@@ -58,6 +58,7 @@ body{
 }
 .menuSchoolName{
     width: 176px;
+    cursor: pointer;
     z-index: 999;
 }
 .menuItems{

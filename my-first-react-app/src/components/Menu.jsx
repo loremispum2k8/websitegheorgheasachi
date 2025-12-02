@@ -48,7 +48,7 @@ function Menu(){
     return(
         <div className='menuContainer'>
             <div ref={blackMenu} className="menu">
-            <img ref={invertText} className="menuSchoolName" src="https://i.imgur.com/Qfn4qxY.png" alt=""/>
+            <NavLink to='/'><img ref={invertText} className="menuSchoolName" src="https://i.imgur.com/Qfn4qxY.png" alt=""/></NavLink>
 
             <div className="menuItems">
                 <div className='linkContainer'>
