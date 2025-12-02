@@ -3,3 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: 'ER_Garamond_Medium';
+    src: url(assets/fonts/EBGaramond-Medium.ttf);
+}
+@font-face {
+    font-family: 'DM_Sans_Regular';
+    src: url(assets/fonts/DMSans-Regular.ttf);
+}
+@font-face {
+    font-family: 'DM_Sans_Medium';
+    src: url(assets/fonts/DMSans-Medium.ttf);
+}
+@font-face {
+    font-family: 'DM_Sans_ExtraBold';
+    src: url(assets/fonts/DMSans-ExtraBold.ttf);
+}
+
+p{
+    font-family: "DM_Sans_ExtraBold";
+    font-size: 50px;
+}
