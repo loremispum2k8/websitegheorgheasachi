@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom'
 function Menu(){
     return(
         <div className="menu">
-            <img className="menuSchoolName" src="/src/assets/images/menuSchoolName.png" alt=""/>
+            <img className="menuSchoolName" src="https://i.imgur.com/FORzK1q.png" alt=""/>
 
             <div className="menuItems">
                 <div className='linkContainer'>
@@ -11,7 +11,7 @@ function Menu(){
                     <div className='activeLinkIndicator'></div>
                 </div>
                 <div className='linkContainer'>
-                    <NavLink to='/' className='menuLinks'>Noutăți</NavLink>
+                    <NavLink to='/error' className='menuLinks'>Noutăți</NavLink>
                     <div className=''></div>
                 </div>
                 <div className='linkContainer'>
