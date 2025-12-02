@@ -1,9 +1,38 @@
+import { useRef } from 'react'
+
 import {NavLink} from 'react-router-dom'
 
 function Menu(){
+
+    const blackMenu = useRef()
+    const menuIcon = useRef()
+    const closingIcon = useRef()
+    const invertText = useRef()
+    const expandableMenu = useRef()
+
+   function expandMenu(){
+        expandableMenu.current.classList.add('expandMenu')
+        blackMenu.current.classList.add('blackMenu')
+        invertText.current.classList.add('invertText')
+        closingIcon.current.classList.add('enabledClosingIcon')
+        menuIcon.current.classList.add('disableMenuIcon')
+        document.body.style.overflow = "hidden"
+   }
+
+   function hideMenu(){
+        expandableMenu.current.classList.remove('expandMenu')
+        blackMenu.current.classList.remove('blackMenu')
+        invertText.current.classList.remove('invertText')
+        closingIcon.current.classList.remove('enabledClosingIcon')
+        menuIcon.current.classList.remove('disableMenuIcon')
+        document.body.style.overflow = "scroll"
+   }
+    
+
     return(
-        <div className="menu">
-            <img className="menuSchoolName" src="https://i.imgur.com/FORzK1q.png" alt=""/>
+        <div className='menuContainer'>
+            <div ref={blackMenu} className="menu">
+            <img ref={invertText} className="menuSchoolName" src="/src/assets/images/menuSchoolName.png" alt=""/>
 
             <div className="menuItems">
                 <div className='linkContainer'>
@@ -22,16 +51,20 @@ function Menu(){
                     <NavLink to='/' className='menuLinks'>Contacte</NavLink>
                     <div className=''></div>
                 </div>
-                <img className='expandableMenuIcon' src="/src/assets/icons/menu.png" alt="" />
-                <img className='closeExpandableMenuIcon' src="/src/assets/icons/close.png" alt="" />
+            </div>
+
+            <img ref={menuIcon} onClick={expandMenu} className='expandableMenuIcon' src="/src/assets/icons/menu.png" alt="" />
+            <img ref={closingIcon} onClick={hideMenu} className='closeExpandableMenuIcon' src="/src/assets/icons/close.png" alt="" />
             </div>
 
             {/*For mobile only*/}
-            <div className='expandableMenu'>
-                <NavLink className='expandableMenuLinks'>Acasă</NavLink>
-                <NavLink className='expandableMenuLinks'>Noutăți</NavLink>
-                <NavLink className='expandableMenuLinks'>Administrație</NavLink>
-                <NavLink className='expandableMenuLinks'>Contacte</NavLink>
+            <div ref={expandableMenu} className='expandableMenu'>
+                <div className="expandableNavLinks">
+                    <NavLink className='expandableMenuLinks'>Acasă</NavLink>
+                    <NavLink className='expandableMenuLinks'>Noutăți</NavLink>
+                    <NavLink className='expandableMenuLinks'>Administrație</NavLink>
+                    <NavLink className='expandableMenuLinks'>Contacte</NavLink>
+                </div>
                 <img className='menuFirstHalf' src="/src/assets/images/logoNoBg.png" alt="" />
                 <img className='menuSecondHalf' src="/src/assets/images/logoNoBg.png" alt="" />
             </div>{/*For mobile only*/}
