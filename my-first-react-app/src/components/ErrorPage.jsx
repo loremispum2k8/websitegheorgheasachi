@@ -10,4 +10,4 @@ function ErrorPage(){
     )
 }
 
-export default ErrorPageNavLink
+export default ErrorPage
