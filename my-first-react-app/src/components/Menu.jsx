@@ -1,8 +1,9 @@
-import { useRef } from 'react'
+import { useRef, useEffect, useState } from 'react'
 
 import {NavLink} from 'react-router-dom'
 
 function Menu(){
+    const [menuIsExpanded, setMenuIsExpanded] = useState(false)
 
     const blackMenu = useRef()
     const menuIcon = useRef()
@@ -17,6 +18,7 @@ function Menu(){
         closingIcon.current.classList.add('enabledClosingIcon')
         menuIcon.current.classList.add('disableMenuIcon')
         document.body.style.overflow = "hidden"
+        setMenuIsExpanded(true)
    }
 
    function hideMenu(){
@@ -26,13 +28,27 @@ function Menu(){
         closingIcon.current.classList.remove('enabledClosingIcon')
         menuIcon.current.classList.remove('disableMenuIcon')
         document.body.style.overflow = "scroll"
+        setMenuIsExpanded(false)
    }
+
+   useEffect(()=>{
+        function handleResize(){
+            if(menuIsExpanded && window.innerWidth > 950){
+                hideMenu()
+            }
+        }
+        window.addEventListener('resize',handleResize)
+
+        return ()=>{
+            window.removeEventListener('resize',handleResize)
+        }
+    },[menuIsExpanded])
     
 
     return(
         <div className='menuContainer'>
             <div ref={blackMenu} className="menu">
-            <img ref={invertText} className="menuSchoolName" src="/src/assets/images/menuSchoolName.png" alt=""/>
+            <img ref={invertText} className="menuSchoolName" src="https://i.imgur.com/Qfn4qxY.png" alt=""/>
 
             <div className="menuItems">
                 <div className='linkContainer'>
@@ -53,8 +69,8 @@ function Menu(){
                 </div>
             </div>
 
-            <img ref={menuIcon} onClick={expandMenu} className='expandableMenuIcon' src="/src/assets/icons/menu.png" alt="" />
-            <img ref={closingIcon} onClick={hideMenu} className='closeExpandableMenuIcon' src="/src/assets/icons/close.png" alt="" />
+            <img ref={menuIcon} onClick={expandMenu} className='expandableMenuIcon' src="https://i.imgur.com/LLd95V0.png" alt="" />
+            <img ref={closingIcon} onClick={hideMenu} className='closeExpandableMenuIcon' src="https://i.imgur.com/pFR3QlR.png" alt="" />
             </div>
 
             {/*For mobile only*/}
@@ -65,8 +81,8 @@ function Menu(){
                     <NavLink className='expandableMenuLinks'>Administrație</NavLink>
                     <NavLink className='expandableMenuLinks'>Contacte</NavLink>
                 </div>
-                <img className='menuFirstHalf' src="/src/assets/images/logoNoBg.png" alt="" />
-                <img className='menuSecondHalf' src="/src/assets/images/logoNoBg.png" alt="" />
+                <img className='menuFirstHalf' src="https://i.imgur.com/aLOMjMQ.png" alt="" />
+                <img className='menuSecondHalf' src="https://i.imgur.com/aLOMjMQ.png" alt="" />
             </div>{/*For mobile only*/}
         </div>
     )

@@ -143,6 +143,68 @@ body{
     .expandableMenuIcon{
         display: flex;
     }
+    .menu{
+        z-index: 1000;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+        padding: 0px 70px;
+        background-color: white;
+        position: relative;
+        box-shadow: none;
+    }
+    .closeExpandableMenuIcon{
+        cursor: pointer;
+        margin-right: 16px;
+        height: 34px;
+        width: 34px;
+        display: none;
+        border: 1px solid #4D4D4D;
+        border-radius: 50%;
+        padding: 6px;
+    }
+
+    
+    .expandableMenu{
+        z-index: 99;
+        top: 0;
+        position: relative;
+        display: none;
+        flex-direction: column;
+        flex: 1;
+        background-color: #0B0B0B;
+        overflow: hidden;
+    }
+    .expandableNavLinks{
+        padding: 40px 70px;
+        gap: 16px;
+        display: flex;
+        flex-direction: column;
+    }
+    .menuFirstHalf{
+        width: 300px;
+        object-fit: cover;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-50%);
+    }
+    .menuSecondHalf{
+        bottom: 0;
+        width: 500px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translateX(55%);
+    }
+    .expandableMenuLinks{
+        font-size: 36px;
+        letter-spacing: 1px;
+        color: white;
+    }
 }
 
 
@@ -173,6 +235,7 @@ body{
         cursor: pointer;
         height: 32px;
         width: 32px;
+        margin-right: 13px;
         display: none;
         border: 1px solid #4D4D4D;
         border-radius: 50%;
@@ -197,7 +260,7 @@ body{
         flex-direction: column;
     }
     .menuFirstHalf{
-        width: 265px;
+        width: 250px;
         object-fit: cover;
         bottom: 0;
         left: 0;
@@ -205,7 +268,7 @@ body{
     }
     .menuSecondHalf{
         bottom: 0;
-        width: 463px;
+        width: 440px;
         position: absolute;
         bottom: 0;
         right: 0;
