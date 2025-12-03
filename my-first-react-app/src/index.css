@@ -24,10 +24,16 @@ a{
     color: initial;
 }
 body{
+    overflow-x:hidden;
+    position: relative;
     height: 1000px;
 }
 
 .menuContainer{
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    position: fixed;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -42,8 +48,8 @@ body{
     justify-content: space-between;
     height: 100px;
     padding: 0px 100px;
-    background-color: white;
-    position: relative;
+    background-color: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(6px);
     box-shadow: 0px 4px 8px 0px rgba(170, 170, 170, 0.1);
 }
 .menu:after{
@@ -53,7 +59,7 @@ body{
     position: absolute;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to right, #FFFFFF, #CACACA, #FFFFFF);
+    background: linear-gradient(to right, #ffffff00, #d9d9d9, #ffffff00);
     pointer-events: none;
 }
 .menuSchoolName{
@@ -65,7 +71,7 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 60px;
+    gap: 66px;
     height: 100%;
     z-index: 999;
 }
@@ -122,20 +128,87 @@ body{
     filter: brightness(100) contrast(0) opacity(0.04);
 }
 
+.headerContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100dvh;
+}
+.headerImagesContainer{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.headerImage{
+    mask-image: linear-gradient(rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 93%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+.headerImage{
+    opacity: 0;
+}
+.showHeader{
+    opacity: 1;
+}
+.dotsContainer{
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    z-index: 99;
+}
+.headerDot{
+    border-radius: 50%;
+    background-color: #CACACA;
+    cursor: pointer;
+    width: 8px;
+    height: 8px;
+    transition: all 0.1s;
+}
+.headerDot:hover{
+    background-color: #F7A524;
+}
+.activeDot{
+    background-color: black;
+    cursor:auto;
+}
+.activeDot:hover{
+    background-color: black;
+}
+.invisibleControlsHeader{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+.headerLeftControl, .headerRightControl{
+    flex: 1;
+    height: 100%;
+    z-index: 98;
+}
+
+
 
 @media screen and (max-width: 1024px){
     .menu{
-        z-index: 100;
-        display: flex;
-        flex-direction: row;
-            width: 100%;
-        align-items: center;
-        justify-content: space-between;
-        height: 100px;
         padding: 0px 70px;
-        background-color: white;
-        position: relative;
-        box-shadow: 0px 4px 8px 0px rgba(170, 170, 170, 0.1);
+        box-shadow: none;
     }
 }
 
@@ -148,17 +221,8 @@ body{
         display: flex;
     }
     .menu{
-        z-index: 1000;
-        top: 0;
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        align-items: center;
-        justify-content: space-between;
         height: 100px;
         padding: 0px 70px;
-        background-color: white;
-        position: relative;
         box-shadow: none;
     }
     .closeExpandableMenuIcon{
@@ -174,8 +238,7 @@ body{
 
     
     .expandableMenu{
-        z-index: 99;
-        top: 0;
+        z-index: 999;
         position: relative;
         display: none;
         flex-direction: column;
@@ -216,17 +279,8 @@ body{
 
 @media screen and (max-width: 500px){
     .menu{
-        z-index: 1000;
-        top: 0;
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        align-items: center;
-        justify-content: space-between;
         height: 70px;
         padding: 0px 20px;
-        background-color: white;
-        position: relative;
         box-shadow: none;
     }
     .menuSchoolName{
@@ -246,16 +300,6 @@ body{
         border: 1px solid #4D4D4D;
         border-radius: 50%;
         padding: 6px;
-    }
-    .expandableMenu{
-        z-index: 99;
-        top: 0;
-        position: relative;
-        display: none;
-        flex-direction: column;
-        flex: 1;
-        background-color: #0B0B0B;
-        overflow: hidden;
     }
     .expandableNavLinks{
         padding: 40px 25px;
@@ -282,6 +326,14 @@ body{
         font-size: 36px;
         letter-spacing: 1px;
         color: white;
+    }
+
+    .dotsContainer{
+        gap: 20px;
+    }
+    .headerDot{
+        width: 8px;
+        height: 8px;
     }
 }   
 

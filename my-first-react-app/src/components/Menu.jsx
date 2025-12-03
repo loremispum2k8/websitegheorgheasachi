@@ -1,8 +1,8 @@
-import { useRef, useEffect, useState, use } from 'react'
+import { useRef, useEffect, useState} from 'react'
 
 import {NavLink} from 'react-router-dom'
 
-function Menu(){
+function Menu({pageNumber}){
     const [menuIsExpanded, setMenuIsExpanded] = useState(false)
 
     const blackMenu = useRef()
@@ -89,6 +89,10 @@ function Menu(){
         function handleResize(){
             if(menuIsExpanded && window.innerWidth > 950){
                 hideMenu()
+            }else if(window.innerWidth > 950){
+                menuIcon.current.style.display = 'none'
+            }else if(window.innerWidth <= 950){
+                menuIcon.current.style.display = 'flex'
             }
         }
         window.addEventListener('resize',handleResize)
@@ -102,24 +106,27 @@ function Menu(){
     return(
         <div className='menuContainer'>
             <div ref={blackMenu} className="menu">
-            <NavLink to='/'><img ref={invertText} className="menuSchoolName" src="https://i.imgur.com/Qfn4qxY.png" alt=""/></NavLink>
+            <picture ref={invertText}>
+                <NavLink to='/'><source media="(max-width: 500px)" src="https://i.imgur.com/Qfn4qxY.png"/></NavLink>
+                <NavLink to='/'><img className="menuSchoolName" src="https://i.imgur.com/6kfihYu.png" alt=""/></NavLink>
+            </picture>
 
             <div className="menuItems">
                 <div className='linkContainer'>
-                    <NavLink to='/' className='menuLinks activeMenuLink'>Acasă</NavLink>
-                    <div className='activeLinkIndicator'></div>
+                    <NavLink to='/' className = {pageNumber === 1 ? 'menuLinks activeMenuLink' : 'menuLinks'}>Acasă</NavLink>
+                    <div className = {pageNumber === 1 ? 'activeLinkIndicator' : ''}></div>
                 </div>
                 <div className='linkContainer'>
-                    <NavLink to='/error' className='menuLinks'>Noutăți</NavLink>
-                    <div className=''></div>
+                    <NavLink to='/noutăți' className = {pageNumber === 2 ? 'menuLinks activeMenuLink' : 'menuLinks'}>Noutăți</NavLink>
+                    <div className = {pageNumber === 2 ? 'activeLinkIndicator' : ''}></div>
                 </div>
                 <div className='linkContainer'>
-                    <NavLink to='/' className='menuLinks'>Administrație</NavLink>
-                    <div className=''></div>
+                    <NavLink to='/administrație' className = {pageNumber === 3 ? 'menuLinks activeMenuLink' : 'menuLinks'}>Administrație</NavLink>
+                    <div className = {pageNumber === 3 ? 'activeLinkIndicator' : ''}></div>
                 </div>
                 <div className='linkContainer'>
-                    <NavLink to='/' className='menuLinks'>Contacte</NavLink>
-                    <div className=''></div>
+                    <NavLink to='/contacte' className = {pageNumber === 4 ? 'menuLinks activeMenuLink' : 'menuLinks'}>Contacte</NavLink>
+                    <div className = {pageNumber === 4 ? 'activeLinkIndicator' : ''}></div>
                 </div>
             </div>
 
@@ -130,10 +137,10 @@ function Menu(){
             {/*For mobile only*/}
             <div ref={expandableMenu} className='expandableMenu'>
                 <div ref={expandableNavLinks} className="expandableNavLinks">
-                    <NavLink ref={firstLink} className='expandableMenuLinks'>Acasă</NavLink>
-                    <NavLink ref={secondLink} className='expandableMenuLinks'>Noutăți</NavLink>
-                    <NavLink ref={thirdLink} className='expandableMenuLinks'>Administrație</NavLink>
-                    <NavLink ref={forthLink} className='expandableMenuLinks'>Contacte</NavLink>
+                    <NavLink to='/' ref={firstLink} className='expandableMenuLinks'>Acasă</NavLink>
+                    <NavLink to='/news' ref={secondLink} className='expandableMenuLinks'>Noutăți</NavLink>
+                    <NavLink to='/administration' ref={thirdLink} className='expandableMenuLinks'>Administrație</NavLink>
+                    <NavLink to='/contacts' ref={forthLink} className='expandableMenuLinks'>Contacte</NavLink>
                 </div>
                 <img className='menuFirstHalf' src="https://i.imgur.com/aLOMjMQ.png" alt="" />
                 <img className='menuSecondHalf' src="https://i.imgur.com/aLOMjMQ.png" alt="" />
