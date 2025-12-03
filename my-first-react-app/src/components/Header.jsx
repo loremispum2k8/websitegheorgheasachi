@@ -4,6 +4,48 @@ import {NavLink} from 'react-router-dom'
 
 function Header(){
 
+    const [headerIndex,setHeaderIndex] = useState(1)
+
+    useEffect(()=>{
+        let interval = setInterval(()=>{
+            setHeaderIndex(prev => prev+1)
+
+            if(headerIndex === 1){
+                console.log('2')
+                img1.current.classList.remove('showHeader')
+                img2.current.classList.add('showHeader')
+                img3.current.classList.remove('showHeader')
+                dot1.current.classList.remove('activeDot')
+                dot2.current.classList.add('activeDot')
+                dot3.current.classList.remove('activeDot')
+            }
+            if(headerIndex === 2){
+                console.log('3')
+                img1.current.classList.remove('showHeader')
+                img2.current.classList.remove('showHeader')
+                img3.current.classList.add('showHeader')
+                dot1.current.classList.remove('activeDot')
+                dot2.current.classList.remove('activeDot')
+                dot3.current.classList.add('activeDot')
+            }else if(headerIndex === 3){
+                setHeaderIndex(1)
+                console.log('1')
+                img1.current.classList.add('showHeader')
+                img2.current.classList.remove('showHeader')
+                img3.current.classList.remove('showHeader')
+                dot1.current.classList.add('activeDot')
+                dot2.current.classList.remove('activeDot')
+                dot3.current.classList.remove('activeDot')
+            }
+            
+            console.log(headerIndex)
+        },4000)
+
+        return()=>{
+            clearInterval(interval)
+        }
+    },[headerIndex])
+
     const img1 = useRef()
     const img2 = useRef()
     const img3 = useRef()
@@ -20,6 +62,7 @@ function Header(){
                 e.target.classList.add('activeDot')
                 dot2.current.classList.remove('activeDot')
                 dot3.current.classList.remove('activeDot')
+                setHeaderIndex(1)
             }else if(e.target.id  === "2"){
                 img1.current.classList.remove('showHeader')
                 img2.current.classList.add('showHeader')
@@ -27,6 +70,7 @@ function Header(){
                 e.target.classList.add('activeDot')
                 dot1.current.classList.remove('activeDot')
                 dot3.current.classList.remove('activeDot')
+                setHeaderIndex(2)
             }else{
                 img1.current.classList.remove('showHeader')
                 img2.current.classList.remove('showHeader')
@@ -34,6 +78,7 @@ function Header(){
                 e.target.classList.add('activeDot')
                 dot1.current.classList.remove('activeDot')
                 dot2.current.classList.remove('activeDot')
+                setHeaderIndex(3)
             }
         }
     }
