@@ -11,7 +11,6 @@ function Header(){
             setHeaderIndex(prev => prev+1)
 
             if(headerIndex === 1){
-                console.log('2')
                 img1.current.classList.remove('showHeader')
                 img2.current.classList.add('showHeader')
                 img3.current.classList.remove('showHeader')
@@ -20,7 +19,6 @@ function Header(){
                 dot3.current.classList.remove('activeDot')
             }
             if(headerIndex === 2){
-                console.log('3')
                 img1.current.classList.remove('showHeader')
                 img2.current.classList.remove('showHeader')
                 img3.current.classList.add('showHeader')
@@ -29,7 +27,6 @@ function Header(){
                 dot3.current.classList.add('activeDot')
             }else if(headerIndex === 3){
                 setHeaderIndex(1)
-                console.log('1')
                 img1.current.classList.add('showHeader')
                 img2.current.classList.remove('showHeader')
                 img3.current.classList.remove('showHeader')
@@ -38,7 +35,6 @@ function Header(){
                 dot3.current.classList.remove('activeDot')
             }
             
-            console.log(headerIndex)
         },5000)
 
         return()=>{

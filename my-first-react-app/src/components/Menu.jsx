@@ -5,6 +5,7 @@ import {NavLink} from 'react-router-dom'
 function Menu({pageNumber}){
     const [menuIsExpanded, setMenuIsExpanded] = useState(false)
 
+    const menuContainer = useRef()
     const blackMenu = useRef()
     const menuIcon = useRef()
     const closingIcon = useRef()
@@ -15,6 +16,20 @@ function Menu({pageNumber}){
     const secondLink = useRef()
     const thirdLink = useRef()
     const forthLink = useRef()
+
+    let currentScroll = 0;
+
+    useEffect(()=>{
+        function updateScrollValue(){
+            window.scrollY > currentScroll ? menuContainer.current.style.display = 'none' : menuContainer.current.style.display = 'flex'
+            currentScroll = window.scrollY;
+        }
+        window.addEventListener('scroll',updateScrollValue)
+
+        return()=>{
+            window.removeEventListener('scroll',updateScrollValue)
+        }
+    },[])
 
 
    function expandMenu(){
@@ -104,7 +119,7 @@ function Menu({pageNumber}){
     
 
     return(
-        <div className='menuContainer'>
+        <div ref={menuContainer} className='menuContainer'>
             <div ref={blackMenu} className="menu">
             <picture ref={invertText}>
                 <NavLink to='/'><source media="(max-width: 500px)" src="https://i.imgur.com/Qfn4qxY.png"/></NavLink>
