@@ -39,7 +39,7 @@ function Header(){
             }
             
             console.log(headerIndex)
-        },4000)
+        },5000)
 
         return()=>{
             clearInterval(interval)
