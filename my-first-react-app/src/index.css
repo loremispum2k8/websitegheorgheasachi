@@ -184,6 +184,7 @@ body{
         padding: 40px 70px;
         gap: 16px;
         display: flex;
+        opacity: 0;
         flex-direction: column;
     }
     .menuFirstHalf{
@@ -243,8 +244,6 @@ body{
         border-radius: 50%;
         padding: 6px;
     }
-
-    
     .expandableMenu{
         z-index: 99;
         top: 0;
@@ -284,13 +283,37 @@ body{
 }   
 
 
-
-
-
-    .blackMenu{
-        background-color: #0B0B0B;
+    .turnMenuBlack{
+        animation-name: turnMenuBlack;
+        animation-duration: 0.15s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
     }
-    .blackMenu:after{
+    @keyframes turnMenuBlack{
+        0%{
+            background-color: #ffffff;
+        }
+        100%{
+            background-color: #0B0B0B;
+        }
+    }
+    .turnMenuWhite{
+        animation-name: turnMenuWhite;
+        animation-duration: 0.15s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+    }
+    @keyframes turnMenuWhite{
+        0%{
+            background-color: #0B0B0B;
+        }
+        100%{
+            background-color: #ffffff;
+        }
+    }
+    .turnMenuBlack:after{
         content: '';
         width: 100%;
         height: 1px;
@@ -300,15 +323,158 @@ body{
         background: linear-gradient(to right, #00000000, rgba(202, 202, 202, 0.2), #00000000);
         pointer-events: none;
     }
-    .disableMenuIcon{
-        display: none;
+
+
+    .invertImageToWhite{
+        animation-name: invertImageToWhite;
+        animation-duration: 0.15s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
     }
-    .expandMenu{
-        display: flex;
+    @keyframes invertImageToWhite{
+        0%{
+            filter: invert(0);
+        }
+        100%{
+            filter: invert(1);
+        }
     }
-    .enabledClosingIcon{
-        display: flex;
+    .invertImageToBlack{
+        animation-name: invertImageToBlack;
+        animation-duration: 0.15s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
     }
-    .invertText{
-        filter: invert(1);
+    @keyframes invertImageToBlack{
+        0%{
+            filter: invert(1);
+        }
+        100%{
+            filter: invert(0);
+        }
+    }
+
+
+
+    .hideMenuIcon{
+        animation-name: hideMenuIcon;
+        animation-duration: 0.15s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+    }
+    @keyframes hideMenuIcon{
+        0%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+    .showMenuIcon{
+        animation-name: showMenuIcon;
+        animation-duration: 0.15s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+    }
+    @keyframes showMenuIcon{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+
+    .hideClosingIcon{
+        animation-name: hideClosingIcon;
+        animation-duration: 0.15s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+    }
+    @keyframes hideClosingIcon{
+        0%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+    .showClosingIcon{
+        animation-name: showClosingIcon;
+        animation-duration: 0.15s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+    }
+    @keyframes showClosingIcon{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    
+
+    .dropTheMenu{
+        animation-name: dropTheMenu;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+    }
+    @keyframes dropTheMenu{
+        0%{
+            transform: translateY(-150%);
+            opacity: 0;
+        }
+        100%{
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    }
+    .raiseTheMenu{
+        animation-name: raiseTheMenu;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+    }
+    @keyframes raiseTheMenu{
+        0%{
+            transform: translateY(0%);
+            opacity: 1;
+        }
+        100%{
+            transform: translateY(-150%);
+            opacity: 0;
+            display: none;
+        }
+    }
+    
+
+    .grow{
+        animation-name: grow;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+    }
+    @keyframes grow {
+        0%{
+            opacity: 0;
+            transform: translateY(-40%);
+            transform-origin: top;
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0%);
+            transform-origin: top;
+        }
     }

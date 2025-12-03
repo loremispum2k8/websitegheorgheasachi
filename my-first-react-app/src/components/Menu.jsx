@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react'
+import { useRef, useEffect, useState, use } from 'react'
 
 import {NavLink} from 'react-router-dom'
 
@@ -10,23 +10,54 @@ function Menu(){
     const closingIcon = useRef()
     const invertText = useRef()
     const expandableMenu = useRef()
+    const expandableNavLinks = useRef()
+
 
    function expandMenu(){
-        expandableMenu.current.classList.add('expandMenu')
-        blackMenu.current.classList.add('blackMenu')
-        invertText.current.classList.add('invertText')
-        closingIcon.current.classList.add('enabledClosingIcon')
-        menuIcon.current.classList.add('disableMenuIcon')
+        blackMenu.current.classList.remove('turnMenuWhite')
+        blackMenu.current.classList.add('turnMenuBlack')
+
+        invertText.current.classList.remove('invertImageToBlack')
+        invertText.current.classList.add('invertImageToWhite')
+
+        menuIcon.current.classList.remove('showMenuIcon')
+        menuIcon.current.classList.add('hideMenuIcon')
+        setTimeout(menuIcon.current.style.display = 'none',150)
+
+        closingIcon.current.style.display = 'flex'
+        closingIcon.current.classList.remove('hideClosingIcon')
+        closingIcon.current.classList.add('showClosingIcon')
+
+        expandableMenu.current.style.display = 'flex'
+        expandableMenu.current.classList.remove('raiseTheMenu')
+        expandableMenu.current.classList.add('dropTheMenu')
+
+        expandableNavLinks.current.classList.add('grow')
+        
         document.body.style.overflow = "hidden"
         setMenuIsExpanded(true)
    }
 
    function hideMenu(){
-        expandableMenu.current.classList.remove('expandMenu')
-        blackMenu.current.classList.remove('blackMenu')
-        invertText.current.classList.remove('invertText')
-        closingIcon.current.classList.remove('enabledClosingIcon')
-        menuIcon.current.classList.remove('disableMenuIcon')
+
+        blackMenu.current.classList.remove('turnMenuBlack')
+        blackMenu.current.classList.add('turnMenuWhite')
+
+        invertText.current.classList.remove('invertImageToWhite')
+        invertText.current.classList.add('invertImageToBlack')
+
+        menuIcon.current.style.display = 'flex'
+        menuIcon.current.classList.remove('hideMenuIcon')
+        menuIcon.current.classList.add('showMenuIcon')
+
+        closingIcon.current.classList.remove('showClosingIcon')
+        closingIcon.current.classList.add('hideClosingIcon')
+        setTimeout(closingIcon.current.style.display = 'none',150)
+        
+
+        expandableMenu.current.classList.remove('dropTheMenu')
+        expandableMenu.current.classList.add('raiseTheMenu')
+
         document.body.style.overflow = "scroll"
         setMenuIsExpanded(false)
    }
@@ -69,13 +100,13 @@ function Menu(){
                 </div>
             </div>
 
-            <img ref={menuIcon} onClick={expandMenu} className='expandableMenuIcon' src="https://i.imgur.com/LLd95V0.png" alt="" />
+            <img ref={menuIcon}  onClick={expandMenu} className='expandableMenuIcon' src="https://i.imgur.com/LLd95V0.png" alt="" />
             <img ref={closingIcon} onClick={hideMenu} className='closeExpandableMenuIcon' src="https://i.imgur.com/pFR3QlR.png" alt="" />
             </div>
 
             {/*For mobile only*/}
             <div ref={expandableMenu} className='expandableMenu'>
-                <div className="expandableNavLinks">
+                <div ref={expandableNavLinks} className="expandableNavLinks">
                     <NavLink className='expandableMenuLinks'>Acasă</NavLink>
                     <NavLink className='expandableMenuLinks'>Noutăți</NavLink>
                     <NavLink className='expandableMenuLinks'>Administrație</NavLink>
