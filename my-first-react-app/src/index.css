@@ -427,7 +427,7 @@ body{
 
     .dropTheMenu{
         animation-name: dropTheMenu;
-        animation-duration: 0.25s;
+        animation-duration: 0.20s;
         animation-timing-function: ease-out;
         animation-fill-mode: forwards;
         animation-iteration-count: 1;
@@ -444,7 +444,7 @@ body{
     }
     .raiseTheMenu{
         animation-name: raiseTheMenu;
-        animation-duration: 0.25s;
+        animation-duration: 0.20s;
         animation-timing-function: ease-in;
         animation-fill-mode: forwards;
         animation-iteration-count: 1;
@@ -464,7 +464,7 @@ body{
 
     .grow{
         animation-name: grow;
-        animation-duration: 0.45s;
+        animation-duration: 0.40s;
         animation-timing-function: ease-out;
         animation-fill-mode: forwards;
         animation-iteration-count: 1;
