@@ -11,6 +11,10 @@ function Menu(){
     const invertText = useRef()
     const expandableMenu = useRef()
     const expandableNavLinks = useRef()
+    const firstLink = useRef()
+    const secondLink = useRef()
+    const thirdLink = useRef()
+    const forthLink = useRef()
 
 
    function expandMenu(){
@@ -33,6 +37,19 @@ function Menu(){
         expandableMenu.current.classList.add('dropTheMenu')
 
         expandableNavLinks.current.classList.add('grow')
+
+        setTimeout(()=>{
+            firstLink.current.classList.add('showLink')
+        },100)
+        setTimeout(()=>{
+            secondLink.current.classList.add('showLink')
+        },200)
+        setTimeout(()=>{
+            thirdLink.current.classList.add('showLink')
+        },300)
+        setTimeout(()=>{
+            forthLink.current.classList.add('showLink')
+        },400)
         
         document.body.style.overflow = "hidden"
         setMenuIsExpanded(true)
@@ -57,6 +74,12 @@ function Menu(){
 
         expandableMenu.current.classList.remove('dropTheMenu')
         expandableMenu.current.classList.add('raiseTheMenu')
+
+        firstLink.current.classList.remove('showLink')
+        secondLink.current.classList.remove('showLink')
+        thirdLink.current.classList.remove('showLink')
+        forthLink.current.classList.remove('showLink')
+
 
         document.body.style.overflow = "scroll"
         setMenuIsExpanded(false)
@@ -107,10 +130,10 @@ function Menu(){
             {/*For mobile only*/}
             <div ref={expandableMenu} className='expandableMenu'>
                 <div ref={expandableNavLinks} className="expandableNavLinks">
-                    <NavLink className='expandableMenuLinks'>Acasă</NavLink>
-                    <NavLink className='expandableMenuLinks'>Noutăți</NavLink>
-                    <NavLink className='expandableMenuLinks'>Administrație</NavLink>
-                    <NavLink className='expandableMenuLinks'>Contacte</NavLink>
+                    <NavLink ref={firstLink} className='expandableMenuLinks'>Acasă</NavLink>
+                    <NavLink ref={secondLink} className='expandableMenuLinks'>Noutăți</NavLink>
+                    <NavLink ref={thirdLink} className='expandableMenuLinks'>Administrație</NavLink>
+                    <NavLink ref={forthLink} className='expandableMenuLinks'>Contacte</NavLink>
                 </div>
                 <img className='menuFirstHalf' src="https://i.imgur.com/aLOMjMQ.png" alt="" />
                 <img className='menuSecondHalf' src="https://i.imgur.com/aLOMjMQ.png" alt="" />
