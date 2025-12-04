@@ -2,6 +2,7 @@ import { useRef, useEffect, useState} from 'react'
 
 import {NavLink} from 'react-router-dom'
 
+
 function Menu({pageNumber}){
     const [menuIsExpanded, setMenuIsExpanded] = useState(false)
 

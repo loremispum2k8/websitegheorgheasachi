@@ -10,6 +10,7 @@ function App() {
             <Menu pageNumber={1}/>
             <Header/>
             <Community/>
+            
         </div>
     )
 }
