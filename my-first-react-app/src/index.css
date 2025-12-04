@@ -470,7 +470,10 @@ body{
     .communityContainer{
         margin-top: 50px;
         padding: 0px 20px;
-        gap: 28px;
+        gap: 10px;
+    }
+    .communityHeader{
+        font-size: 32px;
     }
     .communityContent{
         display: flex;
@@ -491,7 +494,7 @@ body{
         gap: 4px;
     }   
     .communityNumbers{
-        font-size: 50px;
+        font-size: 52px;
     }
     .communityStat{
         font-size: 17px;
