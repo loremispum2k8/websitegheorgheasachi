@@ -22,6 +22,7 @@ function Menu({pageNumber}){
     useEffect(()=>{
         function updateScrollValue(){
             window.scrollY > currentScroll ? menuContainer.current.style.display = 'none' : menuContainer.current.style.display = 'flex'
+            window.scrollY === 0 ? menuContainer.current.style.display = 'none' : null
             currentScroll = window.scrollY;
         }
         window.addEventListener('scroll',updateScrollValue)
@@ -122,8 +123,8 @@ function Menu({pageNumber}){
         <div ref={menuContainer} className='menuContainer'>
             <div ref={blackMenu} className="menu">
             <picture ref={invertText}>
-                <NavLink to='/'><source media="(max-width: 500px)" src="https://i.imgur.com/Qfn4qxY.png"/></NavLink>
-                <NavLink to='/'><img className="menuSchoolName" src="https://i.imgur.com/6kfihYu.png" alt=""/></NavLink>
+                <NavLink to='/'><source media="(max-width: 500px)" src="https://i.imgur.com/zZs5qiC.png"/></NavLink>
+                <NavLink to='/'><img className="menuSchoolName" src="https://i.imgur.com/dYSECNc.png" alt=""/></NavLink>
             </picture>
 
             <div className="menuItems">
