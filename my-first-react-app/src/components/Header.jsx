@@ -4,6 +4,15 @@ import {NavLink} from 'react-router-dom'
 
 function Header(){
 
+    const right = useRef()
+    const left = useRef()
+    const img1 = useRef()
+    const img2 = useRef()
+    const img3 = useRef()
+    const dot1 = useRef()
+    const dot2 = useRef()
+    const dot3 = useRef()
+
     const [headerIndex,setHeaderIndex] = useState(1)
 
     useEffect(()=>{
@@ -53,12 +62,12 @@ function Header(){
         }
     },[headerIndex])
 
-    const img1 = useRef()
-    const img2 = useRef()
-    const img3 = useRef()
-    const dot1 = useRef()
-    const dot2 = useRef()
-    const dot3 = useRef()
+    function leftControls(){
+
+    }
+    function rightControls(){
+        
+    }
 
     function changeHeader(e){
         if(!e.target.classList.contains('activeDot')){
@@ -106,8 +115,8 @@ function Header(){
                 <div ref={dot3} onClick={(e)=>changeHeader(e)} id='3' className='headerDot'></div>
             </div>
             <div className='invisibleControlsHeader'>
-                <div className='headerLeftControl'></div>
-                <div className='headerRightControl'></div>
+                <div ref={left} className='headerLeftControl'></div>
+                <div ref={right} className='headerRightControl'></div>
             </div>
         </div>
     )
