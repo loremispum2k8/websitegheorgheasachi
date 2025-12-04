@@ -144,7 +144,7 @@ body{
     height: 100%;
 }
 .headerImage{
-    mask-image: linear-gradient(rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 93%);
+    mask-image: linear-gradient(rgba(0, 0, 0, 1) 32%, rgba(0, 0, 0, 0) 93%);
     position: absolute;
     top: 0;
     left: 0;
@@ -296,7 +296,7 @@ body{
         position: absolute;
         bottom: 0;
         right: 0;
-        transform: translateX(55%);
+        transform: translateX(55%) translateY(-80px);
     }
     .expandableMenuLinks{
         font-size: 36px;
@@ -339,18 +339,9 @@ body{
     }
     .menuFirstHalf{
         width: 250px;
-        object-fit: cover;
-        bottom: 0;
-        left: 0;
-        transform: translateX(-50%);
     }
     .menuSecondHalf{
-        bottom: 0;
         width: 440px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        transform: translateX(55%);
     }
     .expandableMenuLinks{
         font-size: 36px;
@@ -364,6 +355,9 @@ body{
     .headerDot{
         width: 8px;
         height: 8px;
+    }
+    .headerImage{
+        mask-image: linear-gradient(rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 90%);
     }
 }   
 

@@ -170,8 +170,8 @@ function Menu({pageNumber}){
                     <NavLink to='/administration' ref={thirdLink} className='expandableMenuLinks'>Administrație</NavLink>
                     <NavLink to='/contacts' ref={forthLink} className='expandableMenuLinks'>Contacte</NavLink>
                 </div>
-                <img className='menuFirstHalf' src="https://i.imgur.com/aLOMjMQ.png" alt="" />
-                <img className='menuSecondHalf' src="https://i.imgur.com/aLOMjMQ.png" alt="" />
+                <img className='menuFirstHalf' src="https://i.imgur.com/T3itaGv.png" alt="" />
+                <img className='menuSecondHalf' src="https://i.imgur.com/T3itaGv.png" alt="" />
             </div>{/*For mobile only*/}
         </div>
     )
