@@ -3,6 +3,7 @@ import Menu from './components/Menu'
 import Header from './components/Header'
 import Community from './components/Community'
 import PrincipleMessage from './components/PrincipleMessage'
+import EducationLevels from './components/EducationLevels'
 
 function App() {
     return(
@@ -12,6 +13,7 @@ function App() {
             <Header/>
             <Community/>
             <PrincipleMessage/>
+            <EducationLevels/>
 
         </div>
     )

@@ -8,7 +8,7 @@ function Community(){
         <div className='communityContainer'>
             <h1 className='communityHeader'>Comunitate</h1>
             <div className='communityContent'>
-                <img className='communityImage' src="https://i.imgur.com/M8iNJtk.jpeg" alt="" />
+                <div className='communityImage'><img src="https://i.imgur.com/M8iNJtk.jpeg" alt="" /></div>
                 <div className='communityText'>
                     <div className='communityStatsContainer'>
                         <h2 className='communityNumbers'>30.000+</h2>

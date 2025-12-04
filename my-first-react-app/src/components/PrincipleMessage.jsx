@@ -13,7 +13,7 @@ function PrincipleMessage(){
                 </p>
                 <img className='quote' src="https://i.imgur.com/dHAp5CZ.png" alt="" />
             </div>
-            <img className='principleImage' src="https://i.imgur.com/rWp7QuZ.jpeg" alt="" />
+            <div className='principleImage'><img src="https://i.imgur.com/rWp7QuZ.jpeg" alt="" /></div>
         </div>
     )
 }
