@@ -6,8 +6,14 @@ import PrincipleMessage from './components/PrincipleMessage'
 import EducationLevels from './components/EducationLevels'
 
 function App() {
+    const app = useRef()
+
+    useEffect(()=>{
+        app.current.classList.add('appearDocument')
+    },[])
+
     return(
-        <div className='appContainer'>
+        <div ref={app} className='appContainer'>
 
             <Menu pageNumber={1}/>
             <Header/>
