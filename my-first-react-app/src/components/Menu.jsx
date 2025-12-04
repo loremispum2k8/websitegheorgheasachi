@@ -21,8 +21,20 @@ function Menu({pageNumber}){
 
     useEffect(()=>{
         function updateScrollValue(){
-            window.scrollY > currentScroll ? menuContainer.current.style.display = 'none' : menuContainer.current.style.display = 'flex'
-            window.scrollY === 0 ? menuContainer.current.style.display = 'none' : null
+            if(window.scrollY > currentScroll){
+                menuContainer.current.classList.add('hideMenu')
+                menuContainer.current.classList.remove('showMenu')
+            }else{
+                menuContainer.current.style.display = 'flex'
+                menuContainer.current.classList.remove('hideMenu')
+                menuContainer.current.classList.add('showMenu')
+            }
+
+            if(window.scrollY === 0){
+                menuContainer.current.classList.add('hideMenu')
+                menuContainer.current.classList.remove('showMenu')
+            }
+
             currentScroll = window.scrollY;
         }
         window.addEventListener('scroll',updateScrollValue)

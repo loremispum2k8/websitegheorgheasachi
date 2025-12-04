@@ -581,3 +581,39 @@ body{
 
         }
     }
+
+
+
+    .showMenu{
+        animation-name: showMenu;
+        animation-duration: 0.25s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+    }
+    @keyframes showMenu {
+        0%{
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+
+    .hideMenu{
+        animation-name: hideMenu;
+        animation-duration: 0.25s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+    }
+    @keyframes hideMenu {
+        0%{
+            opacity: 1;
+            transform: translateY(0%);
+        }
+        100%{
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+    }
