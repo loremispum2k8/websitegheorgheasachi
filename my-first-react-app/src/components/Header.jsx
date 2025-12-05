@@ -62,13 +62,6 @@ function Header(){
         }
     },[headerIndex])
 
-    function leftControls(){
-        console.log('left control')
-    }
-    function rightControls(){
-        console.log('left control')
-    }
-
     function changeHeader(e){
         if(!e.target.classList.contains('activeDot')){
             if(e.target.id  === "1"){
@@ -115,8 +108,8 @@ function Header(){
                 <div ref={dot3} onClick={(e)=>changeHeader(e)} id='3' className='headerDot'></div>
             </div>
             <div className='invisibleControlsHeader'>
-                <div onClick={leftControls} ref={left} className='headerLeftControl'></div>
-                <div onCanPlay={rightControls} ref={right} className='headerRightControl'></div>
+                <div ref={left} className='headerLeftControl'></div>
+                <div ref={right} className='headerRightControl'></div>
             </div>
         </div>
     )

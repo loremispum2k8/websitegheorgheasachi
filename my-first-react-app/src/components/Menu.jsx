@@ -166,10 +166,10 @@ function Menu({pageNumber}){
             {/*For mobile only*/}
             <div ref={expandableMenu} className='expandableMenu'>
                 <div ref={expandableNavLinks} className="expandableNavLinks">
-                    <NavLink to='/' ref={firstLink} className='expandableMenuLinks'>Acasă</NavLink>
-                    <NavLink to='/news' ref={secondLink} className='expandableMenuLinks'>Noutăți</NavLink>
-                    <NavLink to='/administration' ref={thirdLink} className='expandableMenuLinks'>Administrație</NavLink>
-                    <NavLink to='/contacts' ref={forthLink} className='expandableMenuLinks'>Contacte</NavLink>
+                    <NavLink to='/' ref={firstLink} className='expandableMenuLinks'><p>Acasă</p></NavLink>
+                    <NavLink to='/news' ref={secondLink} className='expandableMenuLinks'><p>Noutăți</p></NavLink>
+                    <NavLink to='/administration' ref={thirdLink} className='expandableMenuLinks'><p>Administrație</p></NavLink>
+                    <NavLink to='/contacts' ref={forthLink} className='expandableMenuLinks'><p>Contacte</p></NavLink>
                 </div>
                 <img className='menuFirstHalf' src="https://i.imgur.com/T3itaGv.png" alt="" />
                 <img className='menuSecondHalf' src="https://i.imgur.com/T3itaGv.png" alt="" />
