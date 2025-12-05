@@ -34,9 +34,9 @@ function Clubs(){
                         return(
                             <div className='clubCard'>
                                 <div className='clubImage'><img src={club['Imagine principala ( URL )']} alt="" /></div>
-                                <div className='clubTextContainer'>
+                                <div className={club['Titlu'] === 'Crucea Roșie' ? "clubTextContainer redCross" : "clubTextContainer"}>
                                     <h2 className='clubCardTitle'>{club['Titlu']}</h2>
-                                    <div className='clubLine'></div>
+                                    <div className="clubLine"></div>
                                     <p className='clubDescription'>{club['Descriere']}</p>
                                 </div>
                             </div>
