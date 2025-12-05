@@ -583,7 +583,7 @@ body{
         position: absolute;
         bottom: 0;
         right: 0;
-        transform: translateX(55%) translateY(-80px);
+        transform: translateX(55%) translateY(-100px);
     }
     .expandableMenuLinks{
         font-size: 36px;
