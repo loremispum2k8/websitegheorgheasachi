@@ -10,7 +10,7 @@ function Clubs(){
     useEffect(()=>{
         async function getData(){
             const Table_ID = "1dHlwvtfnFb1EFhYzQ0D48eXXN2rdO3_Rx6NTt2Jkahs"
-            const Table_Name = '6'
+            const Table_Name = '1'
             const Table_URL = `https://opensheet.elk.sh/${Table_ID}/${Table_Name}`
 
             let result = await fetch(Table_URL)
@@ -30,7 +30,7 @@ function Clubs(){
                 <div className='clubsCardsContainer'>
 
                     {dataLoaded && clubData.map(club=>{
-                        //console.log(club)
+                        console.log(club)
                         return(
                             <div className='clubCard'>
                                 <div className='clubImage'><img src={club['Imagine principala ( URL )']} alt="" /></div>
