@@ -8,6 +8,7 @@ import Clubs from './components/Clubs'
 import History from './components/History'
 import Gallery from './components/Gallery'
 import Testimonies from './components/Testimonies'
+import Footer from './components/Footer'
 
 function App() {
     const app = useRef()

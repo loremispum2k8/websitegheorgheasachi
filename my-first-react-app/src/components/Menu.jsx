@@ -167,7 +167,7 @@ function Menu({pageNumber}){
             <div ref={expandableMenu} className='expandableMenu'>
                 <div ref={expandableNavLinks} className="expandableNavLinks">
                     <NavLink to='/' ref={firstLink} className='expandableMenuLinks'><p>Acasă</p></NavLink>
-                    <NavLink to='/news' ref={secondLink} className='expandableMenuLinks'><p>Noutăți</p></NavLink>
+                    <NavLink to='/noutăți' ref={secondLink} className='expandableMenuLinks'><p>Noutăți</p></NavLink>
                     <NavLink to='/administration' ref={thirdLink} className='expandableMenuLinks'><p>Administrație</p></NavLink>
                     <NavLink to='/contacts' ref={forthLink} className='expandableMenuLinks'><p>Contacte</p></NavLink>
                 </div>
