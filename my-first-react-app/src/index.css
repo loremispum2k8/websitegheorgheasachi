@@ -220,6 +220,47 @@ body{
 
     }
 }
+
+.showHistoryImage{
+    animation-name: showHistoryImage;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    opacity: 1;
+}
+@keyframes showHistoryImage {
+    0%{
+        opacity: 0;
+        z-index: 1;
+    }
+    100%{
+        opacity: 1;
+        z-index: 100;
+
+    }
+}
+
+.hideHistoryImage{
+    animation-name: hideHistoryImage;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    opacity: 1; 
+}
+@keyframes hideHistoryImage {
+    0%{
+        opacity: 1;
+        z-index: 100;
+    }
+    100%{
+        opacity: 0;
+        z-index: 1;
+
+    }
+}
+
 .dotsContainer{
     bottom: 0;
     position: absolute;
@@ -699,6 +740,17 @@ body{
     width: 100%;
     object-position: center;
     object-fit: cover;
+    opacity: 0;
+    overflow: hidden;
+}
+.historyImage:hover img{
+    scale: 1.02;
+}
+.historyImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.25s;
 }
 
 @media screen and (max-width: 1070px){
