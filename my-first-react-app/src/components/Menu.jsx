@@ -69,16 +69,16 @@ function Menu({pageNumber}){
 
         setTimeout(()=>{
             firstLink.current.classList.add('showLink')
-        },100)
+        },0)
         setTimeout(()=>{
             secondLink.current.classList.add('showLink')
-        },200)
+        },50)
         setTimeout(()=>{
             thirdLink.current.classList.add('showLink')
-        },300)
+        },100)
         setTimeout(()=>{
             forthLink.current.classList.add('showLink')
-        },400)
+        },200)
         
         document.body.style.overflow = "hidden"
         setMenuIsExpanded(true)

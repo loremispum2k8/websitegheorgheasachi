@@ -1330,6 +1330,11 @@ body{
         font-size: 15px;
         padding: 0px 5px;
     }
+
+
+    .headerContainer{
+        height: 580px;
+    }
 }   
 
 
@@ -1474,7 +1479,7 @@ body{
 
     .dropTheMenu{
         animation-name: dropTheMenu;
-        animation-duration: 0.20s;
+        animation-duration: 0.15s;
         animation-timing-function: ease-out;
         animation-fill-mode: forwards;
         animation-iteration-count: 1;
