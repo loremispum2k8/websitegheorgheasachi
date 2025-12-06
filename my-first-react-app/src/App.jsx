@@ -7,6 +7,7 @@ import EducationLevels from './components/EducationLevels'
 import Clubs from './components/Clubs'
 import History from './components/History'
 import Gallery from './components/Gallery'
+import Testimonies from './components/Testimonies'
 
 function App() {
     const app = useRef()
@@ -26,6 +27,7 @@ function App() {
             <Clubs/>
             <History/>
             <Gallery/>
+            <Testimonies/>
 
         </div>
     )
