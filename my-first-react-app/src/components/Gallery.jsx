@@ -17,9 +17,9 @@ function Gallery(){
         <div className='galleryContainer'>
             <div className='galleryTitle'>Galerie</div>
             <div className='galleryGrid'>
-                <div className='galleryBig'><img src="https://i.imgur.com/zu8Djbq.jpeg" alt="" /></div>
-                <div className='galleryTop'><img src="https://i.imgur.com/rNA0SDM.jpeg" alt="" /></div>
-                <div className='galleryBottom'><img src="https://i.imgur.com/hCbJmkr.jpeg" alt="" /></div>
+                <div className='galleryImgCont galleryBig'><img src="https://i.imgur.com/zu8Djbq.jpeg" alt="" /></div>
+                <div className='galleryImgCont galleryTop'><img src="https://i.imgur.com/rNA0SDM.jpeg" alt="" /></div>
+                <div className='galleryImgCont galleryBottom'><img src="https://i.imgur.com/hCbJmkr.jpeg" alt="" /></div>
                 <div className='gallerySlider'>
                     <div className='galleryInnerSlider'>
                         {links.map(imageLink=>{

@@ -804,7 +804,6 @@ body{
 .gallerySliderImg{
     width: 530px;
     height: 375px;
-    padding-bottom: 20px;
     overflow: hidden;
 }
 .galleryContainer img{
@@ -812,6 +811,27 @@ body{
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.galleryImgCont{
+    overflow: hidden;
+}
+.galleryImgCont:hover img{
+    scale: 1.02;
+}
+.galleryImgCont img{
+    will-change: transform;
+    transition: all 0.25s;
+}
+.gallerySliderImg{
+    overflow: hidden;
+}
+.gallerySliderImg:hover img{
+    scale: 1.02;
+}
+.gallerySliderImg img{
+    will-change: transform;
+    transition: all 0.25s;
 }
 
 
@@ -1054,7 +1074,6 @@ body{
 .gallerySliderImg{
     width: 530px;
     height: 350px;
-    padding-bottom: 20px;
     overflow: hidden;
 }
 .galleryContainer img{
