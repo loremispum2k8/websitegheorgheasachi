@@ -465,7 +465,7 @@ body{
     flex-direction: column;
     align-items: start;
     gap: 24px;
-    padding: 0px 100px 100px 100px;
+    padding: 0px 100px 120px 100px;
     position: relative;
 }
 .clubsTitle{
@@ -481,7 +481,7 @@ body{
     height: fit-content;
     position: relative;
     overflow-X: scroll;
-    padding-bottom: 20px;
+    padding-bottom: 14px;
     scrollbar-color: rgb(207, 207, 207) white;
     scrollbar-width:thin;
 }
@@ -575,6 +575,124 @@ body{
     transition: all 0.25s ease-in-out;
 }
 
+
+.historyContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+    padding: 0px 100px 100px 100px;
+    position: relative;
+}
+.historyTitle{
+    font-size: 56px;
+    font-weight: 500;
+    font-family: "ER_Garamond_Medium";
+}
+.historyContentGrid{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 30px;
+}
+.historyImages{
+    padding-right: 30px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.historyTextOne{
+    margin-bottom: 40px;
+    grid-row: 1/2;
+    min-height: 550px;
+    max-height: 600px;
+    font-size: 18px;
+    font-family: 'DM_Sans_Regular';
+    color: #484848;
+    line-height: 170%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.historyTextOne::after{
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 1000px;
+    background: linear-gradient(to right, #ffffff00, #CACACA, #ffffff00);
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transform: translateX(-30px) rotate(90deg);
+}
+.historyTextTwo::before{
+    position: absolute;
+    content: '';
+    height: 1px;
+    background: linear-gradient(to right, #ffffff00, #CACACA, #ffffff00);
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.historyTextTwo{
+    position: relative;
+    padding-top: 30px;
+    font-size: 18px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding-right: 30px;
+    font-family: 'DM_Sans_Regular';
+    color: #484848;
+    line-height: 170%;
+}
+.historyImages{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.historyDotsContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+.historyDot{
+    border-radius: 50%;
+    background-color: #CACACA;
+    cursor: pointer;
+    width: 8px;
+    height: 8px;
+    transition: all 0.1s;
+}
+.historyDot:hover{
+    background-color: #F7A524;
+}
+.activeHistoryDot{
+    background-color: black;
+}
+.historyImagesContainer{
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.historyImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
 @media screen and (max-width: 1070px){
     .menu{
         padding: 0px 70px;
@@ -664,6 +782,109 @@ body{
     .clubsContainer{
         padding: 0px 70px 100px 70px;
     }
+
+
+    
+.historyContainer{
+    padding: 0px 70px 100px 70px;
+}
+.historyContentGrid{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    column-gap: 0px;
+}
+.historyImages{
+    padding-right: 0px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    column-gap: 0px;
+}
+.historyTextOne{
+    padding: 0px 5px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    min-height: fit-content;
+    max-height: fit-content;
+    font-size: 18px;
+    font-family: 'DM_Sans_Regular';
+    color: #484848;
+    line-height: 170%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.historyTextOne::after{
+    height: 0px;
+    width: 0px;
+    display: none;
+}
+.historyTextTwo::before{
+    height: 0px;
+    width: 0px;
+    display: none;
+}
+.historyTextTwo{
+    padding: 0px 5px;
+    position: relative;
+    padding-top: 0px;
+    font-size: 18px;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    font-family: 'DM_Sans_Regular';
+    color: #484848;
+    line-height: 170%;
+}
+.historyImages{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 550px;
+    gap: 30px;
+}
+.historyDotsContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+.historyDot{
+    border-radius: 50%;
+    background-color: #CACACA;
+    cursor: pointer;
+    width: 8px;
+    height: 8px;
+    transition: all 0.1s;
+}
+.historyDot:hover{
+    background-color: #F7A524;
+}
+.activeHistoryDot{
+    background-color: black;
+}
+.historyImagesContainer{
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.historyImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
 }
 
 
@@ -837,6 +1058,13 @@ body{
     }
     .clubsContainer{
         padding: 0px 50px 100px 50px;
+    }
+    .clubsMovementContainer{
+        padding-bottom: 10px;
+    }
+
+    .historyContainer{
+        padding: 0px 50px 55px 50px;
     }
 }
 
@@ -1063,6 +1291,13 @@ body{
         left: 0;
         transition: all 0.25s ease-in-out;
     } 
+
+    .historyTitle{
+        font-size: 34px;
+    }
+    .historyContainer{
+        padding: 0px 20px 55px 20px;
+    }
 }   
 
 

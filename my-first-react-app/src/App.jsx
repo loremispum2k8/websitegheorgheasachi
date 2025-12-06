@@ -5,6 +5,7 @@ import Community from './components/Community'
 import PrincipleMessage from './components/PrincipleMessage'
 import EducationLevels from './components/EducationLevels'
 import Clubs from './components/Clubs'
+import History from './components/History'
 
 function App() {
     const app = useRef()
@@ -22,6 +23,7 @@ function App() {
             <PrincipleMessage/>
             <EducationLevels/>
             <Clubs/>
+            <History/>
 
         </div>
     )
