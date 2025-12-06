@@ -60,6 +60,7 @@ function Testimonies(){
     const testimony3 = useRef()
     const testimony4 = useRef()
     const testimony5 = useRef()
+    const testimony6 = useRef()
     const testimony7 = useRef()
     const testimony8 = useRef()
 
@@ -73,8 +74,38 @@ function Testimonies(){
     const dot8 = useRef()
 
 
-    function changeTestimony(){
+    const [testimonialsIndex,setTestimonialsIndex] = useState(1)
 
+    useEffect(()=>{
+        const interval = setInterval(()=>{
+            setTestimonialsIndex(prev => prev === 8 ? 1 : prev + 1)
+        },5000)
+
+        return ()=> clearInterval(interval)
+    },[])
+
+
+    useEffect(() => {
+
+        const testimonials = [testimony1, testimony2, testimony3, testimony4, testimony5, testimony6, testimony7, testimony8]
+        const dots  = [dot1, dot2, dot3, dot4, dot5, dot6, dot7, dot8]
+        testimonials.forEach(testimony => {
+            testimony.current.classList.remove("showTestimony")
+            testimony.current.classList.add("hideTestimony")
+        })
+
+        dots.forEach(dot => dot.current.classList.remove("activeTestimonyDot"))
+        testimonials[testimonialsIndex-1].current.classList.add("showTestimony")
+        testimonials[testimonialsIndex-1].current.classList.remove("hideTestimony")
+
+        dots[testimonialsIndex-1].current.classList.add("activeTestimonyDot")
+
+    }, [testimonialsIndex])
+
+    
+    function changeTestimony(e){
+        const id = Number(e.target.id)
+        setTestimonialsIndex(id)
     }
 
 
@@ -96,6 +127,84 @@ function Testimonies(){
                     <div className='testimonyimage'><img src="https://i.imgur.com/XwEDcgf.png" alt="" /></div>
                 </div>
                 <div id='testimony2' ref={testimony2} className="testimony">
+                    <div className='testimonyText'>
+                        <h1 className='testimonyTitle'>Liceul Gheorghe Asachi mi-a oferit disciplina și oportunitățile de care aveam nevoie.”</h1>
+                        <div className='testimonyNameContainer'>
+                            <p className='testimonyName'>Ana-Maria Dinu</p>
+                            <div className='testimonytextDot'></div>
+                        </div>
+                        <div className='testimoNline'></div>
+                        <h2 className='testimonySuccesses'>După patru ani în care a coordonat proiecte locale și a fost președinte al Clubului de Informatică la Liceul „Gheorghe Asachi”, Ana-Maria a continuat să sprijine generațiile tinere. Experiența de elev activ a inspirat-o să-și urmeze drumul în educație și comunitate.</h2>
+                        <img className='testimonyQuote' src="https://i.imgur.com/dHAp5CZ.png" alt="" />
+                    </div>
+                    <div className='testimonyimage'><img src="https://i.imgur.com/XwEDcgf.png" alt="" /></div>
+                </div>
+                <div id='testimony3' ref={testimony3} className="testimony">
+                    <div className='testimonyText'>
+                        <h1 className='testimonyTitle'>Liceul Gheorghe Asachi mi-a oferit disciplina și oportunitățile de care aveam nevoie.”</h1>
+                        <div className='testimonyNameContainer'>
+                            <p className='testimonyName'>Ana-Maria Dinu</p>
+                            <div className='testimonytextDot'></div>
+                        </div>
+                        <div className='testimoNline'></div>
+                        <h2 className='testimonySuccesses'>După patru ani în care a coordonat proiecte locale și a fost președinte al Clubului de Informatică la Liceul „Gheorghe Asachi”, Ana-Maria a continuat să sprijine generațiile tinere. Experiența de elev activ a inspirat-o să-și urmeze drumul în educație și comunitate.</h2>
+                        <img className='testimonyQuote' src="https://i.imgur.com/dHAp5CZ.png" alt="" />
+                    </div>
+                    <div className='testimonyimage'><img src="https://i.imgur.com/XwEDcgf.png" alt="" /></div>
+                </div>
+                <div id='testimony4' ref={testimony4} className="testimony">
+                    <div className='testimonyText'>
+                        <h1 className='testimonyTitle'>Liceul Gheorghe Asachi mi-a oferit disciplina și oportunitățile de care aveam nevoie.”</h1>
+                        <div className='testimonyNameContainer'>
+                            <p className='testimonyName'>Ana-Maria Dinu</p>
+                            <div className='testimonytextDot'></div>
+                        </div>
+                        <div className='testimoNline'></div>
+                        <h2 className='testimonySuccesses'>După patru ani în care a coordonat proiecte locale și a fost președinte al Clubului de Informatică la Liceul „Gheorghe Asachi”, Ana-Maria a continuat să sprijine generațiile tinere. Experiența de elev activ a inspirat-o să-și urmeze drumul în educație și comunitate.</h2>
+                        <img className='testimonyQuote' src="https://i.imgur.com/dHAp5CZ.png" alt="" />
+                    </div>
+                    <div className='testimonyimage'><img src="https://i.imgur.com/XwEDcgf.png" alt="" /></div>
+                </div>
+                <div id='testimony5' ref={testimony5} className="testimony">
+                    <div className='testimonyText'>
+                        <h1 className='testimonyTitle'>Liceul Gheorghe Asachi mi-a oferit disciplina și oportunitățile de care aveam nevoie.”</h1>
+                        <div className='testimonyNameContainer'>
+                            <p className='testimonyName'>Ana-Maria Dinu</p>
+                            <div className='testimonytextDot'></div>
+                        </div>
+                        <div className='testimoNline'></div>
+                        <h2 className='testimonySuccesses'>După patru ani în care a coordonat proiecte locale și a fost președinte al Clubului de Informatică la Liceul „Gheorghe Asachi”, Ana-Maria a continuat să sprijine generațiile tinere. Experiența de elev activ a inspirat-o să-și urmeze drumul în educație și comunitate.</h2>
+                        <img className='testimonyQuote' src="https://i.imgur.com/dHAp5CZ.png" alt="" />
+                    </div>
+                    <div className='testimonyimage'><img src="https://i.imgur.com/XwEDcgf.png" alt="" /></div>
+                </div>
+                <div id='testimony6' ref={testimony6} className="testimony">
+                    <div className='testimonyText'>
+                        <h1 className='testimonyTitle'>Liceul Gheorghe Asachi mi-a oferit disciplina și oportunitățile de care aveam nevoie.”</h1>
+                        <div className='testimonyNameContainer'>
+                            <p className='testimonyName'>Ana-Maria Dinu</p>
+                            <div className='testimonytextDot'></div>
+                        </div>
+                        <div className='testimoNline'></div>
+                        <h2 className='testimonySuccesses'>După patru ani în care a coordonat proiecte locale și a fost președinte al Clubului de Informatică la Liceul „Gheorghe Asachi”, Ana-Maria a continuat să sprijine generațiile tinere. Experiența de elev activ a inspirat-o să-și urmeze drumul în educație și comunitate.</h2>
+                        <img className='testimonyQuote' src="https://i.imgur.com/dHAp5CZ.png" alt="" />
+                    </div>
+                    <div className='testimonyimage'><img src="https://i.imgur.com/XwEDcgf.png" alt="" /></div>
+                </div>
+                <div id='testimony7' ref={testimony7} className="testimony">
+                    <div className='testimonyText'>
+                        <h1 className='testimonyTitle'>Liceul Gheorghe Asachi mi-a oferit disciplina și oportunitățile de care aveam nevoie.”</h1>
+                        <div className='testimonyNameContainer'>
+                            <p className='testimonyName'>Ana-Maria Dinu</p>
+                            <div className='testimonytextDot'></div>
+                        </div>
+                        <div className='testimoNline'></div>
+                        <h2 className='testimonySuccesses'>După patru ani în care a coordonat proiecte locale și a fost președinte al Clubului de Informatică la Liceul „Gheorghe Asachi”, Ana-Maria a continuat să sprijine generațiile tinere. Experiența de elev activ a inspirat-o să-și urmeze drumul în educație și comunitate.</h2>
+                        <img className='testimonyQuote' src="https://i.imgur.com/dHAp5CZ.png" alt="" />
+                    </div>
+                    <div className='testimonyimage'><img src="https://i.imgur.com/XwEDcgf.png" alt="" /></div>
+                </div>
+                <div id='testimony8' ref={testimony8} className="testimony">
                     <div className='testimonyText'>
                         <h1 className='testimonyTitle'>Liceul Gheorghe Asachi mi-a oferit disciplina și oportunitățile de care aveam nevoie.”</h1>
                         <div className='testimonyNameContainer'>

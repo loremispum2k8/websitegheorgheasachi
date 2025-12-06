@@ -8,7 +8,20 @@ function Gallery(){
         'https://i.imgur.com/FglDhrt.jpeg',
         'https://i.imgur.com/vgBJnXG.jpeg',
         'https://i.imgur.com/WHthe9h.jpeg',
-        'https://i.imgur.com/pstVUWh.jpeg'
+        'https://i.imgur.com/xUOCXgp.jpeg',
+        'https://i.imgur.com/PCzmZyE.jpeg',
+        'https://i.imgur.com/fHjFZoF.jpeg',
+        'https://i.imgur.com/X942IIY.jpeg',
+        'https://i.imgur.com/fwcVYAZ.jpeg',
+        'https://i.imgur.com/jkDNaJX.jpeg',
+        'https://i.imgur.com/DvzZeAh.jpeg',
+        'https://i.imgur.com/dAcqQkg.jpeg',
+        'https://i.imgur.com/1JRojef.jpeg',
+        'https://i.imgur.com/eH6JsLi.jpeg',
+        'https://i.imgur.com/n2RDoui.jpeg',
+        'https://i.imgur.com/4LeiAcZ.jpeg',
+        'https://i.imgur.com/arWjrCe.jpeg',
+        'https://i.imgur.com/kYynTze.jpeg'
     ]
 
 
