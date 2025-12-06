@@ -18,6 +18,10 @@
     src: url(assets/fonts/DMSans-Medium.ttf);
 }
 @font-face {
+    font-family: 'DM_Sans_SemiBold';
+    src: url(assets/fonts/DMSans-SemiBold.ttf);
+}
+@font-face {
     font-family: 'DM_Sans_ExtraBold';
     src: url(assets/fonts/DMSans-ExtraBold.ttf);
 }
@@ -612,6 +616,10 @@ body{
     display: flex;
     position: relative;
     flex-direction: column;
+}
+.historyTextOne span, .historyTextTwo span{
+    color: black;
+    font-family: 'DM_Sans_SemiBold';
 }
 .historyTextOne::after{
     position: absolute;
@@ -1307,14 +1315,18 @@ body{
     }
     .historyImages{
         height: fit-content;
+        gap: 20px;
     }
     .historyImagesContainer{
         height: 200px;
     }
     .historyTextOne{
+        margin-top: 0px;
+        font-size: 16px;
         padding: 0px 5px;
     }
     .historyTextTwo{
+        font-size: 15px;
         padding: 0px 5px;
     }
 }   
