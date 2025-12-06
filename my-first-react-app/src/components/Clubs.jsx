@@ -30,7 +30,6 @@ function Clubs(){
                 <div className='clubsCardsContainer'>
 
                     {dataLoaded && clubData.map(club=>{
-                        console.log(club)
                         return(
                             <div className='clubCard'>
                                 <div className='clubImage'><img src={club['Imagine principala ( URL )']} alt="" /></div>

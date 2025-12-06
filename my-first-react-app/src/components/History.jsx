@@ -24,6 +24,8 @@ function History(){
 
         return ()=> clearInterval(interval)
     },[])
+
+
     useEffect(() => {
 
         const images = [img1, img2, img3, img4, img5]
@@ -41,6 +43,7 @@ function History(){
 
     }, [historyIndex])
 
+    
     function changeHistory(e){
         const id = Number(e.target.id)
         setHistoryIndex(id)
