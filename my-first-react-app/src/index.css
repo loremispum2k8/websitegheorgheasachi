@@ -1965,11 +1965,11 @@ body{
         font-size: 34px;
     }
     .galleryContainer{
-        padding: 0px 20px 120px 20px;
+        padding: 0px 20px 110px 20px;
         gap: 14px;
     }
     .galleryContainer::after{
-        margin-bottom: 60px;
+        margin-bottom: 55px;
     }
     .galleryGrid{
         width: 100%;
@@ -2008,7 +2008,7 @@ body{
     }
 
 
-    .testimoniesContainer{
+.testimoniesContainer{
     padding: 0px 20px 115px 20px;
     gap: 50px;
     width: 100%;
@@ -2073,7 +2073,7 @@ body{
 }
 .testimonyName{
     font-size: 14px;
-    font-family: 'DM_Sans_SemiBold';
+    font-family: 'DM_Sans_ExtraBold';
 }
 .testimoNline{
     display: none;
