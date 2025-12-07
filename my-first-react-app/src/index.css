@@ -37,6 +37,15 @@ body{
     overflow-x: hidden;
     position: relative;
 }
+.linkedin{
+    color: #808080;
+    position:inline;
+    text-decoration: underline;
+    transition: all 0.1s;
+}
+.linkedin:hover{
+    color: white;
+}
 
 .appContainer{
     opacity: 0;
@@ -1063,17 +1072,17 @@ body{
     filter: brightness(150%);
 }
 .gridFooterLinks{
-    display: grid;
-    gap: 70px;
     width: 100%;
     display: flex;
+    gap: 100px;
     flex-direction: row;
     flex-wrap: wrap;
 }
 .footerGroup{
     display: flex;
+    gap: 80px;
     flex-direction: row;
-    gap: 95px;
+    gap: auto;
 }
 .footerLinks{
     display: flex;
@@ -1886,11 +1895,11 @@ body{
     height: fit-content;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
-    height: 280px;
+    height: 350px;
 }
 .copyright{
     text-align: center;
-    width: 170px;
+    width: 300px;
     line-height: 170%;
     grid-column: 1/2;
     grid-row: 3/4;
@@ -2428,7 +2437,7 @@ body{
     height: fit-content;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
-    height: 270px;
+    height: 300px;
 }
 .copyright{
     text-align: center;

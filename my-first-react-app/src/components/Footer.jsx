@@ -51,19 +51,10 @@ function Footer(){
                             <NavLink className='secondaryLink'>Mapă</NavLink>
                         </div>
                     </div>
-                    <div className='footerLine contactsFooter'></div>
-                </div>
-                <div className='footerGroup lastGroup'>
-                    <div className='footerLinks'>
-                        <NavLink to='/' className='mainLink'>Website</NavLink>
-                        <div className='secondaryLinks'>
-                            <NavLink className='secondaryLink'>Dezvoltator</NavLink>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div className='footerBottom'>
-                <p className='copyright'>Copyright &copy; 2025 <br />  I.P.L.T Gheorghe Asachi mun. Ungheni</p>
+                <p className='copyright'>Copyright &copy; 2025 <br />  I.P.L.T Gheorghe Asachi mun. Ungheni <br /><span>- Dezvoltat de <a target='_blank' className='linkedin' href="https://www.linkedin.com/in/vasile-burungiu-a1b1ab308/">Vasile Burungiu</a></span></p>
                 <div className='footerLogo'>
                     <img className='footerSchoolLogo' src="https://i.imgur.com/FLBI2qF.png" alt="" />
                     <img className='footerNameLogo' src="https://i.imgur.com/ddtPqi5.png" alt="" />
