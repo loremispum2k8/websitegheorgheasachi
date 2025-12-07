@@ -21,14 +21,15 @@ function App() {
         <div ref={app} className='appContainer'>
 
             <Menu pageNumber={1}/>
-            <Header/>
-            <Community/>
-            <PrincipleMessage/>
-            <EducationLevels/>
-            <Clubs/>
-            <History/>
-            <Gallery/>
-            <Testimonies/>
+            <Header id="id" />
+            <Community id='community'/>
+            <PrincipleMessage id='principle'/>
+            <EducationLevels id='education'/>
+            <Clubs id='clubs'/>
+            <History id='history'/>
+            <Gallery id='gallery'/>
+            <Testimonies id='testimonies'/>
+            <Footer/>
 
         </div>
     )

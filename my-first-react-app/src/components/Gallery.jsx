@@ -3,7 +3,7 @@ import { useRef, useEffect, useState, use} from 'react'
 import {NavLink} from 'react-router-dom'
 
 
-function Gallery(){
+function Gallery({id}){
     const links = [
         'https://i.imgur.com/FglDhrt.jpeg',
         'https://i.imgur.com/vgBJnXG.jpeg',
@@ -27,7 +27,7 @@ function Gallery(){
 
 
     return(
-        <div className='galleryContainer'>
+        <div id={id} className='galleryContainer'>
             <div className='galleryTitle'>Galerie</div>
             <div className='galleryGrid'>
                 <div className='galleryImgCont galleryBig'><img src="https://i.imgur.com/zu8Djbq.jpeg" alt="" /></div>

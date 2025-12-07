@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
-function History(){
+function History({id}){
 
     const img1 = useRef()
     const img2 = useRef()
@@ -51,7 +51,7 @@ function History(){
 
 
     return(
-        <div className='historyContainer'>
+        <div id={id}  className='historyContainer'>
             <h1 className='historyTitle'>Istoria liceului</h1>
             <div className='historyContentGrid'>
                 <div className='historyImages'>

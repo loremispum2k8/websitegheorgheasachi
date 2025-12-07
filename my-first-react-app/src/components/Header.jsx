@@ -2,7 +2,7 @@ import { useRef, useEffect, useState, use} from 'react'
 
 import {NavLink} from 'react-router-dom'
 
-function Header(){
+function Header({id}){
 
     const right = useRef()
     const left = useRef()
@@ -96,7 +96,7 @@ function Header(){
     }
 
     return(
-        <div className='headerContainer'>
+        <div id={id} className='headerContainer'>
             <div className='headerImagesContainer'>
                 <img ref={img1} id='header1' className='headerImage showHeader' src="https://i.imgur.com/JZm7Gzk.jpeg" alt="" />
                 <img ref={img2} id='header2' className='headerImage' src="https://i.imgur.com/15kZxIy.jpeg" alt="" />

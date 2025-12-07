@@ -2,7 +2,7 @@ import { useRef, useEffect, useState, use} from 'react'
 
 import {data, NavLink} from 'react-router-dom'
 
-function Clubs(){
+function Clubs({id}){
 
     const[clubData, setClubData] = useState()
     const[dataLoaded, setDataLoaded] = useState(false)
@@ -24,7 +24,7 @@ function Clubs(){
     
 
     return(
-        <div className='clubsContainer'>
+        <div id={id} className='clubsContainer'>
             <h1 className='clubsTitle'>Cluburi și activități</h1>
             <div className='clubsMovementContainer'>
                 <div className='clubsCardsContainer'>
