@@ -2,9 +2,9 @@ import { useRef, useEffect, useState} from 'react'
 
 import {NavLink} from 'react-router-dom'
 
-function PrincipleMessage({id}){
+function PrincipleMessage({id,elementRef,elementStyles}){
     return(
-        <div id={id} className='principleContainer'>
+        <div ref={elementRef} id={id} className={`principleContainer ${elementStyles}`}>
             <div className='principleQuotedContainer'>
                 <h2 className='principleMessage'>
                     În competiţia cu timpul, fiecare doreşte să se simtă victorios prin ceea ce face în activitatea de zi cu zi. Şi dacă uităm să ne consultăm cu ceasul, atunci, la sigur, vine şi recompensa – satisfacţia victoriei. 

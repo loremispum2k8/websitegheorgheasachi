@@ -10,9 +10,20 @@ import Gallery from './components/Gallery'
 import Testimonies from './components/Testimonies'
 import Footer from './components/Footer'
 
-function App() {
-    const app = useRef()
+import {useInView} from 'react-intersection-observer'
 
+function App() {
+    const { ref: communityRef, inView: communityIsVisible} = useInView({triggerOnce:true});
+    const { ref: principleRef, inView: principleIsVisible} = useInView({triggerOnce:true});
+    const { ref: educationRef, inView: educationIsVisible} = useInView({triggerOnce:true});
+    const { ref: clubsRef, inView: clubsIsVisible} = useInView({triggerOnce:true});
+    const { ref: historyRef, inView: historyIsVisible} = useInView({triggerOnce:true});
+    const { ref: galleryRef, inView: galleryIsVisible} = useInView({triggerOnce:true});
+    const { ref: testimoniesRef, inView: testimoniesIsVisible} = useInView({triggerOnce:true});
+    
+    
+    
+    const app = useRef()
     useEffect(()=>{
         app.current.classList.add('appearDocument')
     },[])
@@ -22,13 +33,13 @@ function App() {
 
             <Menu pageNumber={1}/>
             <Header id="id" />
-            <Community id='community'/>
-            <PrincipleMessage id='principle'/>
-            <EducationLevels id='education'/>
-            <Clubs id='clubs'/>
-            <History id='history'/>
-            <Gallery id='gallery'/>
-            <Testimonies id='testimonies'/>
+            <Community elementStyles={` ${communityIsVisible ? 'showSection': ''}`} elementRef={communityRef} id='community'/>
+            <PrincipleMessage elementStyles={` ${principleIsVisible ? 'showSection': ''}`} elementRef={principleRef} id='principle'/>
+            <EducationLevels elementStyles={` ${educationIsVisible ? 'showSection': ''}`} elementRef={educationRef} id='education'/>
+            <Clubs elementStyles={` ${clubsIsVisible ? 'showSection': ''}`} elementRef={clubsRef} id='clubs'/>
+            <History elementStyles={` ${historyIsVisible ? 'showSection': ''}`} elementRef={historyRef} id='hitory'/>
+            <Gallery elementStyles={` ${galleryIsVisible ? 'showSection': ''}`} elementRef={galleryRef} id='gallery'/>
+            <Testimonies elementStyles={` ${testimoniesIsVisible ? 'showSection': ''}`} elementRef={testimoniesRef} id='testimonies'/>
             <Footer/>
 
         </div>

@@ -2,9 +2,9 @@ import { useRef, useEffect, useState} from 'react'
 
 import {NavLink} from 'react-router-dom'
 
-function EducationLevels({id}){
+function EducationLevels({id,elementRef,elementStyles}){
     return(
-        <div id={id} className='educationContainer'>
+        <div ref={elementRef} id={id} className={`educationContainer ${elementStyles}`}>
             <h1 className='educationTitle'>Niveluri de învățământ</h1>
             <div className='educationCardsContainer'>
                 <div className='educationCard educationCard1'>

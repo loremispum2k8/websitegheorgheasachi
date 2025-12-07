@@ -53,7 +53,7 @@ let testimonies = [
     },
 ]
 
-function Testimonies({id}){
+function Testimonies({id,elementRef,elementStyles}){
 
     const testimony1 = useRef()
     const testimony2 = useRef()
@@ -110,7 +110,7 @@ function Testimonies({id}){
 
 
     return(
-        <div id={id} className='testimoniesContainer'>
+        <div ref={elementRef} id={id} className={`testimoniesContainer ${elementStyles}`}>
             <h1 className='testimoniesTitle'>Testimoniale</h1>
             <div className='allTestimonies'>
                 <div id='testimony1' ref={testimony1} className="testimony showTestimony">

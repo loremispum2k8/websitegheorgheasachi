@@ -3,9 +3,9 @@ import { useRef, useEffect, useState} from 'react'
 import {NavLink} from 'react-router-dom'
 
 
-function Community({id}){
+function Community({id,elementRef,elementStyles}){
     return(
-        <div id={id} className='communityContainer'>
+        <div ref={elementRef} id={id} className={`communityContainer ${elementStyles}`}>
             <h1 className='communityHeader'>Comunitate</h1>
             <div className='communityContent'>
                 <div className='communityImage'><img src="https://i.imgur.com/M8iNJtk.jpeg" alt="" /></div>
