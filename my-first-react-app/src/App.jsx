@@ -21,7 +21,9 @@ function App() {
     const { ref: galleryRef, inView: galleryIsVisible} = useInView({triggerOnce:true});
     const { ref: testimoniesRef, inView: testimoniesIsVisible} = useInView({triggerOnce:true});
     
-    
+    useEffect(()=>{
+        document.title = 'I.P.L.T. Gheorghe Asachi'
+    },[])
     
     const app = useRef()
     useEffect(()=>{

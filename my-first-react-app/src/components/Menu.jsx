@@ -130,7 +130,17 @@ function Menu({pageNumber}){
             window.removeEventListener('resize',handleResize)
         }
     },[menuIsExpanded])
+
+    function fixScroll(){
+        document.body.style.overflow = 'scroll'
+    }
     
+    function resetScroll(){
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        })
+    }
 
     return(
         <div ref={menuContainer} className='menuContainer'>
@@ -142,19 +152,19 @@ function Menu({pageNumber}){
 
             <div className="menuItems">
                 <div className='linkContainer'>
-                    <NavLink to='/' className = {pageNumber === 1 ? 'menuLinks activeMenuLink' : 'menuLinks'}>Acasă</NavLink>
+                    <NavLink to='/' onClick={resetScroll} className = {pageNumber === 1 ? 'menuLinks activeMenuLink' : 'menuLinks'}>Acasă</NavLink>
                     <div className = {pageNumber === 1 ? 'activeLinkIndicator' : ''}></div>
                 </div>
                 <div className='linkContainer'>
-                    <NavLink to='/noutăți' className = {pageNumber === 2 ? 'menuLinks activeMenuLink' : 'menuLinks'}>Noutăți</NavLink>
+                    <NavLink to='/noutăți' onClick={resetScroll} className = {pageNumber === 2 ? 'menuLinks activeMenuLink' : 'menuLinks'}>Noutăți</NavLink>
                     <div className = {pageNumber === 2 ? 'activeLinkIndicator' : ''}></div>
                 </div>
                 <div className='linkContainer'>
-                    <NavLink to='/administrație' className = {pageNumber === 3 ? 'menuLinks activeMenuLink' : 'menuLinks'}>Administrație</NavLink>
+                    <NavLink to='/administrație' onClick={resetScroll} className = {pageNumber === 3 ? 'menuLinks activeMenuLink' : 'menuLinks'}>Administrație</NavLink>
                     <div className = {pageNumber === 3 ? 'activeLinkIndicator' : ''}></div>
                 </div>
                 <div className='linkContainer'>
-                    <NavLink to='/contacte' className = {pageNumber === 4 ? 'menuLinks activeMenuLink' : 'menuLinks'}>Contacte</NavLink>
+                    <NavLink to='/contacte' onClick={resetScroll} className = {pageNumber === 4 ? 'menuLinks activeMenuLink' : 'menuLinks'}>Contacte</NavLink>
                     <div className = {pageNumber === 4 ? 'activeLinkIndicator' : ''}></div>
                 </div>
             </div>
@@ -166,10 +176,10 @@ function Menu({pageNumber}){
             {/*For mobile only*/}
             <div ref={expandableMenu} className='expandableMenu'>
                 <div ref={expandableNavLinks} className="expandableNavLinks">
-                    <NavLink to='/' ref={firstLink} className='expandableMenuLinks'><p>Acasă</p></NavLink>
-                    <NavLink to='/noutăți' ref={secondLink} className='expandableMenuLinks'><p>Noutăți</p></NavLink>
-                    <NavLink to='/administration' ref={thirdLink} className='expandableMenuLinks'><p>Administrație</p></NavLink>
-                    <NavLink to='/contacts' ref={forthLink} className='expandableMenuLinks'><p>Contacte</p></NavLink>
+                    <NavLink to='/' ref={firstLink} onClick={fixScroll} className='expandableMenuLinks'><p>Acasă</p></NavLink>
+                    <NavLink to='/noutăți' ref={secondLink} onClick={fixScroll} className='expandableMenuLinks'><p>Noutăți</p></NavLink>
+                    <NavLink to='/administration' ref={thirdLink} onClick={fixScroll} className='expandableMenuLinks'><p>Administrație</p></NavLink>
+                    <NavLink to='/contacts' ref={forthLink} onClick={fixScroll} className='expandableMenuLinks'><p>Contacte</p></NavLink>
                 </div>
                 <img className='menuFirstHalf' src="https://i.imgur.com/T3itaGv.png" alt="" />
                 <img className='menuSecondHalf' src="https://i.imgur.com/T3itaGv.png" alt="" />

@@ -79,7 +79,7 @@ function Testimonies({id,elementRef,elementStyles}){
     useEffect(()=>{
         const interval = setInterval(()=>{
             setTestimonialsIndex(prev => prev === 8 ? 1 : prev + 1)
-        },5000)
+        },27000)
 
         return ()=> clearInterval(interval)
     },[])
@@ -115,15 +115,15 @@ function Testimonies({id,elementRef,elementStyles}){
             <div className='allTestimonies'>
                 <div id='testimony1' ref={testimony1} className="testimony showTestimony">
                     <div className='testimonyText'>
-                        <h1 className='testimonyTitle'>Liceul Gheorghe Asachi mi-a oferit disciplina și oportunitățile de care aveam nevoie.”</h1>
+                        <h1 className='testimonyTitle'>Liceul Teoretic Gheorghe Asachi mi-a oferit curajul de a transforma ideile în realitate."</h1>
                         <div className='testimonyNameContainer'>
-                            <p className='testimonyName'>Ana-Maria Dinu</p>
+                            <p className='testimonyName'>Iacuțevici Valeria</p>
                         </div>
                         <div className='testimoNline'></div>
-                        <h2 className='testimonySuccesses'>După patru ani în care a coordonat proiecte locale și a fost președinte al Clubului de Informatică la Liceul „Gheorghe Asachi”, Ana-Maria a continuat să sprijine generațiile tinere. Experiența de elev activ a inspirat-o să-și urmeze drumul în educație și comunitate.</h2>
+                        <h2 className='testimonySuccesses'>Iacuțevici Valeria, elevă în clasa a XII-a „B” și președinta Consiliului Elevilor 2024, a coordonat peste 70 de activități și proiectele „RadioVox”, prin care a creat un club de radio și a dotat cabinetul cu echipamente, și „Tinerii în acțiune”, care a amenajat un teren de baschet, contribuind la o comunitate școlară activă, unită și motivată.</h2>
                         <img className='testimonyQuote' src="https://i.imgur.com/dHAp5CZ.png" alt="" />
                     </div>
-                    <div className='testimonyimage'><img src="https://i.imgur.com/XwEDcgf.png" alt="" /></div>
+                    <div className='testimonyimage'><img src="https://i.imgur.com/d5kcL9C.jpeg" alt="" /></div>
                 </div>
                 <div id='testimony2' ref={testimony2} className="testimony">
                     <div className='testimonyText'>

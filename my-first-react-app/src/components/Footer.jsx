@@ -1,15 +1,20 @@
 import { useRef, useEffect, useState, use} from 'react'
-
 import {NavLink} from 'react-router-dom'
 
 
 function Footer(){
+    function resetScroll(){
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        })
+    }
+
     return(
         <div className='footerContainer'>
             <div className='gridFooterLinks'>
-                <div className='footerGroup'>
-                    <div className='footerLinks'>
-                        <NavLink to='/' className='mainLink'>Acasă</NavLink>
+                <div className='footerLinks'>
+                        <NavLink to='/' onClick={resetScroll} className='mainLink'>Acasă</NavLink>
                         <div className='secondaryLinks'>
                             <NavLink className='secondaryLink'>Comunitate</NavLink>
                             <NavLink className='secondaryLink'>Mesajul directorului</NavLink>
@@ -19,42 +24,32 @@ function Footer(){
                             <NavLink className='secondaryLink'>Galerie</NavLink>
                             <NavLink className='secondaryLink'>Testimoniale</NavLink>
                         </div>
-                    </div>
-                    <div className='footerLine homeFooter'></div>
                 </div>
-                <div className='footerGroup'>
-                    <div className='footerLinks'>
-                        <NavLink to='/' className='mainLink'>Noutăți</NavLink>
+                <div className='footerLinks'>
+                        <NavLink to='/noutăți' onClick={resetScroll} className='mainLink'>Noutăți</NavLink>
                         <div className='secondaryLinks'>
                             <NavLink className='secondaryLink'>Noutăți noi</NavLink>
                             <NavLink className='secondaryLink'>Toate noutățile</NavLink>
                         </div>
-                    </div>
-                    <div className='footerLine newsFooter'></div>
                 </div>
-                <div className='footerGroup'>
-                    <div className='footerLinks'>
-                        <NavLink to='/' className='mainLink'>Administrație</NavLink>
+                <div className='footerLinks'>
+                        <NavLink to='/' onClick={resetScroll} className='mainLink'>Administrație</NavLink>
                         <div className='secondaryLinks'>
                             <NavLink className='secondaryLink'>Personalul liceului</NavLink>
                             <NavLink className='secondaryLink'>Colaborări</NavLink>
                             <NavLink className='secondaryLink'>Achiziții publice</NavLink>
                             <NavLink className='secondaryLink'>Cheltuieli</NavLink>
                         </div>
-                    </div>
-                    <div className='footerLine administrationFooter'></div>
                 </div>
-                <div className='footerGroup'>
-                    <div className='footerLinks'>
-                        <NavLink to='/' className='mainLink'>Contacte</NavLink>
+                <div className='footerLinks'>
+                        <NavLink to='/' onClick={resetScroll} className='mainLink'>Contacte</NavLink>
                         <div className='secondaryLinks'>
                             <NavLink className='secondaryLink'>Mapă</NavLink>
                         </div>
-                    </div>
                 </div>
             </div>
             <div className='footerBottom'>
-                <p className='copyright'>Copyright &copy; 2025 <br />  I.P.L.T Gheorghe Asachi mun. Ungheni <br /><span>- Dezvoltat de <a target='_blank' className='linkedin' href="https://www.linkedin.com/in/vasile-burungiu-a1b1ab308/">Vasile Burungiu</a></span></p>
+                <p className='copyright'>Copyright &copy; 2025 <br />  I.P.L.T Gheorghe Asachi mun. Ungheni</p>
                 <div className='footerLogo'>
                     <img className='footerSchoolLogo' src="https://i.imgur.com/FLBI2qF.png" alt="" />
                     <img className='footerNameLogo' src="https://i.imgur.com/ddtPqi5.png" alt="" />
