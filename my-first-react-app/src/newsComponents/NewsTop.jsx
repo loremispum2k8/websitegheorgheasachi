@@ -8,7 +8,8 @@ function NewsTop(){
     return(
         <div className='newsTopContainer'>
             <h1 className='newsTopTitle'>Noutăți</h1>
-            <div className='mainNewsBigGrid'>
+            <div className='newsTopContent'>
+                <div className='mainNewsBigGrid'>
                 <div className='new news1'>
                     <div className='newsImage'><img src="https://i.imgur.com/V23bNq2.png" alt="" /></div>
                     <div className='news1Content'>
@@ -17,7 +18,7 @@ function NewsTop(){
                         <div className='newsInlineInfo'>
                             <p className='newsDate'>Nov 20 2025</p>
                             <div className='newsOrangeDot'></div>
-                            <p className='readingTime'>Se citește în 2minute</p>
+                            <p className='readingTime'>Se citește în 2 minute</p>
                         </div>
                     </div>
                 </div>
@@ -43,27 +44,30 @@ function NewsTop(){
                         </div>
                     </div>
                 </div>
-                <div className='new news4 news45'>
-                    <div className='newsImage'><img src="https://i.imgur.com/TdsCbAS.png" alt="" /></div>
-                    <div className="mediumNewsContent">
-                        <h1 className='news45Title'>Elevii clasei a X-a B învăță primul ajutor</h1>
-                        <p className='news45Description'>Concursul a reunit 138 elevi care au rezolvat teste creative, promovând studiul limbii engleze.</p>
-                        <div className='newsInlineInfo'>
-                            <p className='newsDate'>Nov 20 2025</p>
-                            <div className='newsOrangeDot'></div>
-                            <p className='readingTime'>Se citește în 2minute</p>
+                </div>
+                <div className='mediumNewsContainer'>
+                        <div className='new news4 news45'>
+                        <div className='newsImage'><img src="https://i.imgur.com/TdsCbAS.png" alt="" /></div>
+                        <div className="mediumNewsContent">
+                            <h1 className='news45Title'>Elevii clasei a X-a B învăță primul ajutor</h1>
+                            <p className='news45Description'>Concursul a reunit 138 elevi care au rezolvat teste creative, promovând studiul limbii engleze.</p>
+                            <div className='newsInlineInfo'>
+                                <p className='newsDate'>Nov 20 2025</p>
+                                <div className='newsOrangeDot'></div>
+                                <p className='readingTime'>Se citește în 2 minute</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className='new news5 news45'>
-                    <div className='newsImage'><img src="https://i.imgur.com/9M0Nk06.png" alt="" /></div>
-                    <div className="mediumNewsContent">
-                        <h1 className='news45Title'>Întâlnirea cu absolvenții 2025 „Gala Asachi: Reflectoare, Cameră, Reuniune!”</h1>
-                        <p className='news45Description'>Gala Asachi reunește anual absolvenții, într-o ceremonie emoționantă ce celebrează recunoștința, realizările și legătura cu școala lor.</p>
-                        <div className='newsInlineInfo'>
-                            <p className='newsDate'>Nov 20 2025</p>
-                            <div className='newsOrangeDot'></div>
-                            <p className='readingTime'>Se citește în 2minute</p>
+                    <div className='new news5 news45'>
+                        <div className='newsImage'><img src="https://i.imgur.com/9M0Nk06.png" alt="" /></div>
+                        <div className="mediumNewsContent">
+                            <h1 className='news45Title'>Întâlnirea cu absolvenții 2025 „Gala Asachi: Reflectoare, Cameră, Reuniune!”</h1>
+                            <p className='news45Description'>Gala Asachi reunește anual absolvenții, într-o ceremonie emoționantă ce celebrează recunoștința, realizările și legătura cu școala lor.</p>
+                            <div className='newsInlineInfo'>
+                                <p className='newsDate'>Nov 20 2025</p>
+                                <div className='newsOrangeDot'></div>
+                                <p className='readingTime'>Se citește în 2 minute</p>
+                            </div>
                         </div>
                     </div>
                 </div>
