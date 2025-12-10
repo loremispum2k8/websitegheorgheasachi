@@ -1,6 +1,6 @@
 import Menu from "./components/Menu";
 import Footer from './components/Footer'
-import NewsTop from "./newsComponents/newsTop";
+import NewsTop from "./newsComponents/NewsTop.jsx";
 
 import { useState, useEffect, NavLink, useRef, useParams } from 'react'
 
