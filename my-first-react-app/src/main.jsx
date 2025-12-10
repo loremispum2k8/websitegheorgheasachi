@@ -5,6 +5,7 @@ import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import ErrorPage from './components/ErrorPage.jsx'
 import News from './News.jsx'
+import AllNews from './AllNews.jsx'
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path:'/noutăți',
     element:<News/>
+  },
+  {
+    path:'/toateNoutățile',
+    element:<AllNews/>
   }
 ])
 

@@ -28,8 +28,7 @@ function Footer(){
                 <div className='footerLinks'>
                         <NavLink to='/noutăți' onClick={resetScroll} className='mainLink'>Noutăți</NavLink>
                         <div className='secondaryLinks'>
-                            <NavLink className='secondaryLink'>Noutăți noi</NavLink>
-                            <NavLink className='secondaryLink'>Toate noutățile</NavLink>
+                            <NavLink to='/toateNoutățile' className='secondaryLink'>Toate noutățile</NavLink>
                         </div>
                 </div>
                 <div className='footerLinks'>
