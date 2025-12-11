@@ -20,7 +20,11 @@ const router = createBrowserRouter([
   {
     path:'/toateNoutățile',
     element:<AllNews/>
-  }
+  },
+  //   {
+  //   path:'/:slug',
+  //   element: <NewsItems/>
+  // }
 ])
 
 createRoot(document.getElementById('root')).render(
