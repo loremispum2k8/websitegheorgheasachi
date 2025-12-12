@@ -94,6 +94,7 @@ function NewsItems(){
                             {newsData[0].imagini.split("\n").map(image=><div className='articleImage' ><img className='innerAricleImage' src={image} alt="" /></div>)}
                         </div>
                     </div>
+                    <div className='articleBottomLine'></div>
                 </div>
             </div>
             <NewsBottom/>
