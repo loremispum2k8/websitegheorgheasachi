@@ -108,7 +108,7 @@ function Testimonies({id,elementRef,elementStyles}){
                         <h2 className='testimonySuccesses'>Pentru ea, Liceul Teoretic „Gheorghe Asachi” a exercitat o influență esențială în formarea identității sale academice și personale. Aici și-a definit primele repere, aspirații și valori, într-un climat construit prin dăruirea neobosită a profesorilor. Considerând acest liceu drept „casa sufletului”, el va rămâne mereu sursa care îi va orienta pașii spre noi orizonturi de excelență.</h2>
                         <img className='testimonyQuote' src="https://i.imgur.com/dHAp5CZ.png" alt="" />
                     </div>
-                    <div className='testimonyimage'><img src="https://i.imgur.com/2b6zG4I.jpeg" alt="" /></div>
+                    <div className='testimonyimage'><img src="https://i.imgur.com/AhpWB39.jpeg" alt="" /></div>
                 </div>
                 <div id='testimony5' ref={testimony5} className="testimony">
                     <div className='testimonyText'>
