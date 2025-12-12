@@ -1250,6 +1250,7 @@ body{
 }
 .news23 .newsImage{
     display: flex;
+    height: 210px;
     align-items: center;
     justify-content: center;
 }
@@ -1288,7 +1289,7 @@ body{
     background: linear-gradient(to right, #ffffff00, #CACACA, #ffffff00);
 }
 .news3{
-    margin-top: -100px;
+    margin-top: 0px;
     grid-column: 4/5;
     grid-row: 2/3;
     align-self: start;
@@ -1322,6 +1323,15 @@ body{
     width: 90%;
     color: #484848;
     font-family: 'DM_Sans_Regular';
+}
+.news45 .newsImage{
+    height: 340px;
+}
+.news45 .newsImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
 }
 
 .new h1{
@@ -1446,6 +1456,147 @@ body{
 
 
 
+.articleContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    padding: 65px 100px 0px 100px;
+    gap: 30px;
+}
+.articleContentContainer{
+    display: flex;
+    flex-direction: column;
+}
+.articleTopLine{
+    background: linear-gradient(to right, #ffffff00, #CACACA, #ffffff00);
+    height: 1px;
+    width: 100%;
+}
+.articleTopText{
+    padding-top: 30px;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+}
+.articleTitle{
+    font-size: 72px;
+    line-height: 120%;
+    font-weight: 500;
+    font-family: 'ER_Garamond_Medium';
+}
+.articleSummary{
+    font-family: 'DM_Sans_Regular';
+    font-size: 18px;
+    width: 50%;
+    line-height: 140%;
+    margin-top: 14px;
+}
+.articleAuthor{
+    font-family: 'DM_Sans_Regular';
+    margin-top: 20px;
+    font-size: 18px;
+}
+.articleAuthor span{
+    font-family: 'DM_Sans_ExtraBold';
+}
+.inlineArticleTopInfo{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    font-size: 15px;
+    font-family: "DM_Sans_Medium";
+}
+.articleDate{
+    color: #484848;
+}
+.articleDot{
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: #F7A524;
+}
+.articleReadingTime{
+    color: #757575;
+}
+.articleMainImage{
+    max-height: 800px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 40px;
+}
+.articleMainImage:hover img{
+    scale: 1.02;
+}
+.articleMainImage img{
+    object-fit: cover;
+    object-position: top;
+    height: 100%;
+    width: 100%;
+    transition: all 0.25s;
+}
+.articleContent{
+    align-self: center;
+    width: 725px;
+    font-family: 'DM_Sans_Regular';
+    font-size: 20px;
+    line-height: 170%;
+    padding: 65px 0px;
+}
+.articleOuterImagesContainer{
+    width: 820px;
+    height: 350px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 850px;
+    align-self: center;
+    padding-bottom: 0px;
+    scrollbar-color: rgb(207, 207, 207) white;
+}
+.articleImagesContainer{
+    width: fit-content;
+    align-self: center;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.articleImage{
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.articleImage:hover .innerAricleImage{
+    scale: 1.02;
+}
+.innerAricleImage{
+    will-change: transform;
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.25s;
+}
+.articleBottomLine{
+    background: linear-gradient(to right, #ffffff00, #CACACA, #ffffff00);
+    height: 1px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+
+
+
 
 .showTestimony{
     display: flex;
@@ -1534,6 +1685,9 @@ body{
     color: #484848;
     font-family: 'DM_Sans_Regular';
 }
+.news23 .newsImage{
+    height: 340px;
+}
 .news23 .newsImage img{
     width: 110%;
 }
@@ -1567,6 +1721,9 @@ body{
     flex-direction: row;
     align-self: center;
     gap: 30px;
+}
+.news45 .newsImage{
+    height: 340px;
 }
 .news45{
     display: flex;
@@ -2966,7 +3123,7 @@ body{
     scale: 1.02;
 }
 .bottomNewsImg{
-    height: auto;
+    height: 300px;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -3362,7 +3519,7 @@ body{
     scale: 1.02;
 }
 .bottomNewsImg{
-    height: auto;
+    height: 300px;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -3958,6 +4115,12 @@ body{
 .news23 .newsImage img{
     width: 110%;
 }
+.news23 .newsImage{
+    height: 300px;
+}
+.news45 .newsImage{
+    height: 300px;
+}
 .news23{
     width: 100%;
     height: fit-content;
@@ -4100,7 +4263,7 @@ body{
     scale: 1.02;
 }
 .bottomNewsImg{
-    height: auto;
+    height: 300px;
     overflow: hidden;
     position: relative;
     display: flex;

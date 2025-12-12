@@ -3,7 +3,7 @@ import Footer from './components/Footer'
 import NewsTop from "./newsComponents/NewsTop.jsx";
 import NewsBottom from "./newsComponents/NewsBottom.jsx";
 
-import { useState, useEffect, NavLink, useRef, useParams } from 'react'
+import { useState, useEffect, NavLink, useRef, useParams, use } from 'react'
 
 
 const Table_ID = "1dHlwvtfnFb1EFhYzQ0D48eXXN2rdO3_Rx6NTt2Jkahs"
@@ -12,14 +12,14 @@ const Table_URL = `https://opensheet.elk.sh/${Table_ID}/${Table_Name}`
 
 function News(){
 
+    const [newsData, setNewsData] = useState()
+    const [dataIsLoaded, setDatIsLoaded] = useState(false)
+
     async function getNews(){
         let data = await fetch(Table_URL)
         let data_json = await data.json()
-        for(let i = 0; i < 5; i++){
-            console.log('images', i)
-            console.log(data_json[i].imagini)
-            console.log(data_json[i].imagini.split('href'))
-        }
+        setNewsData(data_json)
+        setDatIsLoaded(true)
     }
 
     useEffect(()=>{
@@ -29,10 +29,12 @@ function News(){
     useEffect(()=>{
         document.title = 'Noutăți - I.P.L.T Gheorghe Asachi'
     },[])
+
     const app = useRef()
-        useEffect(()=>{
-        app.current.classList.add('appearDocument')
-    },[])
+
+    useEffect(()=>{
+        dataIsLoaded === false ? null : app.current.classList.add('appearDocument')
+    },[dataIsLoaded])
 
 
 

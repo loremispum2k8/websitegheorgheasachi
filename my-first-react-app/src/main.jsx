@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import ErrorPage from './components/ErrorPage.jsx'
 import News from './News.jsx'
 import AllNews from './AllNews.jsx'
+import NewsItems from './NewsItems.jsx'
 
 const router = createBrowserRouter([
   {
@@ -15,16 +16,19 @@ const router = createBrowserRouter([
   },
   {
     path:'/noutăți',
-    element:<News/>
+    element:<News/>,
+    errorElement: <ErrorPage/>
   },
   {
     path:'/toateNoutățile',
-    element:<AllNews/>
+    element:<AllNews/>,
+    errorElement: <ErrorPage/>
   },
-  //   {
-  //   path:'/:slug',
-  //   element: <NewsItems/>
-  // }
+    {
+    path:'/noutăți/:slug',
+    element: <NewsItems/>,
+    errorElement: <ErrorPage/>
+  }
 ])
 
 createRoot(document.getElementById('root')).render(

@@ -127,24 +127,24 @@ function Testimonies({id,elementRef,elementStyles}){
                 </div>
                 <div id='testimony2' ref={testimony2} className="testimony">
                     <div className='testimonyText'>
-                        <h1 className='testimonyTitle'>Liceul Gheorghe Asachi mi-a oferit disciplina și oportunitățile de care aveam nevoie.”</h1>
+                        <h1 className='testimonyTitle'>Educația din Liceul Teoretic Gheorghe Asachi nu umple un vas, ci aprinde o lumină.”</h1>
                         <div className='testimonyNameContainer'>
-                            <p className='testimonyName'>Ana-Maria Dinu</p>
+                            <p className='testimonyName'>Angheluș Marta</p>
                         </div>
                         <div className='testimoNline'></div>
-                        <h2 className='testimonySuccesses'>După patru ani în care a coordonat proiecte locale și a fost președinte al Clubului de Informatică la Liceul „Gheorghe Asachi”, Ana-Maria a continuat să sprijine generațiile tinere. Experiența de elev activ a inspirat-o să-și urmeze drumul în educație și comunitate.</h2>
+                        <h2 className='testimonySuccesses'>Experiența ei ca profesoară de istorie s-a integrat în identitatea sa. Ea apreciază că meseria îi permite să conecteze generații și epoci, folosind metode interactive și discuții vii. Observă cum elevii își dezvoltă gândirea și capacitatea de argumentare. Relația cu copiii îi oferă satisfacție, simțind că îi sprijină și inspiră. Profesia o provoacă și o împlinește în fiecare zi.</h2>
                         <img className='testimonyQuote' src="https://i.imgur.com/dHAp5CZ.png" alt="" />
                     </div>
-                    <div className='testimonyimage'><img src="https://i.imgur.com/XwEDcgf.png" alt="" /></div>
+                    <div className='testimonyimage'><img src="https://i.imgur.com/DJCplGs.jpeg" alt="" /></div>
                 </div>
                 <div id='testimony3' ref={testimony3} className="testimony">
                     <div className='testimonyText'>
-                        <h1 className='testimonyTitle'>Liceul Gheorghe Asachi mi-a oferit disciplina și oportunitățile de care aveam nevoie.”</h1>
+                        <h1 className='testimonyTitle'>În Liceul Gheorghe Asachi - Vocea ta contează, argumentul tău schimbă”</h1>
                         <div className='testimonyNameContainer'>
-                            <p className='testimonyName'>Ana-Maria Dinu</p>
+                            <p className='testimonyName'>Iachimovschii Luminița</p>
                         </div>
                         <div className='testimoNline'></div>
-                        <h2 className='testimonySuccesses'>După patru ani în care a coordonat proiecte locale și a fost președinte al Clubului de Informatică la Liceul „Gheorghe Asachi”, Ana-Maria a continuat să sprijine generațiile tinere. Experiența de elev activ a inspirat-o să-și urmeze drumul în educație și comunitate.</h2>
+                        <h2 className='testimonySuccesses'>Doamna Iachimovschi Sorina consideră că Clubul de Dezbateri Democratice al I.P.L.T. „Gh. Asachi”, creat în noiembrie 2023, este un spațiu unde ideile capătă voce, iar tinerii își dezvoltă gândirea critică. Ea afirmă că clubul a luat naștere pentru a oferi elevilor libertatea de a discuta argumentat teme importante, văzând dezbaterea ca un exercițiu de respect, colaborare și responsabilitate civică.</h2>
                         <img className='testimonyQuote' src="https://i.imgur.com/dHAp5CZ.png" alt="" />
                     </div>
                     <div className='testimonyimage'><img src="https://i.imgur.com/XwEDcgf.png" alt="" /></div>
