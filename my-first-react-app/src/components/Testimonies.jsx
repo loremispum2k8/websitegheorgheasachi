@@ -2,57 +2,6 @@ import { useRef, useEffect, useState, use} from 'react'
 
 import {NavLink} from 'react-router-dom'
 
-let testimonies = [
-    {
-        title:'Liceul Gheorghe Asachi mi-a oferit disciplina și oportunitățile de care aveam nevoie.”',
-        name:'Ana-Maria Dinu',
-        successes:'După patru ani în care a coordonat proiecte locale și a fost președinte al Clubului de Informatică la Liceul „Gheorghe Asachi”, Ana-Maria a continuat să sprijine generațiile tinere. Experiența de elev activ a inspirat-o să-și urmeze drumul în educație și comunitate.',
-        img:'https://i.imgur.com/XwEDcgf.png',
-    },
-    {
-        title:'a',
-        name:'b',
-        successes:'c',
-        img:'d',
-    },
-    {
-        title:'a',
-        name:'b',
-        successes:'c',
-        img:'d',
-    },
-    {
-        title:'a',
-        name:'b',
-        successes:'c',
-        img:'d',
-    },
-    {
-        title:'a',
-        name:'b',
-        successes:'c',
-        img:'d',
-    },
-    {
-        title:'a',
-        name:'b',
-        successes:'c',
-        img:'d',
-    },
-    {
-        title:'a',
-        name:'b',
-        successes:'c',
-        img:'d',
-    },
-    {
-        title:'a',
-        name:'b',
-        successes:'c',
-        img:'d',
-    },
-]
-
 function Testimonies({id,elementRef,elementStyles}){
 
     const testimony1 = useRef()
@@ -147,19 +96,19 @@ function Testimonies({id,elementRef,elementStyles}){
                         <h2 className='testimonySuccesses'>Doamna Iachimovschi Sorina consideră că Clubul de Dezbateri Democratice al I.P.L.T. „Gh. Asachi”, creat în noiembrie 2023, este un spațiu unde ideile capătă voce, iar tinerii își dezvoltă gândirea critică. Ea afirmă că clubul a luat naștere pentru a oferi elevilor libertatea de a discuta argumentat teme importante, văzând dezbaterea ca un exercițiu de respect, colaborare și responsabilitate civică.</h2>
                         <img className='testimonyQuote' src="https://i.imgur.com/dHAp5CZ.png" alt="" />
                     </div>
-                    <div className='testimonyimage'><img src="https://i.imgur.com/XwEDcgf.png" alt="" /></div>
+                    <div className='testimonyimage'><img src="https://i.imgur.com/fQscNXA.jpeg" alt="" /></div>
                 </div>
                 <div id='testimony4' ref={testimony4} className="testimony">
                     <div className='testimonyText'>
-                        <h1 className='testimonyTitle'>Liceul Gheorghe Asachi mi-a oferit disciplina și oportunitățile de care aveam nevoie.”</h1>
+                        <h1 className='testimonyTitle'>Liceului Teoretic Gheorghe Asachi este locul în care mi-am conturat primele repere academice și personale, cele mai înalte vise."</h1>
                         <div className='testimonyNameContainer'>
-                            <p className='testimonyName'>Ana-Maria Dinu</p>
+                            <p className='testimonyName'>Evelina Covalschi</p>
                         </div>
                         <div className='testimoNline'></div>
-                        <h2 className='testimonySuccesses'>După patru ani în care a coordonat proiecte locale și a fost președinte al Clubului de Informatică la Liceul „Gheorghe Asachi”, Ana-Maria a continuat să sprijine generațiile tinere. Experiența de elev activ a inspirat-o să-și urmeze drumul în educație și comunitate.</h2>
+                        <h2 className='testimonySuccesses'>Pentru ea, Liceul Teoretic „Gheorghe Asachi” a exercitat o influență esențială în formarea identității sale academice și personale. Aici și-a definit primele repere, aspirații și valori, într-un climat construit prin dăruirea neobosită a profesorilor. Considerând acest liceu drept „casa sufletului”, el va rămâne mereu sursa care îi va orienta pașii spre noi orizonturi de excelență.</h2>
                         <img className='testimonyQuote' src="https://i.imgur.com/dHAp5CZ.png" alt="" />
                     </div>
-                    <div className='testimonyimage'><img src="https://i.imgur.com/XwEDcgf.png" alt="" /></div>
+                    <div className='testimonyimage'><img src="https://i.imgur.com/2b6zG4I.jpeg" alt="" /></div>
                 </div>
                 <div id='testimony5' ref={testimony5} className="testimony">
                     <div className='testimonyText'>
