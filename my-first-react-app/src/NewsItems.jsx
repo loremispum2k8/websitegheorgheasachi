@@ -13,12 +13,14 @@ const Table_URL = `https://opensheet.elk.sh/${Table_ID}/${Table_Name}`
 function NewsItems(){
     const{slug} = useParams()
     const [newsData, setNewsData] = useState()
+    const [dataIsLoaded, setDatIsLoaded] = useState(false)
     
     async function getNews(){
         let data = await fetch(Table_URL)
         let data_json = await data.json()
         let filtered_json = await data_json.filter((eachData) => eachData.slug === slug)
         setNewsData(filtered_json)
+        setDatIsLoaded(true)
     }
 
     function resetScroll(){
@@ -65,13 +67,17 @@ function NewsItems(){
     }
 
 
+    const app = useRef()
+
+    useEffect(()=>{
+        dataIsLoaded === false ? null : app.current.classList.add('appearDocument')
+    },[dataIsLoaded])
+
     if(!newsData){
         return('')
-    }
-    
-    
+    } 
     return(
-        <>
+        <div className='newsitemouter' ref={app}>
             <Menu pageNumber={2} />
             <div className='articleContainer'>
                 <h1 className='newsTopTitle'>Noutăți</h1>
@@ -99,19 +105,7 @@ function NewsItems(){
             </div>
             <NewsBottom/>
             <Footer/>
-        </>
-        // <div>
-        //     <h1>Articol</h1>
-        //     <h2>{newsData[0].titlu}</h2>
-        //     <h2>{newsData[0].rezumat}</h2>
-        //     <h2>{newsData[0].autor}</h2>
-        //     <h2>{newsData[0].data}</h2>
-        //     <h2>{newsData[0].autor}</h2>
-        //     <h2>{checkReadingTime(newsData[0].continut)}</h2>
-        //     <img src={newsData[0].imagini.split('\n')[0]} alt="" />
-        //     <h2>{newsData[0].continut}</h2>
-        //     {newsData[0].imagini.split("\n").map(image=><img src={image}></img>)}
-        // </div>
+        </div>
     )
 }
 

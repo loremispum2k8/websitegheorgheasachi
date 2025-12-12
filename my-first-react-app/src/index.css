@@ -1454,7 +1454,9 @@ body{
 }
 
 
-
+.newsitemouter{
+    opacity: 0;
+}
 .articleContainer{
     display: flex;
     flex-direction: column;
