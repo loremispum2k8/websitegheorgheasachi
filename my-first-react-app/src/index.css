@@ -3809,7 +3809,7 @@ body{
 .mediumNewsContent{
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 10px;
     width: 94%;
 }
 .news45Description, .news23Description{
@@ -5016,7 +5016,7 @@ body{
 }
 .articleOuterImagesContainer{
     width: 100%;
-    height: 200px;
+    height: 250px;
     overflow-x: auto;
     overflow-y: hidden;
     align-self: center;
