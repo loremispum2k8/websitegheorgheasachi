@@ -5,6 +5,7 @@ import Menu from './components/Menu'
 import Footer from './components/Footer'
 import NewsBottom from "./newsComponents/NewsBottom.jsx";
 import ErrorPage from './components/ErrorPage.jsx'
+import {useInView} from 'react-intersection-observer'
 
 const Table_ID = "1dHlwvtfnFb1EFhYzQ0D48eXXN2rdO3_Rx6NTt2Jkahs"
 const Table_Name = '2'
@@ -66,7 +67,7 @@ function NewsItems(){
         }
     }
 
-
+    const { ref: newBottomRef, inView: bottomRefIsVisible} = useInView({triggerOnce:true});
     const app = useRef()
 
     useEffect(()=>{
@@ -103,7 +104,7 @@ function NewsItems(){
                     <div className='articleBottomLine'></div>
                 </div>
             </div>
-            <NewsBottom/>
+            <NewsBottom elementStyles={` ${bottomRefIsVisible ? 'showSection': ''}`} elementRef={newBottomRef} id="newsBottom"/>
             <Footer/>
         </div>
     )

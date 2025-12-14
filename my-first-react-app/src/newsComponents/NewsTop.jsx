@@ -7,7 +7,7 @@ const Table_ID = "1dHlwvtfnFb1EFhYzQ0D48eXXN2rdO3_Rx6NTt2Jkahs"
 const Table_Name = '2'
 const Table_URL = `https://opensheet.elk.sh/${Table_ID}/${Table_Name}`
 
-function NewsTop(){
+function NewsTop({id,elementRef,elementStyles}){
     const [newsData, setNewsData] = useState()
 
     async function getNews(){
@@ -54,7 +54,7 @@ function NewsTop(){
 
 
     return(
-        <div className='newsTopContainer'>
+        <div ref={elementRef} id={id} className={`newsTopContainer ${elementStyles}`}>
             <h1 className='newsTopTitle'>Noutăți</h1>
             <div className='newsTopContent'>
                 <div className='mainNewsBigGrid'>

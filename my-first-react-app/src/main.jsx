@@ -40,6 +40,10 @@ const router = createBrowserRouter([
     path:'/noutăți/:slug',
     element: <NewsItems/>,
     errorElement: <ErrorPage/>
+  },
+  {
+    path:'*',
+    element: <App/>,
   }
 ])
 

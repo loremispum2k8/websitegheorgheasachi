@@ -3,6 +3,7 @@ import { Outlet, NavLink } from "react-router-dom";
 import { data, useNavigate, useParams } from 'react-router';
 import Menu from "./components/Menu";
 import Footer from './components/Footer'
+import {useInView} from 'react-intersection-observer'
 
 
 
@@ -133,7 +134,7 @@ function AllNews(){
             <Menu pageNumber={2}/>
             <div className='allNewsContent'>
                 <h1 className='AllNewsTitle'>Noutăți</h1>
-                <Outlet activePage={activePage} />
+                <Outlet activePage={activePage}  />
                 <div className='paginationControlsContainer'>
                     <img className='paginationArrow' src='https://i.imgur.com/ZRB16z2.png' onClick={(e)=>goLeft(e)}></img>
                     <div className='paginationLinks'>

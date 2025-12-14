@@ -2,7 +2,7 @@ import Menu from "./components/Menu";
 import Footer from './components/Footer'
 import NewsTop from "./newsComponents/NewsTop.jsx";
 import NewsBottom from "./newsComponents/NewsBottom.jsx";
-
+import {useInView} from 'react-intersection-observer'
 import { useState, useEffect, NavLink, useRef, useParams, use } from 'react'
 
 
@@ -37,12 +37,14 @@ function News(){
     },[dataIsLoaded])
 
 
+    const { ref: newTopRef, inView: topRefIsVisible} = useInView({triggerOnce:true});
+    const { ref: newBottomRef, inView: bottomRefIsVisible} = useInView({triggerOnce:true});
 
     return(
         <div ref={app} className="newsContainer">
             <Menu pageNumber={2} />
-            <NewsTop/>
-            <NewsBottom/>
+            <NewsTop elementStyles={` ${topRefIsVisible ? 'showSection': ''}`} elementRef={newTopRef} id="newsTop"/>
+            <NewsBottom elementStyles={` ${bottomRefIsVisible ? 'showSection': ''}`} elementRef={newBottomRef} id="newsBottom"/>
             <Footer/>
         </div>
     )
