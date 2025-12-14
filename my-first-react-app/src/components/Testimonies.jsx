@@ -19,7 +19,7 @@ function Testimonies({id,elementRef,elementStyles}){
 
     useEffect(()=>{
         const interval = setInterval(()=>{
-            setTestimonialsIndex(prev => prev === 8 ? 1 : prev + 1)
+            setTestimonialsIndex(prev => prev === 4 ? 1 : prev + 1)
         },27000)
 
         return ()=> clearInterval(interval)
