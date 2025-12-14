@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef, use, act } from 'react'
 import { Outlet, NavLink } from "react-router-dom";
 import { data, useNavigate, useParams } from 'react-router';
+import Menu from "./components/Menu";
+import Footer from './components/Footer'
 
 
 
@@ -32,7 +34,7 @@ function AllNews(){
         let pagesLength = Math.ceil(data_json.length/12)
         setPagesLength(pagesLength)
         let arr = []
-        if(pagesLength <= 9 ){
+        if(pagesLength <= 5 ){
             for(let i = 1; i <= pagesLength; i++){
                 arr.push(i)
             }
@@ -81,15 +83,15 @@ function AllNews(){
     }
 
     
-    useEffect(()=>{
-        let startNews = (activePage-1)*12
-        let lastNews = (activePage * 12 )-1
-        for(let i = startNews; i <= lastNews; i++){
-            newsData ? console.log(newsData[i]) : null
-        }
-        console.log("from: ", startNews)
-        console.log("to: ", lastNews)
-    },[activePage,dataIsLoaded])
+    // useEffect(()=>{
+    //     let startNews = (activePage-1)*12
+    //     let lastNews = (activePage * 12 )-1
+    //     for(let i = startNews; i <= lastNews; i++){
+    //         newsData ? console.log(newsData[i]) : null
+    //     }
+    //     console.log("from: ", startNews)
+    //     console.log("to: ", lastNews)
+    // },[activePage,dataIsLoaded])
     
 
     function goLeft(e){
@@ -126,15 +128,21 @@ function AllNews(){
     }
 
     return(
+
         <div className='AllNewsContainer' ref={app}>
-            <Outlet/>
-            <button onClick={(e)=>goLeft(e)}>left</button>
-            <br />
-            <br />
-            {pages.map((page,index)=><NavLink key={index} onClick = {(e)=>checkPageIndex(e)} to={"/toate-noutățile/"+page}>{page}</NavLink>)}
-            <br />
-            <br />
-            <button onClick={goRight}>right</button>
+            <Menu pageNumber={2}/>
+            <div className='allNewsContent'>
+                <h1 className='AllNewsTitle'>Noutăți</h1>
+                <Outlet activePage={activePage} />
+                <div className='paginationControlsContainer'>
+                    <img className='paginationArrow' src='https://i.imgur.com/ZRB16z2.png' onClick={(e)=>goLeft(e)}></img>
+                    <div className='paginationLinks'>
+                        {pages.map((page,index)=><NavLink className="paginationLink" key={index} onClick = {(e)=>checkPageIndex(e)} to={"/toate-noutățile/"+page}>{page}</NavLink>)}
+                    </div>
+                    <img className='paginationArrow' src='https://i.imgur.com/N9QKfNx.png' onClick={goRight}></img>
+                </div>
+            </div>
+            <Footer/>
         </div>
     )
 }

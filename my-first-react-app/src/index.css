@@ -1603,18 +1603,141 @@ body{
 .AllNewsContainer{
     opacity: 0;
 }
-.AllNewsContainer a{
-    border: 1px solid red;
-    margin-left: 20px;
-    color: grey;
-    padding: 10px;
+.allNewsContent{
+    display: flex;
+    flex-direction: column;
 }
-.AllNewsContainer a.active{
+.AllNewsTitle{
+    padding: 160px 100px 40px 100px;
+    font-size: 56px;
+    font-weight: 500;
+    font-family: "ER_Garamond_Medium";
+}
+.paginationControlsContainer{
+    display: flex;
+    padding-bottom: 120px;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    align-self: center;
+    gap: 8px;
+}
+.paginationArrow{
+    cursor: pointer;
+    width: 34px;
+    padding: 4px;
+    transition: all 0.1s;
+}
+.paginationLinks{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.paginationLink{
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
     font-size: 18px;
-    font-weight: bold;
-    color: black;
-    padding: 12px;
+    font-family: 'DM_Sans_SemiBold';
+    color: #979797;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s;
 }
+.paginationLink:hover{
+    color: #F7A524;
+}
+.paginationLink.active{
+    color: black;
+    font-size: 22px;
+    font-family: 'DM_Sans_ExtraBold';
+    transition: all 0.1s;
+}
+.paginationLink.active:hover{
+    color: #000000;
+    cursor: default;
+}
+.paginationArrow:hover{
+    filter: brightness(0);
+}
+.innerAllNewsContainer{
+    padding: 0px 100px 100px 100px;
+    width: 100%;
+}
+.allNewsGridContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    row-gap: 100px;
+    column-gap: 30px;
+    width: 100%;
+}
+.allNewsCard{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.allNewsImg{
+    width: 100%;
+    height: 230px;
+    min-height: 200px;
+    max-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.allNewsCard:hover img{
+    scale: 1.02;
+}
+.allNewsCard:hover p{
+    color: black;
+}
+.allNewsCard:hover .allNewsCardTitle{
+    color:#F7A524;
+}
+.allNewsImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.25s;
+}
+.allNewsText{
+    width: 94%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    height: 100%;
+}
+.allNewsCardTitle{
+    font-size: 26px;
+    font-family: 'ER_Garamond_Medium';
+    font-weight: 500;
+    line-height: 120%;
+    margin-top: 8px;
+    transition: all 0.1s;
+}
+.allNewsInlineInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.allNewsLine{
+    background: linear-gradient(to right, #ffffff00, #CACACA, #ffffff00);
+    height: 1px;
+    width: 100%;
+}
+.readingTime{
+    transition: all 0.1s;
+}
+.newsDate{
+    transition: all 0.1s;
+}
+
 
 
 
