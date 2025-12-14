@@ -1,8 +1,8 @@
 import { useRef, useEffect, useState, use} from 'react'
-import {NavLink} from 'react-router-dom'
+import { HashLink as NavLink } from 'react-router-hash-link';
 
 
-function Footer(){
+function Footer({parentLink}){
     function resetScroll(){
         window.scrollTo({
             top:0,
@@ -16,19 +16,19 @@ function Footer(){
                 <div className='footerLinks'>
                         <NavLink to='/' onClick={resetScroll} className='mainLink'>Acasă</NavLink>
                         <div className='secondaryLinks'>
-                            <NavLink className='secondaryLink'>Comunitate</NavLink>
-                            <NavLink className='secondaryLink'>Mesajul directorului</NavLink>
-                            <NavLink className='secondaryLink'>Niveluri de educație</NavLink>
-                            <NavLink className='secondaryLink'>Cluburi și activități</NavLink>
-                            <NavLink className='secondaryLink'>Istoria liceului</NavLink>
-                            <NavLink className='secondaryLink'>Galerie</NavLink>
-                            <NavLink className='secondaryLink'>Testimoniale</NavLink>
+                            <NavLink to='/#community' className='secondaryLink'>Comunitate</NavLink>
+                            <NavLink to='/#principle' className='secondaryLink'>Mesajul directorului</NavLink>
+                            <NavLink to='/#education' className='secondaryLink'>Niveluri de educație</NavLink>
+                            <NavLink to='/#clubs' className='secondaryLink'>Cluburi și activități</NavLink>
+                            <NavLink to='/#history' className='secondaryLink'>Istoria liceului</NavLink>
+                            <NavLink to='/#gallery' className='secondaryLink'>Galerie</NavLink>
+                            <NavLink to='/#testimonies' className='secondaryLink'>Testimoniale</NavLink>
                         </div>
                 </div>
                 <div className='footerLinks'>
                         <NavLink to='/noutăți' onClick={resetScroll} className='mainLink'>Noutăți</NavLink>
                         <div className='secondaryLinks'>
-                            <NavLink to='/toateNoutățile' className='secondaryLink'>Toate noutățile</NavLink>
+                            <NavLink to='/toate-noutățile' className='secondaryLink'>Toate noutățile</NavLink>
                         </div>
                 </div>
                 <div className='footerLinks'>

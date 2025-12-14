@@ -7,6 +7,8 @@ import ErrorPage from './components/ErrorPage.jsx'
 import News from './News.jsx'
 import AllNews from './AllNews.jsx'
 import NewsItems from './NewsItems.jsx'
+import InnerAllNews from './InnerAllNews.jsx'
+import { Navigate } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
@@ -20,11 +22,21 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>
   },
   {
-    path:'/toateNoutățile',
+    path:'/toate-noutățile',
     element:<AllNews/>,
+    children:[
+      {
+        index: true,
+        element: <Navigate to="1" replace/>
+      },
+      {
+        path:':page',
+        element:<InnerAllNews/>
+      }
+    ],
     errorElement: <ErrorPage/>
   },
-    {
+  {
     path:'/noutăți/:slug',
     element: <NewsItems/>,
     errorElement: <ErrorPage/>

@@ -29,6 +29,9 @@
     font-family: 'Newsreader_Medium';
     src: url(assets/fonts/Newsreader_36pt-Medium.ttf);
 }
+html{
+    scroll-behavior: smooth;
+}
 a{
     text-decoration: none;
     color: initial;
@@ -1596,6 +1599,22 @@ body{
 }
 
 
+
+.AllNewsContainer{
+    opacity: 0;
+}
+.AllNewsContainer a{
+    border: 1px solid red;
+    margin-left: 20px;
+    color: grey;
+    padding: 10px;
+}
+.AllNewsContainer a.active{
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    padding: 12px;
+}
 
 
 

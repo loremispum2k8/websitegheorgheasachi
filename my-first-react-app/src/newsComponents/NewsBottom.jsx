@@ -58,7 +58,7 @@ function NewsBottom(){
 
     return(
         <div className='newsBottomContainer'>
-            <NavLink to='/toateNoutățile'>
+            <NavLink to='/toate-noutățile'>
             <div className='newsBottomTitleContainer'>
                 <h3>Toate noutățile</h3>
                 <img className='newsBottomArrow' src="https://i.imgur.com/wumVWNV.png" alt="" />

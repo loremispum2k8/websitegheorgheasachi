@@ -39,10 +39,10 @@ function App() {
             <PrincipleMessage elementStyles={` ${principleIsVisible ? 'showSection': ''}`} elementRef={principleRef} id='principle'/>
             <EducationLevels elementStyles={` ${educationIsVisible ? 'showSection': ''}`} elementRef={educationRef} id='education'/>
             <Clubs elementStyles={` ${clubsIsVisible ? 'showSection': ''}`} elementRef={clubsRef} id='clubs'/>
-            <History elementStyles={` ${historyIsVisible ? 'showSection': ''}`} elementRef={historyRef} id='hitory'/>
+            <History elementStyles={` ${historyIsVisible ? 'showSection': ''}`} elementRef={historyRef} id='history'/>
             <Gallery elementStyles={` ${galleryIsVisible ? 'showSection': ''}`} elementRef={galleryRef} id='gallery'/>
             <Testimonies elementStyles={` ${testimoniesIsVisible ? 'showSection': ''}`} elementRef={testimoniesRef} id='testimonies'/>
-            <Footer/>
+            <Footer parentLink = '/' />
 
         </div>
     )
