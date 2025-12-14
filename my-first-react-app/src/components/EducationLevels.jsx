@@ -8,13 +8,13 @@ function EducationLevels({id,elementRef,elementStyles}){
             <h1 className='educationTitle'>Niveluri de învățământ</h1>
             <div className='educationCardsContainer'>
                 <div className='educationCard educationCard1'>
-                    <div className='educationImage'><img src="https://i.imgur.com/73hzE3m.jpeg" alt="" /></div>
+                    <div className='educationImage'><img src="https://i.imgur.com/Mk5AuGg.jpg" alt="" /></div>
                     <h2 className='educationName'>Primar</h2>
                     <div className='educationLine'></div>
                     <p className='educationDescription'>Oferă mediu prietenos, dezvoltă competențe de bază și emoționale, prin activități interactive și profesori dedicați sprijinind copiii în primii patru ani.</p>
                 </div>
                 <div className='educationCard educationCard2'>
-                    <div className='educationImage'><img src="https://i.imgur.com/76eCsGI.jpeg" alt="" /></div>
+                    <div className='educationImage'><img src="https://i.imgur.com/rsKowSl.jpg" alt="" /></div>
                     <h2 className='educationName'>Gimnazial</h2>
                     <div className='educationLine'></div>
                     <p className='educationDescription'>Asigură cinci ani de pregătire echilibrată, discipline variate, proiecte și evaluări moderne, sprijinind elevii să-și consolideze cunoștințele și să se pregătească pentru liceu.</p>

@@ -10,7 +10,7 @@ function Clubs({id,elementRef,elementStyles}){
     useEffect(()=>{
         async function getData(){
             const Table_ID = "1dHlwvtfnFb1EFhYzQ0D48eXXN2rdO3_Rx6NTt2Jkahs"
-            const Table_Name = '1'
+            const Table_Name = '2'
             const Table_URL = `https://opensheet.elk.sh/${Table_ID}/${Table_Name}`
 
             let result = await fetch(Table_URL)

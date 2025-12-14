@@ -62,7 +62,7 @@ function History({id,elementRef,elementStyles}){
                         </div>
 
                         <div ref={img2} className='historyImage'>
-                            <img id='history2' src="https://i.imgur.com/ybN8HbW.jpeg" alt="" />
+                            <img id='history2' src="https://i.imgur.com/T6snEaI.jpg" alt="" />
                         </div>
 
                         <div ref={img3} className='historyImage'>
