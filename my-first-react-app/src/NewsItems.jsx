@@ -96,11 +96,11 @@ function NewsItems(){
                     </div>
                     <div className='articleMainImage'><img src={newsData[0].imagini.split('\n')[0]} alt="" /></div>
                     <div className='articleContent'>{newsData[0].continut ? newsData[0].continut : 'Ne pare rău... articolul nu conține text'}</div>
-                    <div className='articleOuterImagesContainer'>
+                    {!newsData[0].imagini ? "" : <div className='articleOuterImagesContainer'>
                         <div className='articleImagesContainer'>
                             {newsData[0].imagini.split("\n").map(image=><div className='articleImage' ><img className='innerAricleImage' src={image} alt="" /></div>)}
                         </div>
-                    </div>
+                    </div>}
                     <div className='articleBottomLine'></div>
                 </div>
             </div>
