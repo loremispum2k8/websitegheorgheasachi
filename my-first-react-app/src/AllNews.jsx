@@ -20,16 +20,26 @@ function AllNews(){
     const [pagesLength, setPagesLength] = useState(0)
     const [pages,setPages] = useState([])
     const [activePage,setActivePage] = useState(Number(page) || 1)
+    const [dataError, seDataError] = useState(null)
+    const [dataLoading, setDataLoading] = useState(true)
 
     useEffect(()=>{
         setActivePage(page)
     },[page])
 
     async function getNews(){
-        let data = await fetch(Table_URL)
-        let data_json = await data.json()
-        setNewsData(data_json)
-        setDatIsLoaded(true)
+        try{
+            let data = await fetch(Table_URL)
+            let data_json = await data.json()
+            setNewsData(data_json)
+            setDatIsLoaded(true)
+        }
+        catch(error){
+            seDataError('Eroare')
+        }finally{
+            console.log('a')
+            setDataLoading(false)
+        }
 
         //Here you set how many pages there are from 1 --> who knows
         let pagesLength = Math.ceil(data_json.length/12)
@@ -126,6 +136,29 @@ function AllNews(){
 
     if(!newsData){
         return ('')
+    }
+
+    if(dataError){
+        return(
+            <ErrorPage/>
+        )
+    }
+
+    function stopScroll(){
+        document.body.style.overflowY = 'none'
+    }
+    function enableScroll(){
+        document.body.style.overflowY = 'scroll'
+    }
+    if(dataLoading){
+        stopScroll()
+        return(
+            <div className='loadingScreen'>
+                <h1>Se încarcă...</h1>
+            </div>
+        )
+    }else{
+        enableScroll()
     }
 
     return(

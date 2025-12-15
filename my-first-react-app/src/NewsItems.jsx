@@ -15,13 +15,21 @@ function NewsItems(){
     const{slug} = useParams()
     const [newsData, setNewsData] = useState()
     const [dataIsLoaded, setDatIsLoaded] = useState(false)
+    const [dataError, seDataError] = useState(null)
+    const [dataLoading, setDataLoading] = useState(true)
     
     async function getNews(){
-        let data = await fetch(Table_URL)
-        let data_json = await data.json()
-        let filtered_json = await data_json.filter((eachData) => eachData.slug === slug)
-        setNewsData(filtered_json)
-        setDatIsLoaded(true)
+        try{
+            let data = await fetch(Table_URL)
+            let data_json = await data.json()
+            let filtered_json = await data_json.filter((eachData) => eachData.slug === slug)
+            setNewsData(filtered_json)
+            setDatIsLoaded(true)
+        }catch(error){
+            seDataError('Eroare')
+        }finally{
+            setDataLoading(false)
+        }
     }
 
     function resetScroll(){
@@ -67,6 +75,13 @@ function NewsItems(){
         }
     }
 
+    function stopScroll(){
+        document.body.style.overflowY = 'none'
+    }
+    function enableScroll(){
+        document.body.style.overflowY = 'scroll'
+    }
+
     const { ref: newBottomRef, inView: bottomRefIsVisible} = useInView({triggerOnce:true});
     const app = useRef()
 
@@ -77,6 +92,22 @@ function NewsItems(){
     if(!newsData){
         return('')
     } 
+    if(dataError){
+        return(
+            <ErrorPage/>
+        )
+    }
+    if(dataLoading){
+        console.log('loading')
+        stopScroll()
+        return(
+            <div className='loadingScreen'>
+                <h1>Se încarcă...</h1>
+            </div>
+        )
+    }else{
+        enableScroll()
+    }
     return(
         <div className='newsitemouter' ref={app}>
             <Menu pageNumber={2} />

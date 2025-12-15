@@ -15,16 +15,22 @@ function InnerAllNews(){
     const [dataIsLoaded, setDatIsLoaded] = useState(false)
     const [actPage,setActPage] = useState(Number(page) || 1)
     const [newsContent,setNewsContent] = useState([])
+    const [dataError, seDataError] = useState(null)
     
     useEffect(()=>{
         setActPage(page)
     },[page])
 
     async function getNews(){
-        let data = await fetch(Table_URL)
-        let data_json = await data.json()
-        setNewsData(data_json)
-        setDatIsLoaded(true)
+        try{
+            let data = await fetch(Table_URL)
+            let data_json = await data.json()
+            setNewsData(data_json)
+            setDatIsLoaded(true)
+        }
+        catch(error){
+            seDataError('Eroare')
+        }
     }
     
     useEffect(()=>{
@@ -81,6 +87,11 @@ function InnerAllNews(){
 
     if(!newsData){
         return("")
+    }
+    if(dataError){
+        return(
+            <ErrorPage/>
+        )
     }
 
     return(

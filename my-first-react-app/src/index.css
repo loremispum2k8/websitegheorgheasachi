@@ -1740,6 +1740,24 @@ body{
     transition: all 0.1s;
 }
 
+.loadingScreen{
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: -100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100dvw;
+    background-color: rgb(255, 255, 255);
+    height: 100dvh;
+}
+.loadingScreen h1{
+    font-family: 'DM_Sans_SemiBold';
+    font-size: 80px;
+    color: #1f1f1f;
+}
 
 
 
@@ -2100,7 +2118,12 @@ body{
         padding: 0px 70px;
         box-shadow: none;
     }
-
+.loadingScreen{
+    height: 100dvh;
+}
+.loadingScreen h1{
+    font-size: 60px;
+}
     .communityContainer{
         margin-top: 80px;
         padding: 0px 70px;
@@ -4857,6 +4880,13 @@ body{
 }
 
 @media screen and (max-width: 500px){
+    .loadingScreen{
+        margin-top: -0px;
+        height: 100dvh;
+    }
+    .loadingScreen h1{
+        font-size: 30px;
+    }
     .menu{
         height: 70px;
         padding: 0px 20px;
