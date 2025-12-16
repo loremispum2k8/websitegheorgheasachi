@@ -630,7 +630,7 @@
 
 .administrationHeaderContainer{
     width: 100dvw;
-    height: auto;
+    height: 500px;
     overflow: hidden;
     position: relative;
     display: flex;

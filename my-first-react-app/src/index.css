@@ -3021,7 +3021,7 @@ body{
         flex-direction: column;
         background-color: #0B0B0B;
         overflow: hidden;
-        height: 100vh;
+        height: 100dvh;
     }
     .expandableNavLinks{
         padding: 40px 50px;
