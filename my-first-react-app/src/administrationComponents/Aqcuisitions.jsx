@@ -2,13 +2,13 @@ import { useState, useEffect, useRef } from 'react'
 import "./administration.css"
 
 const Table_ID = "1dHlwvtfnFb1EFhYzQ0D48eXXN2rdO3_Rx6NTt2Jkahs"
-const Table_Name = '3'
+const Table_Name = '4'
 const Table_URL = `https://opensheet.elk.sh/${Table_ID}/${Table_Name}`
 
 
 function Aqcuisitions({id,elementRef,elementStyles}){
 
-    const [colaborationsData, setAqcuisitionsData] = useState()
+    const [aqcuisitionsData, setAqcuisitionsData] = useState()
     const [dataIsLoaded, setDataIsLoaded] = useState(false)
     const [dataError, seDataError] = useState(null)
     const [dataLoading, setDataLoading] = useState(true)
@@ -26,11 +26,10 @@ function Aqcuisitions({id,elementRef,elementStyles}){
             }finally{
                 setDataLoading(false)
             }
-        }
-    
-        useEffect(()=>{
-            getAquisitions()
-        },[])
+    }
+    useEffect(()=>{
+        getAquisitions()
+    },[])
 
 
     function stopScroll(){
@@ -53,16 +52,18 @@ function Aqcuisitions({id,elementRef,elementStyles}){
         <div ref={elementRef} id={id} className={`aqcuisitionsContainer ${elementStyles}`}>
             <h1 className='aqcuisitionsTitle'>Achiziții publice </h1>
             <div className='aqcuisitonsFilesContainer'>
-                <div className='aqcuisitionsInline'>
-                    <a className='outsideAq' target='_blank' href='https://drive.google.com/file/d/1BlcuRGd-Cz5EjM7-qYHqqtiV0E2ICK36/view?usp=sharing'>Planul de achiziții pentru anul 2025 </a>
-                    <a download href="Modificari la planul de achizitii publice pentru anul 2025 IP Liceul Teoretic ,,Gheorghe Asachi.pdf">
-                        <div className='downloadAq'>
-                            <img src="https://i.imgur.com/BwS2PDE.png" alt="" />
-                            <span>0.23 MB</span>
+                {aqcuisitionsData.map((aqdata,index)=>{
+                    return(
+                        <div key={index} className='aqcuisitionsInline'>
+                            <a className='outsideAq' target='_blank' href={aqdata.fisier}>{aqdata.titlu}</a>
+                            <a download href={aqdata.fisierDescarcare}>
+                                <div className='downloadAq'>
+                                    <img src="https://i.imgur.com/BwS2PDE.png" alt="" />
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-
+                    )
+                })}
             </div>
         </div>
     )

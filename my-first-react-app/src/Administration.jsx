@@ -3,6 +3,7 @@ import Menu from './components/Menu'
 import Footer from './components/Footer'
 import Colaborations from './administrationComponents/Colaborations'
 import Aqcuisitions from './administrationComponents/Aqcuisitions'
+import Spendings from './administrationComponents/Spendings'
 import {useInView} from 'react-intersection-observer'
 
 function Administration(){
@@ -18,11 +19,13 @@ function Administration(){
 
     const { ref: colaborationsRef, inView: colaborationsIsVisible} = useInView({triggerOnce:true});
     const { ref: aqcuisitonsRef, inView: aqcuisitonsIsVisible} = useInView({triggerOnce:true});
+    const { ref: spendingsRef, inView: spendingsIsVisible} = useInView({triggerOnce:true});
     return(
         <div ref={app}  className='administrationContainer'>
             <Menu pageNumber={3}/>
             <Colaborations elementStyles={` ${colaborationsIsVisible ? 'showSection': ''}`} elementRef={colaborationsRef} id="colaborations"/>
             <Aqcuisitions elementStyles={` ${aqcuisitonsIsVisible ? 'showSection': ''}`} elementRef={aqcuisitonsRef} id="aqcuisitons"/>
+            <Spendings elementStyles={` ${spendingsIsVisible ? 'showSection': ''}`} elementRef={spendingsRef} id="spendings"/>
             <Footer parentLink = '/' />
         </div>
     )

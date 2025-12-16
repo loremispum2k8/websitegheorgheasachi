@@ -41,7 +41,7 @@
     padding: 0px 100px 0px 100px;
     position: relative;
 }
-.colaborationsTitle,.aqcuisitionsTitle{
+.colaborationsTitle,.aqcuisitionsTitle, .spendingsTitle{
     font-size: 56px;
     font-weight: 500;
     font-family: "ER_Garamond_Medium";
@@ -67,8 +67,6 @@
     display: flex;
     width: 410px;
     flex-direction: column;
-    transition: all 0.15s;
-    will-change: transform;
 }
 .colaborationsCardTop{
     height: 190px;
@@ -77,10 +75,6 @@
     padding: 30px 40px 30px 30px;
     border: 3px solid #F7F7F7;
     transition: all 0.15s ease-in-out;
-}
-.colaborationsCard:hover{
-    transform-origin: top left;
-    scale: 1.01;
 }
 .colaborationsCard:hover .colaborationsCardTop{
     border: 3px solid #FFA314;
@@ -166,7 +160,6 @@
 }
 .aqcuisitionsInline{
     display: flex;
-    align-items: center;
     flex-direction: row;
     gap: 10px;
 }
@@ -177,11 +170,17 @@
     gap: 10px;
     cursor: pointer;
 }
-.downloadAq:hover  span{
-    text-decoration: none;
-    color: black;
-}
 .downloadAq:hover  img{
+    filter: brightness(0);
+}
+.downloadSp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.downloadSp:hover  img{
     filter: brightness(0);
 }
 .aqcuisitionsInline img{
@@ -192,10 +191,14 @@
 .aqcuisitionsInline a{
     font-size: 18px;
     font-weight: 500;
+    line-height: 170%;
     font-family: 'DM_Sans_Regular';
     cursor: pointer;
 }
 .aqcuisitionsInline .outsideAq:hover{
+    text-decoration: underline;
+}
+.spendingsInline .outsideSp:hover{
     text-decoration: underline;
 }
 .aqcuisitionsInline span{
@@ -207,10 +210,78 @@
     cursor: pointer;
 }
 
+
+
+
+.spendingsContainer{
+    opacity: 0;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    padding: 0px 100px 120px 100px;
+    position: relative;
+}
+.spendingsFilesContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.spendingsInline{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.spendingsInline img{
+    width: 30px;
+    height: 30px;
+    transition: all 0.1s;
+}
+.spendingsInline a{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 170%;
+    font-family: 'DM_Sans_Regular';
+    cursor: pointer;
+}
+.spendingsInline span{
+    transition: all 0.1s;
+    font-size: 18px;
+    font-weight: 500;
+    color: #BCBCBC;
+    font-family: 'DM_Sans_Regular';
+    cursor: pointer;
+}
+
+
 @media screen and (max-width: 1070px){
 .colaborationsContainer{
     gap: 30px;
     padding: 0px 70px 0px 70px;
+    position: relative;
+}
+.aqcuisitionsContainer{
+    opacity: 0;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    padding: 0px 70px 0px 70px;
+    position: relative;
+}
+.spendingsContainer{
+    opacity: 0;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    padding: 0px 70px 120px 70px;
     position: relative;
 }
 }
@@ -221,6 +292,28 @@
     padding: 0px 50px 0px 50px;
     position: relative;
 }    
+.aqcuisitionsContainer{
+    opacity: 0;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    padding: 0px 50px 0px 50px;
+    position: relative;
+}
+.spendingsContainer{
+    opacity: 0;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    padding: 0px 50px 120px 50px;
+    position: relative;
+}
 }
 
 @media screen and (max-width:600px){
@@ -234,6 +327,49 @@
     gap: 30px;
     padding: 0px 50px 0px 50px;
     position: relative;
+}
+.aqcuisitionsContainer{
+    opacity: 0;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    padding: 0px 50px 0px 50px;
+    position: relative;
+}
+.aqcuisitionsInline{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 10px;
+}
+.aqcuisitionsInline a{
+    font-size: 17px;
+}
+
+.spendingsContainer{
+    opacity: 0;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    padding: 0px 50px 120px 50px;
+    position: relative;
+}
+.spendingsInline{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 10px;
+}
+.spendingsInline a{
+    font-size: 17px;
 }
 .colaborationsTitle{
     font-size: 56px;
@@ -330,7 +466,50 @@
 
 
 @media screen and (max-width:500px){
-    .colaborationsContainer{
+.aqcuisitionsTitle{
+    font-size: 34px;
+}
+.aqcuisitionsContainer{
+    opacity: 0;
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    padding: 0px 20px 0px 20px;
+    position: relative;
+}
+.aqcuisitonsFilesContainer{
+    padding-left: 5px;
+    gap: 28px;
+}
+.aqcuisitionsInline a{
+    font-size: 16px;
+}
+
+.spendingsTitle{
+    font-size: 34px;
+}
+.spendingsContainer{
+    opacity: 0;
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    padding: 0px 20px 100px 20px;
+    position: relative;
+}
+.spendingsFilesContainer{
+    padding-left: 5px;
+    gap: 28px;
+}
+.spendingsInline a{
+    font-size: 16px;
+}
+.colaborationsContainer{
     opacity: 0;
     width: 100%;
     margin-top: 65px;
@@ -342,7 +521,7 @@
     position: relative;
 }
 .colaborationsTitle{
-    font-size: 50px;
+    font-size: 34px;
 }
 .colaborationsOuterContainer{
     display: flex;
@@ -363,11 +542,11 @@
 }
 .colaborationsCard{
     display: flex;
-    width: 400px;
+    width: 380px;
     flex-direction: column;
 }
 .colaborationsCardTop{
-    height: 130px;
+    height: 160px;
     background-color: white;
     position: relative;
     padding: 30px 40px 30px 30px;
@@ -375,7 +554,7 @@
 }
 .colaborationCardTitle{
     line-height: 140%;
-    font-size: 24px;
+    font-size: 23px;
     font-family: 'ER_Garamond_Medium';
     font-weight: 500;
 }
@@ -404,11 +583,11 @@
     gap: 6px;
 }
 .colaborationsBigText{
-    font-size: 17px;
+    font-size: 16px;
     font-family: 'DM_Sans_SemiBold';
 }
 .colaborationsSmallText{
-    font-size: 15px;
+    font-size: 14px;
     font-family: 'DM_Sans_Regular';
 }
 .collaborationsBottomInfoContainer{
@@ -422,11 +601,11 @@
     gap: 10px;
 }
 .colaborationsInfoRow img{
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
 }
 .colaborationsInfoRow p{
-    font-size: 16px;
+    font-size: 15px;
     font-family: 'DM_Sans_Regular';
 }
 }

@@ -34,10 +34,10 @@ function Footer({parentLink}){
                 <div className='footerLinks'>
                         <NavLink to='/administrație' onClick={resetScroll} className='mainLink'>Administrație</NavLink>
                         <div className='secondaryLinks'>
-                            <NavLink className='secondaryLink'>Personalul liceului</NavLink>
+                            {/* <NavLink className='secondaryLink'>Personalul liceului</NavLink> */}
                             <NavLink to="/administrație#colaborations" className='secondaryLink'>Colaborări</NavLink>
-                            <NavLink className='secondaryLink'>Achiziții publice</NavLink>
-                            <NavLink className='secondaryLink'>Cheltuieli</NavLink>
+                            <NavLink to="/administrație#aqcuisitons" className='secondaryLink'>Achiziții publice</NavLink>
+                            <NavLink to="/administrație#spendings" className='secondaryLink'>Cheltuieli</NavLink>
                         </div>
                 </div>
                 <div className='footerLinks'>
