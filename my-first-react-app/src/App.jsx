@@ -45,7 +45,7 @@ function App() {
             <Gallery elementStyles={` ${galleryIsVisible ? 'showSection': ''}`} elementRef={galleryRef} id='gallery'/>
             <Testimonies elementStyles={` ${testimoniesIsVisible ? 'showSection': ''}`} elementRef={testimoniesRef} id='testimonies'/>
             <Footer parentLink = '/' />
-
+            <Analytics/>
         </div>
     )
 }

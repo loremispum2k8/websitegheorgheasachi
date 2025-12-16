@@ -149,8 +149,8 @@ function Menu({pageNumber}){
         <div ref={menuContainer} className='menuContainer'>
             <div ref={blackMenu} className="menu">
             <picture ref={invertText}>
-                <NavLink to='/'><source media="(max-width: 500px)" src="https://i.imgur.com/zZs5qiC.png"/></NavLink>
-                <NavLink to='/'><img className="menuSchoolName" src="https://i.imgur.com/dYSECNc.png" alt=""/></NavLink>
+                <NavLink onClick={resetScroll} to='/'><source media="(max-width: 500px)" src="https://i.imgur.com/zZs5qiC.png"/></NavLink>
+                <NavLink onClick={resetScroll} to='/'><img className="menuSchoolName" src="https://i.imgur.com/dYSECNc.png" alt=""/></NavLink>
             </picture>
 
             <div className="menuItems">
