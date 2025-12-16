@@ -1771,6 +1771,7 @@ body{
     opacity: 0;
 }
 .contactsContainer{
+    opacity: 0;
     min-height: 100dvh;
 }
 
