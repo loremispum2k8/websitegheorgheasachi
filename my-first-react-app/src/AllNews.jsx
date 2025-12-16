@@ -23,14 +23,15 @@ function AllNews(){
     const [dataError, seDataError] = useState(null)
     const [dataLoading, setDataLoading] = useState(true)
 
-    useEffect(()=>{
-        setActivePage(page)
-    },[page])
+    useEffect(() => {
+        setActivePage(Number(page) || 1)
+    }, [page])
 
     async function getNews(){
+        let data_json;
         try{
             let data = await fetch(Table_URL)
-            let data_json = await data.json()
+            data_json = await data.json()
             setNewsData(data_json)
             setDatIsLoaded(true)
         }
@@ -92,17 +93,6 @@ function AllNews(){
             }
         }
     }
-
-    
-    // useEffect(()=>{
-    //     let startNews = (activePage-1)*12
-    //     let lastNews = (activePage * 12 )-1
-    //     for(let i = startNews; i <= lastNews; i++){
-    //         newsData ? console.log(newsData[i]) : null
-    //     }
-    //     console.log("from: ", startNews)
-    //     console.log("to: ", lastNews)
-    // },[activePage,dataIsLoaded])
     
 
     function goLeft(e){

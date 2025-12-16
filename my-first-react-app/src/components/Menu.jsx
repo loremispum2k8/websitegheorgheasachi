@@ -178,7 +178,7 @@ function Menu({pageNumber}){
                 <div ref={expandableNavLinks} className="expandableNavLinks">
                     <NavLink to='/' ref={firstLink} onClick={fixScroll} className='expandableMenuLinks'><p>Acasă</p></NavLink>
                     <NavLink to='/noutăți' ref={secondLink} onClick={fixScroll} className='expandableMenuLinks'><p>Noutăți</p></NavLink>
-                    <NavLink to='/administration' ref={thirdLink} onClick={fixScroll} className='expandableMenuLinks'><p>Administrație</p></NavLink>
+                    <NavLink to='/administrație' ref={thirdLink} onClick={fixScroll} className='expandableMenuLinks'><p>Administrație</p></NavLink>
                     <NavLink to='/contacts' ref={forthLink} onClick={fixScroll} className='expandableMenuLinks'><p>Contacte</p></NavLink>
                 </div>
                 <img className='menuFirstHalf' src="https://i.imgur.com/T3itaGv.png" alt="" />

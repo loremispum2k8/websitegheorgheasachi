@@ -2,15 +2,16 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import { createBrowserRouter, RouterProvider } from 'react-router'
+import { createHashRouter, RouterProvider } from 'react-router-dom'
 import ErrorPage from './components/ErrorPage.jsx'
 import News from './News.jsx'
 import AllNews from './AllNews.jsx'
 import NewsItems from './NewsItems.jsx'
 import InnerAllNews from './InnerAllNews.jsx'
 import { Navigate } from "react-router-dom";
+import Administration from './Administration.jsx'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path:'/',
     element: <App/>,
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
   {
     path:'/noutăți/:slug',
     element: <NewsItems/>,
+    errorElement: <ErrorPage/>
+  },
+  {
+    path:'/administrație',
+    element:<Administration/>,
     errorElement: <ErrorPage/>
   },
   {
