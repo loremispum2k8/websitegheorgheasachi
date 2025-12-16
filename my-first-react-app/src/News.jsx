@@ -50,7 +50,7 @@ function News(){
     const { ref: newBottomRef, inView: bottomRefIsVisible} = useInView({triggerOnce:true});
 
     function stopScroll(){
-        document.body.style.overflowY = 'none'
+        document.body.style.overflowY = 'hidden'
     }
     function enableScroll(){
         document.body.style.overflowY = 'scroll'

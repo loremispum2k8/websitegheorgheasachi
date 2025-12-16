@@ -32,7 +32,7 @@ function Colaborations({id,elementRef,elementStyles}){
 
 
     function stopScroll(){
-        document.body.style.overflowY = 'none'
+        document.body.style.overflowY = 'hidden'
     }
     function enableScroll(){
         document.body.style.overflowY = 'scroll'
