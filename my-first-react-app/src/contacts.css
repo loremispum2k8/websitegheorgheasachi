@@ -76,8 +76,11 @@
     height: 26px;
 }
 .contactsInline p{
-    font-family: 'DM_Sans_Regular';
+    font-family: 'DM_Sans_Medium';
     font-size: 18px;
+}
+.contactsInline p span{
+    font-family: 'DM_Sans_Regular';
 }
 
 @media screen and (max-width: 1300px){

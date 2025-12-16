@@ -22,15 +22,15 @@ function Contacts(){
                     <div className='contactsIconsContainer'>
                         <div className='contactsInline'>
                             <img src="https://i.imgur.com/3TeYFy2.png" alt="" />
-                            <p>Telefon: 0236-2-08-48 sau 0236-2-08-49</p>
+                            <p>Telefon: <span>0236-2-08-48 sau 0236-2-08-49</span></p>
                         </div>
                         <div className='contactsInline'>
                             <img src="https://i.imgur.com/UTugLfJ.png" alt="" />
-                            <p>Email: gheorgheasachi@mail.ru</p>
+                            <p>Email: <span>gheorgheasachi@mail.ru</span></p>
                         </div>
                         <div className='contactsInline'>
                             <img src="https://i.imgur.com/6ctpnvH.png" alt="" />
-                            <p>Locație: Strada Gh.Cristiuc 47, mun. Ungheni</p>
+                            <p>Locație: <span>Strada Gh.Cristiuc 47, mun. Ungheni</span></p>
                         </div>
                     </div>
                 </div>
