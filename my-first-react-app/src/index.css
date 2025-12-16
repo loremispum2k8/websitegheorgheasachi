@@ -1767,6 +1767,7 @@ body{
 
 
 .administrationContainer{
+    min-height: 100vh;
     opacity: 0;
 }
 

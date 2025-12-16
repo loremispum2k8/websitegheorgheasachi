@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/react";
+
 import { useState, useEffect, NavLink, useRef, useParams } from 'react'
 import Menu from './components/Menu'
 import Header from './components/Header'
@@ -34,7 +36,7 @@ function App() {
         <div ref={app} className='appContainer'>
 
             <Menu pageNumber={1}/>
-            <Header id="id" />
+            <Header id="header" />
             <Community elementStyles={` ${communityIsVisible ? 'showSection': ''}`} elementRef={communityRef} id='community'/>
             <PrincipleMessage elementStyles={` ${principleIsVisible ? 'showSection': ''}`} elementRef={principleRef} id='principle'/>
             <EducationLevels elementStyles={` ${educationIsVisible ? 'showSection': ''}`} elementRef={educationRef} id='education'/>
