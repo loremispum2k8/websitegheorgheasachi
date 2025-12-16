@@ -34,7 +34,7 @@ function Contacts(){
                         </div>
                     </div>
                 </div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d667.5199429943752!2d27.79254993950204!3d47.22239512361715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cb003508452007%3A0x87a38074db9c5d79!2sLiceul%20Teoretic%20%22Gheorghe%20Asachi%22!5e1!3m2!1sen!2s!4v1765921771987!5m2!1sen!2s" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d667.5199429943752!2d27.79254993950204!3d47.22239512361715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cb003508452007%3A0x87a38074db9c5d79!2sLiceul%20Teoretic%20%22Gheorghe%20Asachi%22!5e1!3m2!1sro!2s!4v1765921771987!5m2!1sro!2s" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <Footer/>
         </div>
