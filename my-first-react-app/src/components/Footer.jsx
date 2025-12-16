@@ -41,9 +41,9 @@ function Footer({parentLink}){
                         </div>
                 </div>
                 <div className='footerLinks'>
-                        <NavLink to='/' onClick={resetScroll} className='mainLink'>Contacte</NavLink>
+                        <NavLink to='/contacte' onClick={resetScroll} className='mainLink'>Contacte</NavLink>
                         <div className='secondaryLinks'>
-                            <NavLink className='secondaryLink'>Mapă</NavLink>
+                            <NavLink to="/contacte#map" className='secondaryLink'>Mapă</NavLink>
                         </div>
                 </div>
             </div>

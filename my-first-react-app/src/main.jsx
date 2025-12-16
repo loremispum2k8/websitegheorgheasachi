@@ -10,6 +10,7 @@ import NewsItems from './NewsItems.jsx'
 import InnerAllNews from './InnerAllNews.jsx'
 import { Navigate } from "react-router-dom";
 import Administration from './Administration.jsx'
+import Contacts from './Contacts.jsx'
 
 const router = createHashRouter([
   {
@@ -48,9 +49,14 @@ const router = createHashRouter([
     errorElement: <ErrorPage/>
   },
   {
+    path:'/contacte',
+    element: <Contacts/>,
+    errorElement: <ErrorPage/>
+  },
+  {
     path:'*',
     element: <App/>,
-  }
+  },
 ])
 
 createRoot(document.getElementById('root')).render(
