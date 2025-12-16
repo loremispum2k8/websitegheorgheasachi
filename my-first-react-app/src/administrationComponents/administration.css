@@ -1,0 +1,432 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-color: black white;
+    scrollbar-width:thin;;
+}
+@font-face {
+    font-family: 'ER_Garamond_Medium';
+    src: url(assets/fonts/EBGaramond-Medium.ttf);
+}
+@font-face {
+    font-family: 'DM_Sans_Regular';
+    src: url(assets/fonts/DMSans-Regular.ttf);
+}
+@font-face {
+    font-family: 'DM_Sans_Medium';
+    src: url(assets/fonts/DMSans-Medium.ttf);
+}
+@font-face {
+    font-family: 'DM_Sans_SemiBold';
+    src: url(assets/fonts/DMSans-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'DM_Sans_ExtraBold';
+    src: url(assets/fonts/DMSans-ExtraBold.ttf);
+}
+@font-face {
+    font-family: 'Newsreader_Medium';
+    src: url(assets/fonts/Newsreader_36pt-Medium.ttf);
+}
+
+.colaborationsContainer{
+    opacity: 0;
+    width: 100%;
+    margin-top: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    padding: 0px 100px 0px 100px;
+    position: relative;
+}
+.colaborationsTitle,.aqcuisitionsTitle{
+    font-size: 56px;
+    font-weight: 500;
+    font-family: "ER_Garamond_Medium";
+}
+.colaborationsOuterContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    overflow-X: scroll;
+    padding-bottom: 14px;
+    scrollbar-color: rgb(207, 207, 207) white;
+    scrollbar-width:thin;
+}
+.colaborationsScrollContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-items: stretch;
+    gap: 30px;
+}
+.colaborationsCard{
+    display: flex;
+    width: 410px;
+    flex-direction: column;
+    transition: all 0.15s;
+    will-change: transform;
+}
+.colaborationsCardTop{
+    height: 190px;
+    background-color: white;
+    position: relative;
+    padding: 30px 40px 30px 30px;
+    border: 3px solid #F7F7F7;
+    transition: all 0.15s ease-in-out;
+}
+.colaborationsCard:hover{
+    transform-origin: top left;
+    scale: 1.01;
+}
+.colaborationsCard:hover .colaborationsCardTop{
+    border: 3px solid #FFA314;
+}
+.colaborationCardTitle{
+    line-height: 140%;
+    font-size: 28px;
+    font-family: 'ER_Garamond_Medium';
+    font-weight: 500;
+}
+.colaborationsDot{
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-top: 20px;
+    background-color: #FFA314;
+    border-radius: 50%;
+}
+.colaborationsCardBottom{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px 40px 30px;
+    background-color: #F7F7F7;
+    gap: 20px;
+    flex: 1;
+}
+.colaborationsTextContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.colaborationsBigText{
+    font-size: 18px;
+    font-family: 'DM_Sans_SemiBold';
+}
+.colaborationsSmallText{
+    font-size: 16px;
+    font-family: 'DM_Sans_Regular';
+}
+.colaborationsLine{
+    height: 1px;
+    background: linear-gradient(to right, #ffffff00, #CACACA, #ffffff00);
+    width: 100%;
+}
+.collaborationsBottomInfoContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.colaborationsInfoRow{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.colaborationsInfoRow img{
+    width: 24px;
+    height: 24px;
+}
+.colaborationsInfoRow p{
+    font-size: 16px;
+    font-family: 'DM_Sans_Regular';
+}
+
+
+.aqcuisitionsContainer{
+    opacity: 0;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    padding: 0px 100px 0px 100px;
+    position: relative;
+}
+.aqcuisitonsFilesContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.aqcuisitionsInline{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+.downloadAq{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.downloadAq:hover  span{
+    text-decoration: none;
+    color: black;
+}
+.downloadAq:hover  img{
+    filter: brightness(0);
+}
+.aqcuisitionsInline img{
+    width: 30px;
+    height: 30px;
+    transition: all 0.1s;
+}
+.aqcuisitionsInline a{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'DM_Sans_Regular';
+    cursor: pointer;
+}
+.aqcuisitionsInline .outsideAq:hover{
+    text-decoration: underline;
+}
+.aqcuisitionsInline span{
+    transition: all 0.1s;
+    font-size: 18px;
+    font-weight: 500;
+    color: #BCBCBC;
+    font-family: 'DM_Sans_Regular';
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1070px){
+.colaborationsContainer{
+    gap: 30px;
+    padding: 0px 70px 0px 70px;
+    position: relative;
+}
+}
+
+@media screen and (max-width: 950px){
+.colaborationsContainer{
+    gap: 30px;
+    padding: 0px 50px 0px 50px;
+    position: relative;
+}    
+}
+
+@media screen and (max-width:600px){
+    .colaborationsContainer{
+    opacity: 0;
+    width: 100%;
+    margin-top: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    padding: 0px 50px 0px 50px;
+    position: relative;
+}
+.colaborationsTitle{
+    font-size: 56px;
+    font-weight: 500;
+    font-family: "ER_Garamond_Medium";
+}
+.colaborationsOuterContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    overflow-X: scroll;
+    padding-bottom: 14px;
+    scrollbar-color: rgb(207, 207, 207) white;
+    scrollbar-width:thin;
+}
+.colaborationsScrollContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-items: stretch;
+    gap: 30px;
+}
+.colaborationsCard{
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+}
+.colaborationsCardTop{
+    height: 130px;
+    background-color: white;
+    position: relative;
+    padding: 30px 40px 30px 30px;
+    border: 3px solid #F7F7F7;
+}
+.colaborationCardTitle{
+    line-height: 140%;
+    font-size: 24px;
+    font-family: 'ER_Garamond_Medium';
+    font-weight: 500;
+}
+.colaborationsDot{
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-top: 20px;
+    background-color: #FFA314;
+    border-radius: 50%;
+}
+.colaborationsCardBottom{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px 40px 30px;
+    background-color: #F7F7F7;
+    gap: 20px;
+    flex: 1;
+}
+.colaborationsTextContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.colaborationsBigText{
+    font-size: 17px;
+    font-family: 'DM_Sans_SemiBold';
+}
+.colaborationsSmallText{
+    font-size: 15px;
+    font-family: 'DM_Sans_Regular';
+}
+.collaborationsBottomInfoContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.colaborationsInfoRow{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.colaborationsInfoRow img{
+    width: 24px;
+    height: 24px;
+}
+.colaborationsInfoRow p{
+    font-size: 16px;
+    font-family: 'DM_Sans_Regular';
+}
+
+}
+
+
+@media screen and (max-width:500px){
+    .colaborationsContainer{
+    opacity: 0;
+    width: 100%;
+    margin-top: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    padding: 0px 20px 0px 20px;
+    position: relative;
+}
+.colaborationsTitle{
+    font-size: 50px;
+}
+.colaborationsOuterContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    overflow-X: scroll;
+    padding-bottom: 14px;
+    scrollbar-color: rgb(207, 207, 207) white;
+    scrollbar-width:thin;
+}
+.colaborationsScrollContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-items: stretch;
+    gap: 30px;
+}
+.colaborationsCard{
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+}
+.colaborationsCardTop{
+    height: 130px;
+    background-color: white;
+    position: relative;
+    padding: 30px 40px 30px 30px;
+    border: 3px solid #F7F7F7;
+}
+.colaborationCardTitle{
+    line-height: 140%;
+    font-size: 24px;
+    font-family: 'ER_Garamond_Medium';
+    font-weight: 500;
+}
+.colaborationsDot{
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-top: 20px;
+    background-color: #FFA314;
+    border-radius: 50%;
+}
+.colaborationsCardBottom{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px 40px 30px;
+    background-color: #F7F7F7;
+    gap: 20px;
+    flex: 1;
+}
+.colaborationsTextContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.colaborationsBigText{
+    font-size: 17px;
+    font-family: 'DM_Sans_SemiBold';
+}
+.colaborationsSmallText{
+    font-size: 15px;
+    font-family: 'DM_Sans_Regular';
+}
+.collaborationsBottomInfoContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.colaborationsInfoRow{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.colaborationsInfoRow img{
+    width: 24px;
+    height: 24px;
+}
+.colaborationsInfoRow p{
+    font-size: 16px;
+    font-family: 'DM_Sans_Regular';
+}
+}
