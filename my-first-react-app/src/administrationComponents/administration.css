@@ -482,6 +482,7 @@
 }
 .aqcuisitonsFilesContainer{
     padding-left: 5px;
+    padding-right: 5px;
     gap: 28px;
 }
 .aqcuisitionsInline a{
@@ -504,6 +505,7 @@
 }
 .spendingsFilesContainer{
     padding-left: 5px;
+    padding-right: 5px;
     gap: 28px;
 }
 .spendingsInline a{
@@ -542,25 +544,25 @@
 }
 .colaborationsCard{
     display: flex;
-    width: 380px;
+    width: 90vw;
     flex-direction: column;
 }
 .colaborationsCardTop{
-    height: 160px;
+    height: 140px;
     background-color: white;
     position: relative;
-    padding: 30px 40px 30px 30px;
+    padding: 25px 25px 25px 25px;
     border: 3px solid #F7F7F7;
 }
 .colaborationCardTitle{
     line-height: 140%;
-    font-size: 23px;
+    font-size: 20px;
     font-family: 'ER_Garamond_Medium';
     font-weight: 500;
 }
 .colaborationsDot{
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     position: absolute;
     top: 0;
     right: 0;
@@ -572,7 +574,7 @@
 .colaborationsCardBottom{
     display: flex;
     flex-direction: column;
-    padding: 20px 30px 40px 30px;
+    padding: 25px 25px 25px 25px;
     background-color: #F7F7F7;
     gap: 20px;
     flex: 1;
