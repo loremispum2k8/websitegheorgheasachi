@@ -2,10 +2,12 @@ import { useState, useEffect, useRef } from 'react'
 import "./administration.css"
 
 
-function Aqcuisitions(){
+function AdministrationHeader(){
     return(
-        <div className='headerContainer'></div>
+        <div className='administrationHeaderContainer'>
+            <img src="https://i.imgur.com/Nu6cYe9.jpg" alt="" />
+        </div>
     )
 }
 
-export default Aqcuisitions
+export default AdministrationHeader

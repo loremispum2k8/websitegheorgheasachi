@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import Colaborations from './administrationComponents/Colaborations'
 import Aqcuisitions from './administrationComponents/Aqcuisitions'
 import Spendings from './administrationComponents/Spendings'
+import AdministrationHeader from './administrationComponents/AdministrationHeader'
 import {useInView} from 'react-intersection-observer'
 
 function Administration(){
@@ -22,6 +23,7 @@ function Administration(){
     const { ref: spendingsRef, inView: spendingsIsVisible} = useInView({triggerOnce:true});
     return(
         <div ref={app}  className='administrationContainer'>
+            <AdministrationHeader/>
             <Menu pageNumber={3}/>
             <Colaborations elementStyles={` ${colaborationsIsVisible ? 'showSection': ''}`} elementRef={colaborationsRef} id="colaborations"/>
             <Aqcuisitions elementStyles={` ${aqcuisitonsIsVisible ? 'showSection': ''}`} elementRef={aqcuisitonsRef} id="aqcuisitons"/>
