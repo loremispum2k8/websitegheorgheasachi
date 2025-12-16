@@ -131,16 +131,19 @@ function Menu({pageNumber}){
         }
     },[menuIsExpanded])
 
-    function fixScroll(){
-        document.body.style.overflow = 'scroll'
-    }
-    
+
     function resetScroll(){
         window.scrollTo({
             top:0,
             behavior:"smooth"
         })
     }
+    
+    function fixScroll(){
+        document.body.style.overflow = 'scroll'
+        resetScroll()
+    }
+
 
     return(
         <div ref={menuContainer} className='menuContainer'>

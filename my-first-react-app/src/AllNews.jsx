@@ -70,7 +70,12 @@ function AllNews(){
         dataIsLoaded === false ? null : app.current.classList.add('appearDocument')
     },[dataIsLoaded])
 
-
+    function resetScroll(){
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        })
+    }
 
     
 
@@ -92,6 +97,7 @@ function AllNews(){
                 setPages(newPages)
             }
         }
+        resetScroll()
     }
     
 

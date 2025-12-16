@@ -48,6 +48,7 @@ function Spendings({id,elementRef,elementStyles}){
     }else{
         enableScroll()
     }
+    
         return(
             <div ref={elementRef} id={id} className={`spendingsContainer ${elementStyles}`}>
                 <h1 className='spendingsTitle'>Cheltuieli</h1>
