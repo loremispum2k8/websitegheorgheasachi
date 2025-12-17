@@ -76,7 +76,7 @@ function Testimonies({id,elementRef,elementStyles}){
                         <h2 className='testimonySuccesses'>Experiența ei ca profesoară de istorie s-a integrat în identitatea sa. Ea apreciază că meseria îi permite să conecteze generații și epoci, folosind metode interactive și discuții vii. Observă cum elevii își dezvoltă gândirea și capacitatea de argumentare. Relația cu copiii îi oferă satisfacție, simțind că îi sprijină și inspiră. Profesia o provoacă și o împlinește în fiecare zi.</h2>
                         <img className='testimonyQuote' src="https://i.imgur.com/dHAp5CZ.png" alt="" />
                     </div>
-                    <div className='testimonyimage'><img src="https://i.imgur.com/DJCplGs.jpeg" alt="" /></div>
+                    <div className='testimonyimage'><img src="/testimony2.webp" alt="" /></div>
                 </div>
                 <div id='testimony4' ref={testimony3} className="testimony">
                     <div className='testimonyText'>
