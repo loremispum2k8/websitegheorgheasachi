@@ -30,7 +30,7 @@ function AdministrationHeader(){
 
     return(
         <div ref={app} className='administrationHeaderContainer'>
-            <img src="https://i.imgur.com/Nu6cYe9.jpg" alt="" />
+            <img src="/administrationHeader.webp" alt="" />
         </div>
     )
 }
