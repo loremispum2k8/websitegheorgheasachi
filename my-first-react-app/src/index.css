@@ -1413,6 +1413,7 @@ body{
     line-height: 120%;
 }
 .bottomNewsText{
+    gap: 26px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
