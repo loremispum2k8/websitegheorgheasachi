@@ -30,7 +30,7 @@ function Gallery({id,elementRef,elementStyles}){
         <div ref={elementRef} id={id} className={`galleryContainer ${elementStyles}`}>
             <div className='galleryTitle'>Galerie</div>
             <div className='galleryGrid'>
-                <div className='galleryImgCont galleryBig'><img src="https://i.imgur.com/CqXjmKd.jpg" alt="" /></div>
+                <div className='galleryImgCont galleryBig'><img src="galleryTop.webp" alt="" /></div>
                 <div className='galleryImgCont galleryTop'><img src="https://i.imgur.com/rNA0SDM.jpeg" alt="" /></div>
                 <div className='galleryImgCont galleryBottom'><img src="https://i.imgur.com/AaPu3bL.jpg" alt="" /></div>
                 <div className='gallerySlider'>
