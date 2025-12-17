@@ -26,7 +26,7 @@ function Contacts(){
                         </div>
                         <div className='contactsInline'>
                             <img src="https://i.imgur.com/UTugLfJ.png" alt="" />
-                            <p>Email: <span>gheorgheasachi@mail.ru</span></p>
+                            <p>Email: <span>ghasachi2020@gmail.com</span></p>
                         </div>
                         <div className='contactsInline'>
                             <img src="https://i.imgur.com/6ctpnvH.png" alt="" />
