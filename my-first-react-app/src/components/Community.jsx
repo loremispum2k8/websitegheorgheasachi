@@ -15,15 +15,15 @@ function Community({id,elementRef,elementStyles}){
                         <h4 className='communityStat'>absolvenți</h4>
                     </div>
                     <div className='communityStatsContainer'>
-                        <h2 className='communityNumbers'>49</h2>
+                        <h2 className='communityNumbers'>50+</h2>
                         <h4 className='communityStat'>cadre didactice</h4>
                     </div>
                     <div className='communityStatsContainer'>
-                        <h2 className='communityNumbers'>50</h2>
+                        <h2 className='communityNumbers'>60+</h2>
                         <h4 className='communityStat'>olimpici raionali</h4>
                     </div>
                     <div className='communityStatsContainer'>
-                        <h2 className='communityNumbers'>12</h2>
+                        <h2 className='communityNumbers'>20+</h2>
                         <h4 className='communityStat'>olimpici republicani</h4>
                     </div>
                 </div>
