@@ -58,7 +58,7 @@ function History({id,elementRef,elementStyles}){
                     <div className='historyImagesContainer'>
 
                         <div ref={img1} className='historyImage showHistoryImage'>
-                            <img id='history1' src="https://i.imgur.com/T6iVwOM.png" alt="" />
+                            <img id='history1' src="/history1.webp" alt="" />
                         </div>
 
                         <div ref={img2} className='historyImage'>
