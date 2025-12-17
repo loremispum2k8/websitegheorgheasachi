@@ -5,7 +5,7 @@ import {NavLink} from 'react-router-dom'
 
 function Gallery({id,elementRef,elementStyles}){
     const links = [
-        'https://i.imgur.com/FglDhrt.jpeg',
+        '/gallery1.webp',
         'https://i.imgur.com/vgBJnXG.jpeg',
         'https://i.imgur.com/WHthe9h.jpeg',
         'https://i.imgur.com/xUOCXgp.jpeg',
@@ -30,9 +30,9 @@ function Gallery({id,elementRef,elementStyles}){
         <div ref={elementRef} id={id} className={`galleryContainer ${elementStyles}`}>
             <div className='galleryTitle'>Galerie</div>
             <div className='galleryGrid'>
-                <div className='galleryImgCont galleryBig'><img src="galleryTop.webp" alt="" /></div>
+                <div className='galleryImgCont galleryBig'><img src="/galleryTop.webp" alt="" /></div>
                 <div className='galleryImgCont galleryTop'><img src="https://i.imgur.com/rNA0SDM.jpeg" alt="" /></div>
-                <div className='galleryImgCont galleryBottom'><img src="https://i.imgur.com/AaPu3bL.jpg" alt="" /></div>
+                <div className='galleryImgCont galleryBottom'><img src="/galleryBottom.webp" alt="" /></div>
                 <div className='gallerySlider'>
                     <div className='galleryInnerSlider'>
                         {links.map(imageLink=>{
