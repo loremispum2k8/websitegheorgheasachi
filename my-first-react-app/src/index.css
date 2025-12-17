@@ -1087,6 +1087,14 @@ body{
 .copyright span{
     font-size: 12px;
 }
+.copyright i{
+    line-height: 150%;
+    color: white;
+    font-size: 11px;
+}
+.copyright .name{
+    color: #808080;
+}
 .footerSocialMedias{
     grid-column: 3/4;
     display: flex;

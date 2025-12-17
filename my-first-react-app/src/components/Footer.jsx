@@ -48,7 +48,7 @@ function Footer({parentLink}){
                 </div>
             </div>
             <div className='footerBottom'>
-                <p className='copyright'>Copyright &copy; 2025 <br />  I.P.L.T Gheorghe Asachi mun. Ungheni</p>
+                <p className='copyright'>Copyright &copy; 2025 <br />  I.P.L.T Gheorghe Asachi mun. Ungheni <br /><i>Site în dezvoltare. Conținutul este actualizat periodic <br /> <i className='name'>- Vasile Burungiu</i></i></p>
                 <div className='footerLogo'>
                     <img className='footerSchoolLogo' src="https://i.imgur.com/FLBI2qF.png" alt="" />
                     <img className='footerNameLogo' src="https://i.imgur.com/ddtPqi5.png" alt="" />
