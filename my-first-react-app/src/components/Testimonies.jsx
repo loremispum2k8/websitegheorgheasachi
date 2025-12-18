@@ -97,7 +97,7 @@ function Testimonies({id,elementRef,elementStyles}){
                             <p className='testimonyName'>Iachimovschii Luminița</p>
                         </div>
                         <div className='testimoNline'></div>
-                        <h2 className='testimonySuccesses'>Doamna Iachimovschi Luminița consideră că Clubul de Dezbateri Democratice al I.P.L.T. „Gh. Asachi”, creat în noiembrie 2023, este un spațiu unde ideile capătă voce, iar tinerii își dezvoltă gândirea critică. Ea afirmă că clubul a luat naștere pentru a oferi elevilor libertatea de a discuta argumentat teme importante, văzând dezbaterea ca un exercițiu de respect, colaborare și responsabilitate civică.</h2>
+                        <h2 className='testimonySuccesses'>Doamna Iachimovschii Luminița consideră că Clubul de Dezbateri Democratice al I.P.L.T. „Gh. Asachi”, creat în noiembrie 2023, este un spațiu unde ideile capătă voce, iar tinerii își dezvoltă gândirea critică. Ea afirmă că clubul a luat naștere pentru a oferi elevilor libertatea de a discuta argumentat teme importante, văzând dezbaterea ca un exercițiu de respect, colaborare și responsabilitate civică.</h2>
                         <img className='testimonyQuote' src="https://i.imgur.com/dHAp5CZ.png" alt="" />
                     </div>
                     <div className='testimonyimage'><img src="https://i.imgur.com/fQscNXA.jpeg" alt="" /></div>
