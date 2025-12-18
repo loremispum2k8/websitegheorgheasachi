@@ -12,7 +12,7 @@ const Table_Name = '1'
 const Table_URL = `https://opensheet.elk.sh/${Table_ID}/${Table_Name}`
 
 function AllNews(){
-
+    const navigate = useNavigate()
     const [newsData, setNewsData] = useState()
     const [dataIsLoaded, setDatIsLoaded] = useState(false)
 
@@ -38,7 +38,6 @@ function AllNews(){
         catch(error){
             seDataError('Eroare')
         }finally{
-            console.log('a')
             setDataLoading(false)
         }
 
@@ -52,9 +51,25 @@ function AllNews(){
             }
         }
         else{
-            for(let i = Number(page); i <= Number(page) + 8; i++){
-                arr.push(i)
+
+            if(activePage < 5){
+                for(let i = 1; i <= 5; i++){
+                    console.log(Number(page))
+                    arr.push(i)
+                }
+            }else{
+                for(let i = Number(page); i <= Number(page) + 4; i++){
+                    if(i <= pagesLength){
+                        console.log(Number(page))
+                        arr.push(i)
+                    }
+                }
             }
+            let newarr = Array.from(arr)
+            for(let i = arr[0]-1; i > arr[0]-(5-arr.length)-1 ; i--){
+                newarr.unshift(i)
+            }
+            arr = newarr;
         }
         setPages(arr)
         //
@@ -77,10 +92,11 @@ function AllNews(){
         })
     }
 
-    
 
-    const navigate = useNavigate()
     
+    useEffect(()=>{
+        navigate("/toate-noutățile/"+ (Number(activePage)))
+    },[activePage])
     
     function checkPageIndex(e){  
         console.log(e.target.textContent)
@@ -101,7 +117,7 @@ function AllNews(){
     }
     
 
-    function goLeft(e){
+    function goLeft(){
         if(activePage > 1){
             navigate("/toate-noutățile/"+(Number(activePage) - 1))
             console.log(Number(activePage)-1)
@@ -140,6 +156,10 @@ function AllNews(){
         )
     }
 
+    
+    
+    
+    
     function stopScroll(){
         document.body.style.overflowY = 'hidden'
     }
@@ -155,10 +175,9 @@ function AllNews(){
         )
     }else{
         enableScroll()
+        console.log(pages)
     }
-
     return(
-
         <div className='AllNewsContainer' ref={app}>
             <Menu pageNumber={2}/>
             <div className='allNewsContent'>
