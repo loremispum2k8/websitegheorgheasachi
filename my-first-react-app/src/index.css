@@ -5468,6 +5468,9 @@ body{
 .news23 .newsImage img{
     width: 110%;
 }
+.news1 .newsImage{
+    height: 300px;
+}
 .news23 .newsImage{
     height: 300px;
 }
