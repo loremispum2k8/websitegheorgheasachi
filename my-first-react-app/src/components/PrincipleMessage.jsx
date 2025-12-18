@@ -13,7 +13,7 @@ function PrincipleMessage({id,elementRef,elementStyles}){
                 </p>
                 <img className='quote' src="https://i.imgur.com/dHAp5CZ.png" alt="" />
             </div>
-            <div className='principleImage'><img src="https://i.imgur.com/rWp7QuZ.jpeg" alt="" /></div>
+            <div className='principleImage'><img src="https://i.imgur.com/rWp7QuZ.jpeg" alt="Imagine director" /></div>
         </div>
     )
 }

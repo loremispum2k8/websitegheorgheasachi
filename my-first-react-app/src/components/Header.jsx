@@ -98,9 +98,9 @@ function Header({id}){
     return(
         <div id={id} className='headerContainer'>
             <div className='headerImagesContainer'>
-                <img ref={img1} id='header1' className='headerImage showHeader' src="/headerImages/header1.webp" alt="" />
-                <img ref={img2} id='header2' className='headerImage' src="/headerImages/header2.webp" alt="" />
-                <img ref={img3} id='header3' className='headerImage' src="/headerImages/header3.webp" alt="" />
+                <img ref={img1} id='header1' className='headerImage showHeader' src="/headerImages/header1.webp" alt="Header imagine liceu 1" />
+                <img ref={img2} id='header2' className='headerImage' src="/headerImages/header2.webp" alt="Header imagine liceu 2" />
+                <img ref={img3} id='header3' className='headerImage' src="/headerImages/header3.webp" alt="Header imagine liceu 3" />
             </div>
             <div className='dotsContainer'>
                 <div ref={dot1} onClick={(e)=>changeHeader(e)} id='1' className='headerDot activeDot'></div>
