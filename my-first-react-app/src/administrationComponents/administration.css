@@ -626,18 +626,19 @@
 }
 .comisionImage{
     width: 90dvw;
-    height: 300px;
+    height: 280px;
     overflow: hidden;
 }
 .comisionsTitle{
     padding-left: 5px;
-    font-size: 30px;
+    font-size: 34px;
     font-weight: 500;
     font-family: "ER_Garamond_Medium";
 }
 .comisionTitle{
+    width: 95%;
     transition: all 0.1s;
-    font-size: 30px;
+    font-size: 28px;
     font-family: 'ER_Garamond_Medium';
     font-weight: 500;
 }
