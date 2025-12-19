@@ -5,7 +5,7 @@ import Colaborations from './administrationComponents/Colaborations'
 import Aqcuisitions from './administrationComponents/Aqcuisitions'
 import Spendings from './administrationComponents/Spendings'
 import AdministrationHeader from './administrationComponents/AdministrationHeader'
-import Comisions from './administrationComponents/comisions'
+import Comisions from './administrationComponents/Comisions.jsx'
 import {useInView} from 'react-intersection-observer'
 
 function Administration(){
