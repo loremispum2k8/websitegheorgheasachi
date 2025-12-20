@@ -35,9 +35,9 @@ function Gallery({id,elementRef,elementStyles}){
                 <div className='galleryImgCont galleryBottom'><img src="/galleryBottom.webp" alt="" /></div>
                 <div className='gallerySlider'>
                     <div className='galleryInnerSlider'>
-                        {links.map(imageLink=>{
+                        {links.map((imageLink, index)=>{
                             return(
-                                <div className='gallerySliderImg'><img src={imageLink} alt="" /></div>
+                                <div key={index} className='gallerySliderImg'><img src={imageLink} alt="" /></div>
                             )
                         })}
                     </div>
