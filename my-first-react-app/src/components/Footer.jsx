@@ -55,9 +55,9 @@ function Footer({parentLink}){
                     <img className='footerNameLogo' src="https://i.imgur.com/ddtPqi5.png" alt="" />
                 </div>
                 <div className='footerSocialMedias'>
-                    <a target='_blank' href="https://www.instagram.com/ce.gheorghe.asachi.un?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img className='socials' src="https://i.imgur.com/hMmaTUB.png" alt="" /></a>
-                    <a target='_blank' href=""><img className='socials' src="https://i.imgur.com/Z1TpJyu.png" alt="" /></a>
-                    <a target='_blank' href=""><img className='socials' src="https://i.imgur.com/AYnAWyw.png" alt="https://www.facebook.com/p/Liceul-Teoretic-GhAsachi-100057494078263/" /></a>
+                    <a target='_blank' href="https://www.instagram.com/ce.gheorghe.asachi.un?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img className='socials' src="https://i.imgur.com/hMmaTUB.png" alt="instagram icon" /></a>
+                    <a target='_blank' href="https://www.tiktok.com/@ce.gheorghe.asachi"><img className='socials' src="https://i.imgur.com/Z1TpJyu.png" alt="tiktok icon" /></a>
+                    <a target='_blank' href="https://www.facebook.com/p/Liceul-Teoretic-GhAsachi-100057494078263/"><img className='socials' src="https://i.imgur.com/AYnAWyw.png" alt="facebook icon" /></a>
                 </div>
             </div>
         </div>
