@@ -1761,16 +1761,39 @@ body{
     margin-top: 0px;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    gap: 16px;
     justify-content: center;
     width: 100dvw;
     background-color: rgb(255, 255, 255);
     height: 100dvh;
+    perspective: 400px;
+}
+.loadingScreen img{
+    width: 220px;
+    filter: saturate(0) opacity(0.8);
+    animation-name: rotate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode:forwards;
 }
 .loadingScreen h1{
     font-family: 'ER_Garamond_Medium';
     font-size: 50px;
     font-weight: 500;
-    color: #1f1f1f;
+    color: #484848;
+}
+@keyframes rotate {
+    0%{
+        transform: rotateY(0deg);
+    }
+    50%{
+        transform: rotateY(360deg);
+    }
+    100%{
+        transform: rotateY(0deg);
+    }
 }
 
 

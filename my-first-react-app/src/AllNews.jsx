@@ -4,6 +4,7 @@ import { data, useNavigate, useParams } from 'react-router';
 import Menu from "./components/Menu";
 import Footer from './components/Footer'
 import {useInView} from 'react-intersection-observer'
+import LoadingScreen from './components/LoadingScreen';
 
 
 
@@ -169,9 +170,7 @@ function AllNews(){
     if(dataLoading){
         stopScroll()
         return(
-            <div className='loadingScreen'>
-                <h1>Se încarcă...</h1>
-            </div>
+            <LoadingScreen/>
         )
     }else{
         enableScroll()

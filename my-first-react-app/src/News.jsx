@@ -5,6 +5,7 @@ import NewsBottom from "./newsComponents/NewsBottom.jsx";
 import {useInView} from 'react-intersection-observer'
 import { useState, useEffect, NavLink, useRef, useParams, use } from 'react'
 import ErrorPage from './components/ErrorPage.jsx'
+import LoadingScreen from "./components/LoadingScreen.jsx";
 
 
 const Table_ID = "1dHlwvtfnFb1EFhYzQ0D48eXXN2rdO3_Rx6NTt2Jkahs"
@@ -58,9 +59,7 @@ function News(){
     if(dataLoading){
         stopScroll()
         return(
-            <div className='loadingScreen'>
-                <h1>Se încarcă...</h1>
-            </div>
+            <LoadingScreen/>
         )
     }else{
         enableScroll()
