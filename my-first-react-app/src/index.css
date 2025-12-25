@@ -1778,12 +1778,6 @@ body{
     animation-timing-function: ease-in-out;
     animation-fill-mode:forwards;
 }
-.loadingScreen h1{
-    font-family: 'ER_Garamond_Medium';
-    font-size: 50px;
-    font-weight: 500;
-    color: #484848;
-}
 @keyframes rotate {
     0%{
         transform: rotateY(0deg);
@@ -2173,9 +2167,6 @@ body{
     }
 .loadingScreen{
     height: 100dvh;
-}
-.loadingScreen h1{
-    font-size: 60px;
 }
     .communityContainer{
         margin-top: 80px;
@@ -4937,8 +4928,14 @@ body{
         margin-top: -0px;
         height: 100dvh;
     }
-    .loadingScreen h1{
-        font-size: 30px;
+    .loadingScreen img{
+        width: 180px;
+        filter: saturate(0) opacity(0.8);
+        animation-name: rotate;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode:forwards;
     }
     .menu{
         height: 70px;
@@ -5919,7 +5916,18 @@ body{
     transition: all 0.1s;
 }
 
-}   
+}
+@media screen and (max-width:400px){ 
+    .loadingScreen img{
+        width: 140px;
+        filter: saturate(0) opacity(0.8);
+        animation-name: rotate;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode:forwards;
+    }
+}
 
 
     .turnMenuBlack{

@@ -1,6 +1,7 @@
 import { useState, useEffect, NavLink, useRef} from 'react'
 import { useParams } from 'react-router'
 import { Link } from 'react-router'
+import LoadingScreen from './components/LoadingScreen'
 
 
 const Table_ID = "1dHlwvtfnFb1EFhYzQ0D48eXXN2rdO3_Rx6NTt2Jkahs"
@@ -16,6 +17,7 @@ function InnerAllNews(){
     const [actPage,setActPage] = useState(Number(page) || 1)
     const [newsContent,setNewsContent] = useState([])
     const [dataError, seDataError] = useState(null)
+    const [dataLoading, setDataLoading] = useState(true)
     
     useEffect(()=>{
         setActPage(page)
@@ -30,6 +32,9 @@ function InnerAllNews(){
         }
         catch(error){
             seDataError('Eroare')
+        }
+        finally{
+            setDataLoading(false)
         }
     }
     
@@ -84,14 +89,26 @@ function InnerAllNews(){
         }
     }
 
-
-    if(!newsData){
-        return("")
-    }
+    
     if(dataError){
         return(
             <ErrorPage/>
         )
+    }
+
+    function stopScroll(){
+        document.body.style.overflowY = 'hidden'
+    }
+    function enableScroll(){
+        document.body.style.overflowY = 'scroll'
+    }
+    if(dataLoading){
+        stopScroll()
+        return(
+            <LoadingScreen/>
+        )
+    }else{
+        enableScroll()
     }
 
     return(
