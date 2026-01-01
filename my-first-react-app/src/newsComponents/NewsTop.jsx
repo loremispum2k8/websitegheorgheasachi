@@ -27,7 +27,6 @@ function NewsTop({id,elementRef,elementStyles}){
     useEffect(()=>{
         getNews()
     },[])   
-    newsData ? console.log(newsData[0].slug) : null
 
     function checkReadingTime(string){
         switch(true){
@@ -81,7 +80,6 @@ function NewsTop({id,elementRef,elementStyles}){
             <h1 className='newsTopTitle'>Noutăți</h1>
             <div className='newsTopContent'>
                 <div className='mainNewsBigGrid'>
-                {console.log(newsData[0])}
                 <NavLink to={newsData ? `/noutăți/${newsData[0].slug}` : null} className='new news1'>
                     <div className='newsImage'><img src={newsData[0].imagini ? newsData[0].imagini.split('\n')[0] : "https://i.imgur.com/5mZIpUH.png"} alt="" /></div>
                     <div className='news1Content'>

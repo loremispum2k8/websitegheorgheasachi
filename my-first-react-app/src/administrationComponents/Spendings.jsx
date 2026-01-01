@@ -20,7 +20,6 @@ function Spendings({id,elementRef,elementStyles}){
                 let data_json = await data.json()
                 setSpendingsData(data_json)
                 setDataIsLoaded(true)
-                console.log(data_json)
             }
             catch(error){
                     seDataError('Eroare')

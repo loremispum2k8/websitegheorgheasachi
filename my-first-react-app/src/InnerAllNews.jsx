@@ -1,8 +1,7 @@
-import { useState, useEffect, NavLink, useRef} from 'react'
+import { useState, useEffect, NavLink, useRef,} from 'react'
 import { useParams } from 'react-router'
 import { Link } from 'react-router'
 import LoadingScreen from './components/LoadingScreen'
-
 
 const Table_ID = "1dHlwvtfnFb1EFhYzQ0D48eXXN2rdO3_Rx6NTt2Jkahs"
 const Table_Name = '1'
@@ -49,7 +48,6 @@ function InnerAllNews(){
         for(let i = startNews; i <= lastNews; i++){
             newsData ? newsDataArr.push(newsData[i]) : null
         }
-        console.log(newsContent)
         setNewsContent(newsDataArr)
     },[actPage,dataIsLoaded])
 
@@ -110,6 +108,7 @@ function InnerAllNews(){
     }else{
         enableScroll()
     }
+
 
     return(
         <div className='innerAllNewsContainer'>

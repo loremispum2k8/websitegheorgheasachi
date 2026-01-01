@@ -17,7 +17,6 @@ function NewsBottom({id,elementRef,elementStyles}){
     useEffect(()=>{
         getNews()
     },[])   
-    newsData ? console.log(newsData[0].slug) : null
 
     function checkReadingTime(string){
         if(string){

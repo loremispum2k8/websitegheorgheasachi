@@ -55,13 +55,11 @@ function AllNews(){
 
             if(activePage < 5){
                 for(let i = 1; i <= 5; i++){
-                    console.log(Number(page))
                     arr.push(i)
                 }
             }else{
                 for(let i = Number(page); i <= Number(page) + 4; i++){
                     if(i <= pagesLength){
-                        console.log(Number(page))
                         arr.push(i)
                     }
                 }
@@ -100,15 +98,12 @@ function AllNews(){
     },[activePage])
     
     function checkPageIndex(e){  
-        console.log(e.target.textContent)
         if(Number(e.target.textContent) === pages[0]){
-            console.log('first page')
             if(pages[0] > 1){
                 let newPages = pages.map(page => page - 1 )
                 setPages(newPages)
             }
         }else if(Number(e.target.textContent) === pages[pages.length-1]){
-            console.log('last page')
             if(pages[pages.length-1] < pagesLength){
                 let newPages = pages.map(page => page + 1 )
                 setPages(newPages)
@@ -121,9 +116,7 @@ function AllNews(){
     function goLeft(){
         if(activePage > 1){
             navigate("/toate-noutățile/"+(Number(activePage) - 1))
-            console.log(Number(activePage)-1)
             if((Number(activePage) - 1) === pages[0]){
-                console.log('first page')
                 if(pages[0] > 1){
                     let newPages = pages.map(page => page - 1 )
                     setPages(newPages)
@@ -135,10 +128,7 @@ function AllNews(){
     function goRight(){
         if(activePage < pagesLength){
             navigate("/toate-noutățile/"+ (Number(activePage) + 1))
-            console.log(Number(activePage)+1)
-            console.log(pages[pages.length-1])
             if((Number(activePage) + 1) === pages[pages.length-1]){
-                console.log('last page')
                 if(pages[pages.length-1] < pagesLength){
                     let newPages = pages.map(page => page + 1 )
                     setPages(newPages)
@@ -174,8 +164,8 @@ function AllNews(){
         )
     }else{
         enableScroll()
-        console.log(pages)
     }
+
     return(
         <div className='AllNewsContainer' ref={app}>
             <Menu pageNumber={2}/>
